@@ -27,6 +27,8 @@ seo:
   meta_twitter_site: "https://gemz.ro"
   meta_twitter_creator: "@gemz.ro"
 
+markdown: kramdown
+
 collections:
   shops:
     output: true
