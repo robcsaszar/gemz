@@ -1,0 +1,90 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+---
+
+// Colors
+$primary: #f12705;
+$secondary-brass: #C49C87;
+$grey-silver: #AAA69B;
+$brown-cafeaulait: #A8774C;
+$brown-coffee: #815037;
+$blue-charcoal: #3A4950;
+$blue-sand: #BCC6C8;
+$green-artichoke: #949168;
+$black: #2f2f41;
+$white: #ffffff;
+$white-offset: #F0F5EE;
+$black-offset-coffee: #393333;
+
+// Letter-spacing
+
+$expanded: 0.075rem;
+$relaxed: 0.05rem;
+$condensed: -0.025rem;
+$tight: -0.05rem;
+
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: lighten($primary, 10%);
+$link-hover-decoration: underline;
+
+// Fonts
+$font-family-base: 'Inter', Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Fraunces', serif, -apple-system;
+
+// Footer
+$footer-background-color: $white-offset;
+$footer-text-color: $black-offset-coffee;
+$sub-footer-background-color: darken($white-offset, 10%);
+$sub-footer-text-color: $black-offset-coffee;
+$sub-footer-icon-color: darken($white-offset, 40%);
+$sub-footer-icon-hover-color: darken($white-offset, 70%);
+
+// Bootstrap
+@import 'bootstrap-variables';
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap-grid';
+// @import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
+
+
+// Libraries
+@import 'libraries/hamburgers/hamburgers';
+@import 'libraries/fontawesome/fontawesome';
+
+// Components
+@import 'components/type';
+@import 'components/page';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sub-footer';
+@import 'components/logo';
+@import 'components/main-menu';
+@import 'components/main-menu-mobile';
+@import 'components/hamburger';
+@import 'components/buttons';
+@import 'components/call';
+@import 'components/title';
+@import 'components/content';
+@import 'components/intro';
+@import 'components/intro-image';
+@import 'components/strip';
+@import 'components/feature';
+@import 'components/social';
+@import 'components/variables';
+
+// Pages
+@import 'pages/home';
+@import 'pages/team/team-summary';
+@import 'pages/shops/page-shops-single';
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: $font-family-base;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}

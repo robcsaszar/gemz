@@ -1,0 +1,42 @@
+baseurl: ''
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+permalink: pretty
+title: 'Gemz.ro — Shop smart, shop local'
+language: "ro"
+lang_direction: "ltr"
+background-color: "#f12705"
+theme-color: "#f0f5ee"
+
+google_analytics_id: ""
+homepage:
+  show_call_box: true
+logo:
+  mobile: "images/logo/logo-mobile.svg"
+  desktop: "images/logo/logo.svg"
+  desktop_height: "64px"
+footer:
+  copyright_text: 'built by <a class="nhg" href="https://nhg.design">nhg.design</a>'
+
+seo:
+  meta_og_title: "Gemz.ro — Shop smart, shop local"
+  meta_og_type: "website"
+  meta_og_url: "https://gemz.ro"
+  meta_og_image: "images/social/og_metatag.png"
+  meta_og_description: "Afaceri locale intr-un singur loc? Da, aici puteți descoperi orice căutați - de la mici magazine locale la furnizori de servicii din toate domeniile!"
+  meta_twitter_card: "summary_large_image"
+  meta_twitter_site: "https://gemz.ro"
+  meta_twitter_creator: "@gemz.ro"
+
+collections:
+  shops:
+    output: true
+  team:
+    output: true
+
+sass:
+  indentWidth: 4
+  style: compact # possible values: nested expanded compact compressed
+  precision: 10
+
+plugins:
+  - jekyll-environment-variables

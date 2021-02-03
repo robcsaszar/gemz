@@ -1,0 +1,21 @@
+---
+title: "Jewlz"
+date: 2018-11-18T12:33:46+10:00
+image: jewelry.jpg
+featured: true
+facebook: "https://facebook.com/"
+instagram: "https://instagram.com/"
+website: "https://nhg.design/"
+category: Bijuterii Accesorii
+layout: shop
+---
+
+Jewellery or jewelry (American English; see spelling differences) consists of decorative items worn for personal adornment, such as brooches, rings, necklaces, earrings, pendants, bracelets, and cufflinks. Jewellery may be attached to the body or the clothes. From a western perspective, the term is restricted to durable ornaments, excluding flowers for example. For many centuries metal such as gold used in different carats from 21, 18, 12, 9 or even lower, often combined with gemstones, has been the normal material for jewellery, but other materials such as shells and other plant materials may be used. It is one of the oldest type of archaeological artefact – with 100,000-year-old beads made from Nassarius shells thought to be the oldest known jewellery.[1] The basic forms of jewellery vary between cultures but are often extremely long-lived; in European cultures the most common forms of jewellery listed above have persisted since ancient times, while other forms such as adornments for the nose or ankle, important in other cultures, are much less common.
+
+![Jewlz](/images/shops/jewelry.jpg)
+
+> Jewellery may be made from a wide range of materials. Gemstones and similar materials such as amber and coral, precious metals, beads, and shells have been widely used, and enamel has often been important. In most cultures jewellery can be understood as a status symbol, for its material properties, its patterns, or for meaningful symbols. 
+
+Jewellery has been made to adorn nearly every body part, from hairpins to toe rings, and even genital jewellery. In modern European culture the amount worn by adult males is relatively low compared with other cultures and other periods in European culture.
+
+The word jewellery itself is derived from the word jewel, which was anglicised from the Old French "jouel",[2] and beyond that, to the Latin word "jocale", meaning plaything. In British English, Indian English, New Zealand English, Hiberno-English, Australian English, and South African English it is spelled jewellery, while the spelling is jewelry in American English.[3] Both are used in Canadian English, though jewelry prevails by a two to one margin. In French and a few other European languages the equivalent term, joaillerie, may also cover decorated metalwork in precious metal such as objets d'art and church items, not just objects worn on the person.

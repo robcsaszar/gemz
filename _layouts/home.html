@@ -1,0 +1,121 @@
+---
+title: Gemz.ro
+layout: default
+bodyClass: page-home
+---
+
+<div class="intro">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                {{ content }}
+                {% if site.homepage.show_call_box %}
+                {% include call.html show_button=true %}
+                {% endif %}
+            </div>
+            {% if page.intro_image %}
+            <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+                <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="strip">
+    <div class="container pt-6 pb-6 pb-md-10">
+        <div class="row justify-content-start">
+            {% for shop in site.shops %}
+            {% if shop.featured %}
+            <div class="col-12 col-md-4 mb-1">
+                <div class="card-shop">
+                    {% if shop.featured %}
+                    <span class="card-featured"></span>
+                    {% endif %}
+                    <div class="card-social">
+                        {% if shop.facebook %}
+                        <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook }}"></a>
+                        {% endif %}
+                        {% if shop.instagram %}
+                        <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram }}"></a>
+                        {% endif %}
+                        {% if shop.website %}
+                        <a aria-label="Website" class="card-link website" href="{{ shop.website }}"></a>
+                        {% endif %}
+                    </div>
+                    <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
+                    <div class="card-overlay"></div>
+                    <a href="{{site.baseurl}}{{ shop.url }}">
+                        {% for image in shop.image %}
+                        <img class="shop-image" src="/images/shops/{{ image }}" alt="{{ shop.title }}" loading="eager">{% endfor %}</a>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a class="button button-primary" href="{{site.baseurl}}/shops">Mai multe</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var randomIndexUsed = [];
+    var counter = 0;
+    var numberOfShops = 3;
+
+    while (counter < numberOfShops)
+    {
+        var randomIndex;
+        var shopHREF;
+        var shopTitle;
+
+        randomIndex = Math.floor(Math.random() * shopsHREF.length);
+
+        if (randomIndexUsed.indexOf(randomIndex) == "-1")
+        {
+            shopHREF = shopsHREF[randomIndex];
+            shopTitle = shopsTitle[randomIndex];
+
+            if (counter == (numberOfShops - 1))
+            {
+                document.write('<p><a href="' + shopHREF + '">' + shopTitle + '</a></p>');
+            }
+            else
+            {
+                document.write('<p><a href="' + shopHREF + '">' + shopTitle + '</a></p><hr />');
+            }
+
+            randomIndexUsed.push(randomIndex);
+
+            counter++;
+        }
+    }
+
+</script>
+
+{% if site.data.features %}
+<div class="strip strip-grey">
+    <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+        <div class="row justify-content-center">
+
+            {% for feature in site.data.features %}
+            <div class="col-12 col-md-6 col-lg-4 mb-2">
+                <div class="feature">
+                    {% if feature.image %}
+                    <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
+                    {% endif %}
+                    <h2 class="feature-title">{{ feature.title }}</h2>
+                    <div class="feature-content">{{ feature.description }}</div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endif %}

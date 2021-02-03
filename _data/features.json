@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Categorii",
+    "description": "Fiecare business este categorizat in functie de industrie si interese.",
+    "image": "images/features/categories.svg"
+  },
+  {
+    "title": "100% local",
+    "description": "Toate business-urile sunt detinute si operate in Romania.",
+    "image": "images/features/local.svg"
+  },
+  {
+    "title": "Platforma mobila",
+    "description": "Business-ul tau are pagina proprie si este vizibil pe orice marime de ecran, oricand.",
+    "image": "images/features/mobile.svg"
+  }
+]

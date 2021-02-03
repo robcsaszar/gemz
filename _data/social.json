@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Facebook",
+    "link": "https://facebook.com/gemz",
+    "class": "icon-facebook"
+  },
+  {
+    "name": "Instagram",
+    "link": "https://instagram.com/gemz",
+    "class": "icon-instagram"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://linkedin.com/gemz",
+    "class": "icon-linkedin"
+  }
+]

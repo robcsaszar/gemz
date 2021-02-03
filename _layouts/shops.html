@@ -1,0 +1,49 @@
+---
+layout: default
+bodyClass: page-services-list
+---
+
+<div class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+        {{ content }}
+      </div>
+      {% if page.intro_image %}
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="container pt-6 pb-6">
+  <div class="row">
+    {% for shop in site.shops %}
+    <div class="col-12 col-md-4 mb-1">
+        <div class="card-shop">
+            {% if shop.featured %}
+            <span class="card-featured"></span>
+            {% endif %}
+            <div class="card-social">
+                {% if shop.facebook %}
+                <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook }}"></a>
+                {% endif %}
+                {% if shop.instagram %}
+                <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram }}"></a>
+                {% endif %}
+                {% if shop.website %}
+                <a aria-label="Website" class="card-link website" href="{{ shop.website }}"></a>
+                {% endif %}
+            </div>
+            <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
+            <div class="card-overlay"></div>
+            <a href="{{site.baseurl}}{{ shop.url }}">
+                {% for image in shop.image %}
+                <img class="shop-image" src="/images/shops/{{ image }}" alt="{{ shop.title }}">{% endfor %}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
