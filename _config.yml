@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: 'gemz.ro'
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 permalink: pretty
 title: 'Gemz.ro — Shop smart, shop local'
