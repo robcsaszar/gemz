@@ -41,7 +41,7 @@ bodyClass: page-services-list
             <div class="card-overlay"></div>
             <a href="{{site.baseurl}}{{ shop.url }}">
                 {% for image in shop.image %}
-                <img class="shop-image" src="/images/shops/{{ image }}" alt="{{ shop.title }}">{% endfor %}</a>
+                <img class="shop-image" src="{{site.baseurl}}/images/shops/{{ image }}" alt="{{ shop.title }}">{% endfor %}</a>
         </div>
     </div>
     {% endfor %}
