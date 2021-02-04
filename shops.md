@@ -8,4 +8,5 @@ intro_image_hide_on_mobile: false
 
 # Business-uri locale la indemana
 
-Aliquam erat volutpat. Morbi nisl tortor, dignissim eget efficitur vel, auctor non felis. Fusce quis viverra mi. Aenean quis massa pretium, ullamcorper nisi eget, hendrerit odio.
+Criza pandemiei COVID-19 ne-a determinat pe toti sa regandim modul in care cheltuim banii- unde si in ce ne dorim sa ii investim. Pentru ca a cumpara local inseamna a sustine si a ajuta comunitatea locala, adica oameni ca si noi. Doar noi ii putem ajuta sa isi continue activitatea in aceasta perioada grea.
+Gemz.ro sustine revenirea la normal a anteprenoriatului romanesc in perioada post-pandemie.
