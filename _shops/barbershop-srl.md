@@ -6,7 +6,7 @@ featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"
 website: "https://nhg.design/"
-category: Beauty Servicii
+category: [Beauty, Servicii]
 layout: shop
 ---
 
