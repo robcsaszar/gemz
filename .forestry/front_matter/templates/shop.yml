@@ -40,3 +40,5 @@ fields:
   label: Layout
   hidden: true
   default: shop
+pages:
+- _shops/sc-test-srl.md
