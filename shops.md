@@ -5,6 +5,8 @@ intro_image: images/illustrations/gemz-shopshero.svg
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 menu:
+  footer:
+    weight: 2
   main:
     weight: 1
 
