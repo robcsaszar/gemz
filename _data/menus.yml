@@ -1,18 +1,18 @@
 ---
 footer:
-- url: "/contact/"
-  weight: 2
-  title: Contact
 - url: "/"
   weight: 1
   title: Home
-main:	
-- url: "/contact/"	
-  weight: 3	
-  title: 	Contact
-- url: "/despre-noi/"	
-  weight: 2	
-  title: 	Despre noi
-- url: "/shops/"	
-  weight: 1	
+- url: "/contact/"
+  weight: 3
+  title: Contact
+main:
+- url: "/shops/"
+  weight: 1
   title: Acasa
+- url: "/despre-noi/"
+  weight: 3
+  title: Despre noi
+- url: "/contact/"
+  weight: 5
+  title: Contact

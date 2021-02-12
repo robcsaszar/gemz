@@ -4,9 +4,9 @@ layout: contact
 bodyClass: page-contact
 menu:
   footer:
-    weight: 3
+    weight: 5
   main:
-    weight: 3
+    weight: 6
 
 ---
 Contactati-ne la urmatoarea adresa de e-mail:

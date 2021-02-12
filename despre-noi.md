@@ -5,7 +5,7 @@ layout: page
 bodyClass: page-about
 menu:
   main:
-    weight: 2
+    weight: 4
 
 ---
 ### Toate afacerile locale stranse intr-un singur loc? 

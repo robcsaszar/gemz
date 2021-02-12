@@ -8,8 +8,8 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 menu:
   footer:
-    weight: 1
-    title: Home
+    weight: 2
+    title: Homes
 
 ---
 # Gemz - noua platformă pentru afaceri locale

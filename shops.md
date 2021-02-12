@@ -6,9 +6,9 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 menu:
   footer:
-    weight: 2
+    weight: 4
   main:
-    weight: 1
+    weight: 2
 
 ---
 # Business-uri locale la indemana
