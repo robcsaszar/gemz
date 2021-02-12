@@ -6,13 +6,3 @@ footer:
 - url: "/"
   weight: 1
   title: Home
-main:
-- url: "/contact/"
-  weight: 3
-  title: 
-- url: "/despre-noi/"
-  weight: 2
-  title: 
-- url: "/shops/"
-  weight: 1
-  title: 
