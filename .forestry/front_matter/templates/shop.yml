@@ -32,7 +32,7 @@ fields:
     min: 1
     max: 
     source:
-      type: pages
+      type: documents
       section: categories
   label: Category
 - type: text
