@@ -1,14 +1,16 @@
 ---
-title: "Soap Diner"
+title: Soap Diner
 image: "/soap.jpg"
 featured: true
-facebook: "https://facebook.com/"
-instagram: "https://instagram.com/"
-website: "https://nhg.design/"
-category: Online Beauty
+facebook: https://facebook.com/
+instagram: https://instagram.com/
+website: https://nhg.design/
+category:
+- Sanatate
+- Beauty
 layout: shop
----
 
+---
 Soap is a salt of a fatty acid[1] used in a variety of cleansing and lubricating products. In a domestic setting, soaps are surfactants usually used for washing, bathing, and other types of housekeeping. In industrial settings, soaps are used as thickeners, components of some lubricants, and precursors to catalysts.
 
 ![Soap Diner](/images/shops/soap.jpg)

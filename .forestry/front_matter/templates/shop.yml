@@ -46,3 +46,4 @@ fields:
   default: shop
 pages:
 - _shops/sc-test-srl.md
+- _shops/soapdiner.md
