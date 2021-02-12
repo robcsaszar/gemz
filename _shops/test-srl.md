@@ -2,11 +2,12 @@
 image: "/images/shops/placeholder-shop.jpg"
 layout: shop
 title: Test SRL
-featured: false
-facebook: ''
+featured: true
+facebook: www.facebook.com
 instagram: ''
 website: ''
-category: []
+category:
+- '4'
 published: false
 
 ---
