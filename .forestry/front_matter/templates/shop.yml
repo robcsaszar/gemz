@@ -2,6 +2,10 @@
 label: Shop
 hide_body: false
 fields:
+- type: file
+  name: image
+  label: Cover
+  default: "/placeholder-shop.jpg"
 - type: text
   name: title
   label: Titlu
@@ -9,25 +13,9 @@ fields:
     required: true
     max: 30
     min: 3
-- type: file
-  name: image
-  label: Cover
-  default: "/placeholder-shop.jpg"
 - type: boolean
   name: featured
   label: Featured
-- type: text
-  name: facebook
-  label: Facebook
-- type: text
-  name: instagram
-  label: Instagram
-- type: text
-  name: website
-  label: Website
-  showOnly:
-    field: featured
-    value: false
 - name: category
   type: list
   config:
@@ -40,6 +28,17 @@ fields:
       file: _categories/categories.yml
       path: categories
   label: Category
+- type: text
+  name: facebook
+  label: Facebook
+- type: text
+  name: instagram
+  label: Instagram
+- type: text
+  name: website
+  label: Website
+  showOnly:
+    value: false
 - type: text
   name: layout
   label: Layout
