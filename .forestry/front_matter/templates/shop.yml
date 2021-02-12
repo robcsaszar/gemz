@@ -1,0 +1,31 @@
+---
+label: Shop
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: image
+  label: image
+- type: boolean
+  name: featured
+  label: featured
+- type: text
+  name: facebook
+  label: facebook
+- type: text
+  name: instagram
+  label: instagram
+- type: text
+  name: website
+  label: website
+- type: list
+  name: category
+  label: category
+- type: text
+  name: layout
+  label: layout
