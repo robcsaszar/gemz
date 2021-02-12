@@ -34,7 +34,7 @@ fields:
     source:
       type: documents
       section: categories
-      file: _categories/categories.md
+      file: _categories/categories.yml
       path: categories
   label: Category
 - type: text
