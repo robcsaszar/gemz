@@ -4,7 +4,7 @@ layout: contact
 bodyClass: page-contact
 menu:
   footer:
-    weight: 2
+    weight: 3
   main:
     weight: 3
 
