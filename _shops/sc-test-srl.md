@@ -7,7 +7,9 @@ facebook: facebook.com
 instagram: insta.com
 website: ''
 category:
-- _categories/accesorii.md
+- Auto
+- Animale
+- Accesorii
 published: false
 
 ---
