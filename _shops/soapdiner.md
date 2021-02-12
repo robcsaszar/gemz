@@ -3,8 +3,8 @@ title: Soap Diner
 image: "/soap.jpg"
 featured: true
 facebook: https://facebook.com/
-instagram: https://instagram.com/
-website: https://nhg.design/
+instagram: ''
+website: ''
 category:
 - Sanatate
 - Beauty
