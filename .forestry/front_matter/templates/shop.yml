@@ -32,9 +32,10 @@ fields:
     min: 1
     max: 
     source:
-      type: simple
+      type: documents
       section: categories
-      file: 
+      file: _categories/categories.md
+      path: categories
   label: Category
 - type: text
   name: layout
