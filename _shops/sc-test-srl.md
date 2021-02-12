@@ -7,9 +7,9 @@ facebook: facebook.com
 instagram: insta.com
 website: ''
 category:
-- Auto
+- Beauty
+- Bauturi
 - Animale
-- Accesorii
 published: false
 
 ---
