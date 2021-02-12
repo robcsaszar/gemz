@@ -2,9 +2,9 @@
 footer:
 - url: "/"
   weight: 1
-  title: Home
+  title: Acasa
 - url: "/contact/"
-  weight: 3
+  weight: 2
   title: Contact
 main:
 - url: "/shops/"

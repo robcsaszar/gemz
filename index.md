@@ -6,10 +6,6 @@ description: Afaceri locale intr-un singur loc? Da, aici puteți descoperi orice
 intro_image: images/illustrations/gemz-mainhero.svg
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
-menu:
-  footer:
-    weight: 2
-    title: Homes
 
 ---
 # Gemz - noua platformă pentru afaceri locale

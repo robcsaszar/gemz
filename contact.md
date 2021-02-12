@@ -3,8 +3,6 @@ title: Contact
 layout: contact
 bodyClass: page-contact
 menu:
-  footer:
-    weight: 5
   main:
     weight: 6
 
