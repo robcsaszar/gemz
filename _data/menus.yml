@@ -1,5 +1,5 @@
----	---
-footer:	footer:
+---
+footer:
 - url: "/contact/"
   weight: 2
   title: Contact
