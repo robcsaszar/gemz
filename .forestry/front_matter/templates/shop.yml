@@ -25,6 +25,9 @@ fields:
 - type: text
   name: website
   label: Website
+  showOnly:
+    field: featured
+    value: false
 - name: category
   type: list
   config:
