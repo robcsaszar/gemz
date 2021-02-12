@@ -45,5 +45,3 @@ fields:
   label: Layout
   hidden: true
   default: shop
-pages:
-- _shops/test-srl.md
