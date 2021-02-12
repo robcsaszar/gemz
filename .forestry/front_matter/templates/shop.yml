@@ -4,28 +4,32 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
-- type: datetime
-  name: date
-  label: date
+  label: Titlu
+  config:
+    required: true
+    max: 30
+    min: 3
 - type: file
   name: image
-  label: image
+  label: Cover
+  default: "/images/shops/placeholder-shop.jpg"
 - type: boolean
   name: featured
-  label: featured
+  label: Featured
 - type: text
   name: facebook
-  label: facebook
+  label: Facebook
 - type: text
   name: instagram
-  label: instagram
+  label: Instagram
 - type: text
   name: website
-  label: website
+  label: Website
 - type: list
   name: category
-  label: category
+  label: Categorie
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  hidden: true
+  default: shop
