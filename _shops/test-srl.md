@@ -1,5 +1,5 @@
 ---
-image: "/images/shops/placeholder-shop.jpg"
+image: "/placeholder-shop.jpg"
 layout: shop
 title: Test SRL
 featured: true
