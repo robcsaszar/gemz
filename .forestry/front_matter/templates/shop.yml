@@ -28,6 +28,18 @@ fields:
 - type: list
   name: category
   label: Categorie
+  config:
+    use_select: true
+    source:
+      type: simple
+      section: categories
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
 - type: text
   name: layout
   label: Layout
