@@ -4,9 +4,6 @@ layout: shops
 intro_image: images/illustrations/gemz-shopshero.svg
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
-menu:
-  main:
-    weight: 2
 
 ---
 # Business-uri locale la indemana

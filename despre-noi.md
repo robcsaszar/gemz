@@ -3,9 +3,6 @@ title: Despre noi
 date: 2021-01-21T17:01:34.000+07:00
 layout: page
 bodyClass: page-about
-menu:
-  main:
-    weight: 4
 
 ---
 ### Toate afacerile locale stranse intr-un singur loc? 

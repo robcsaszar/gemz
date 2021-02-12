@@ -7,12 +7,12 @@ footer:
   weight: 2
   title: Contact
 main:
+- weight: 2
+  url: "/despre-noi/"
+  title: Despre noi
 - url: "/shops/"
   weight: 1
-  title: Acasa
-- url: "/despre-noi/"
-  weight: 3
-  title: Despre noi
+  title: Shops
 - url: "/contact/"
-  weight: 5
+  weight: 3
   title: Contact
