@@ -1,5 +1,5 @@
 ---
-image: "/placeholder-shop.jpg"
+image: "/images/shops/placeholder-shop.jpg"
 layout: shop
 title: Test SRL
 featured: true
@@ -7,8 +7,9 @@ facebook: www.facebook.com
 instagram: ''
 website: ''
 category:
-- Test
-- Test
+- '5'
+- '2'
+- '1'
 published: false
 
 ---
