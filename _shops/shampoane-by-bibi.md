@@ -1,7 +1,6 @@
 ---
 title: "Shampoane by Bibi"
-date: 2018-11-18T12:33:46+10:00
-image: beauty.jpg
+image: "/beauty.jpg"
 featured: false
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"

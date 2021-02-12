@@ -7,4 +7,5 @@ gem 'eventmachine'
 
 group :jekyll_plugins do
     gem "jekyll-paginate-v2"
+    gem "jekyll-menus"
   end

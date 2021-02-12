@@ -1,7 +1,6 @@
 ---
 title: "Dupa Blocuri"
-date: 2018-11-18T12:33:46+10:00
-image: shop.jpg
+image: "/shop.jpg"
 featured: false
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"

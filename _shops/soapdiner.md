@@ -1,7 +1,6 @@
 ---
 title: "Soap Diner"
-date: 2018-11-18T12:33:46+10:00
-image: soap.jpg
+image: "/soap.jpg"
 featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"

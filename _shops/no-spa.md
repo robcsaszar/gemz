@@ -1,7 +1,6 @@
 ---
 title: "No Spa SRL"
-date: 2018-11-18T12:33:46+10:00
-image: salon.jpg
+image: "/salon.jpg"
 featured: false
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"

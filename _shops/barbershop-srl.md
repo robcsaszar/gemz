@@ -1,7 +1,6 @@
 ---
 title: "Barbershop SRL"
-date: 2018-11-18T12:33:46+10:00
-image: barber.jpg
+image: "/barber.jpg"
 featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"

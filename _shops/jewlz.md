@@ -1,7 +1,6 @@
 ---
 title: "Jewlz"
-date: 2018-11-18T12:33:46+10:00
-image: jewelry.jpg
+image: "/jewelry.jpg"
 featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"
