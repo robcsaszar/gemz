@@ -12,7 +12,7 @@ fields:
 - type: file
   name: image
   label: Cover
-  default: "/images/shops/placeholder-shop.jpg"
+  default: "/placeholder-shop.jpg"
 - type: boolean
   name: featured
   label: Featured
@@ -25,21 +25,16 @@ fields:
 - type: text
   name: website
   label: Website
-- type: list
+- type: select
   name: category
   label: Categorie
   config:
-    use_select: true
+    required: true
+    options: []
     source:
-      type: simple
+      type: pages
       section: categories
-    options:
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - '5'
-    - '6'
+      file: _data/categories.yaml
 - type: text
   name: layout
   label: Layout
