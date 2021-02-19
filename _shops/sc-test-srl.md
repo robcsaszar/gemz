@@ -7,6 +7,8 @@ facebook: facebook.com
 instagram: insta.com
 website: ''
 category:
+- Alimente
+- Arta
 - Accesorii
 - Agricultura
 published: false
