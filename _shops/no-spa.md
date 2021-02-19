@@ -3,7 +3,7 @@ title: No Spa SRL
 image: "/salon.jpg"
 featured: false
 facebook: https://facebook.com/
-instagram: https://instagram.com/
+instagram: ''
 website: https://nhg.design/
 category:
 - Sanatate
