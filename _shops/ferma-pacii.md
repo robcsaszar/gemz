@@ -4,8 +4,9 @@ image: "/farm.jpg"
 featured: false
 facebook: https://facebook.com/
 instagram: https://instagram.com/
-website: https://nhg.design/
-category: Alimente Agricultura
+website: ''
+category:
+- Agricultura
 layout: shop
 
 ---
