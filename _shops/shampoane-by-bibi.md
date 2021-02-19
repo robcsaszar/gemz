@@ -1,14 +1,14 @@
 ---
-title: "Shampoane by Bibi"
+title: Shampoane by Bibi
 image: "/beauty.jpg"
-featured: true
-facebook: "https://facebook.com/"
-instagram: "https://instagram.com/"
-website: "https://nhg.design/"
+featured: false
+facebook: https://facebook.com/
+instagram: https://instagram.com/
+website: https://nhg.design/
 category: Beauty Sanatate
 layout: shop
----
 
+---
 Shampoo (/ʃæmˈpuː/) is a hair care product, typically in the form of a viscous liquid, that is used for cleaning hair. Less commonly, shampoo is available in bar form, like a bar of soap. Shampoo is used by applying it to wet hair, massaging the product into the scalp, and then rinsing it out. Some users may follow a shampooing with the use of hair conditioner.
 
 The typical reason of using shampoo is to remove the unwanted build-up of sebum in the hair without stripping out so much as to make hair unmanageable. Shampoo is generally made by combining a surfactant, most often sodium lauryl sulfate or sodium laureth sulfate, with a co-surfactant, most often cocamidopropyl betaine in water. The sulphate ingredient acts as a surfactant, essentially heavy-duty soap that makes it easier to trap oil and grease.
