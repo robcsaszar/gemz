@@ -5,7 +5,9 @@ featured: false
 facebook: https://facebook.com/
 instagram: https://instagram.com/
 website: https://nhg.design/
-category: Beauty Relaxare Servicii
+category:
+- Sanatate
+- Relaxare
 layout: shop
 
 ---
