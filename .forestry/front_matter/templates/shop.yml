@@ -45,6 +45,7 @@ fields:
   hidden: true
   default: shop
 pages:
+- _shops/jewlz.md
 - _shops/no-spa.md
 - _shops/sc-test-srl.md
 - _shops/shampoane-by-bibi.md

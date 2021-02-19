@@ -2,10 +2,12 @@
 title: Jewlz
 image: "/jewelry.jpg"
 featured: false
-facebook: https://facebook.com/
+facebook: ''
 instagram: https://instagram.com/
 website: https://nhg.design/
-category: Bijuterii Accesorii
+category:
+- Bijuterii
+- Accesorii
 layout: shop
 
 ---
