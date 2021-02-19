@@ -7,11 +7,11 @@ facebook: facebook.com
 instagram: insta.com
 website: ''
 category:
-- Alimente
-- Arta
-- Accesorii
-- Agricultura
+- Bauturi
+- Publicatii
 published: false
 
 ---
+![](/images/shops/social/og_metatag.png)
+
 Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
