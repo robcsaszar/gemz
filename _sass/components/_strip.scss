@@ -5,16 +5,21 @@
 .strip-white {
   background-color: white;
 }
+
+.strip-offwhite {
+  background: $white-offset;
+}
+
 .strip-featured {
   background-color: #FEEEEB;
 }
 
 .strip-diagonal {
-  transform: skewY(5deg);
+  transform: skewY(3deg);
   padding-bottom: 50px;
   margin-bottom: 65px;
   > div {
-    transform: skewY(-5deg);
+    transform: skewY(-3deg);
   }
 }
 .strip-primary-gradient {
