@@ -5,7 +5,8 @@ featured: false
 facebook: https://facebook.com/
 instagram: ''
 website: ''
-category: Beauty Sanatate
+category:
+- Beauty Sanatate
 layout: shop
 
 ---
