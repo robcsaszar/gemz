@@ -1,14 +1,16 @@
 ---
-title: "Barbershop SRL"
+title: Barbershop SRL
 image: "/barber.jpg"
-featured: true
-facebook: "https://facebook.com/"
-instagram: ""
-website: ""
-category: [Beauty, Servicii]
+featured: false
+facebook: https://facebook.com/
+instagram: ''
+website: ''
+category:
+- Beauty
+- Servicii
 layout: shop
----
 
+---
 A barber is a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums. They are the locations of open debates, voicing public concerns, and engaging citizens in discussions about contemporary issues.
 
 In previous times, barbers (**known as barber surgeons**) also performed surgery and dentistry. With the development of safety razors and the decreasing prevalence of beards, in Anglophonic cultures, most barbers now specialize in cutting men's scalp hair as opposed to facial hair.
