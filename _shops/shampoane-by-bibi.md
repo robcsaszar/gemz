@@ -6,7 +6,8 @@ facebook: https://facebook.com/
 instagram: ''
 website: ''
 category:
-- Beauty Sanatate
+- Sanatate
+- Beauty
 layout: shop
 
 ---
