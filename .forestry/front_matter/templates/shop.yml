@@ -45,6 +45,7 @@ fields:
   hidden: true
   default: shop
 pages:
+- _shops/barbershop-srl.md
 - _shops/ferma-pacii.md
 - _shops/jewlz.md
 - _shops/no-spa.md

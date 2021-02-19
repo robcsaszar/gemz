@@ -6,8 +6,9 @@ facebook: https://facebook.com/
 instagram: ''
 website: ''
 category:
+- Sanatate
+- Relaxare
 - Beauty
-- Servicii
 layout: shop
 
 ---
