@@ -13,6 +13,84 @@ main:
 - url: "/shops/"
   weight: 1
   title: Shops
+- weight: 2
+  title: Categorii
+  children:
+    - weight: 1
+      title: De purtat
+      children: 
+        - url: "/categorii/imbracaminte"
+          weight: 1
+          title: Imbracaminte
+        - url: "/categorii/incaltaminte"
+          weight: 2
+          title: Incaltaminte
+        - url: "/categorii/accesorii-si-bijuterii"
+          weight: 3
+          title: Accesorii si bijuterii
+        - url: "/categorii/haine-si-accesorii-copii"
+          weight: 4
+          title: Haine si accesorii pentru copii
+    - weight: 2
+      title: De consumat
+      children: 
+        - url: "/categorii/alimente"
+          weight: 1
+          title: Alimente
+        - url: "/categorii/bauturi"
+          weight: 2
+          title: Bauturi
+        - url: "/categorii/diete"
+          weight: 3
+          title: Diete
+        - url: "/categorii/hrana-animale"
+          weight: 4
+          title: Hrana animale          
+    - weight: 3
+      title: Pentru timpul liber
+      children: 
+        - url: "/categorii/hobby"
+          weight: 1
+          title: Hobby
+        - url: "/categorii/arta"
+          weight: 2
+          title: Arta
+        - url: "/categorii/turism"
+          weight: 3
+          title: Turism
+        - url: "/categorii/carti-si-publicatii"
+          weight: 4
+          title: Carti si publicatii
+        - url: "/categorii/cursuri"
+          weight: 5
+          title: Carti si publicatii          
+        - url: "/categorii/gaming"
+          weight: 6
+          title: Gaming
+        - url: "/categorii/it"
+          weight: 7
+          title: IT
+        - url: "/categorii/agricultura"
+          weight: 8
+          title: Agricultura
+        - url: "/categorii/amenajare-si-constructii"
+          weight: 9
+          title: Amenajare si constructii
+    - weight: 4
+      title: Pentru cei dragi
+      children: 
+        - url: "/categorii/cadouri"
+          weight: 1
+          title: Cadouri
+        - url: "/categorii/jucarii"
+          weight: 2
+          title: Jucarii
+        - url: "/categorii/veterinar"
+          weight: 3
+          title: Veterinar
+        - url: "/categorii/gaming"
+          weight: 4
+          title: Gaming          
 - url: "/contact/"
   weight: 3
   title: Contact

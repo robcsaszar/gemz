@@ -3,7 +3,11 @@
   <ul>
     {% for item in mainmenu %}
     <li class="{% if item.url == page.url %}active{% endif %}">
+      {% if item.url %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% else %}
+      <span class="menu-text">{{ item.title }}</span>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>

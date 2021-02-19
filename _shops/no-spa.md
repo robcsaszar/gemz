@@ -1,7 +1,7 @@
 ---
 title: "No Spa SRL"
 image: "/salon.jpg"
-featured: false
+featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"
 website: "https://nhg.design/"

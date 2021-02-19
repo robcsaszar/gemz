@@ -1,10 +1,44 @@
-<div id="main-menu" class="main-menu">
-  {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
-  <ul>
+<div class="logo">
+    <a href="{{site.baseurl}}/"><img height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
+</div>
+<div class="logo-mobile">
+    <a href="{{site.baseurl}}/"><img alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+</div>
+{% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
+<ul>
     {% for item in mainmenu %}
     <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% if item.url %}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% else %}
+            <span class="menu-text">{{ item.title }}</span>
+        {% endif %}
+        {% if item.children %}
+        <ul class="sub-menu">
+            {% for item in item.children %}
+            <li class="menu-item-{{ forloop.index }}">
+                {% if item.url %}
+                    <a href="{{ item.url | relative_url }}" title="go to {{ item.title }}">{{ item.title }}</a>
+                {% else %}
+                    <span class="menu-item-text">{{ item.title }}</span>
+                {% endif %}
+                {% if item.children %}
+                <ul class="sub-sub-menu">
+                    {% for item in item.children %}
+                    <li class="sub-menu-item-{{ forloop.index }}">
+                        {% if item.url %}
+                            <a href="{{ item.url | relative_url }}" title="go to {{ item.title }}">{{ item.title }}</a>
+                        {% else %}
+                            <span class="sub-menu-item-text">{{ item.title }}</span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </li>
     {% endfor %}
-  </ul>
-</div>
+</ul>

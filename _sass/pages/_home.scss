@@ -74,12 +74,19 @@
   bottom: 0;
   right: 0;
   margin: 0.5rem;
+  justify-content: space-between;
+  display: flex;
 
   .card-link {
     @extend %fa-icon;
 
     color: $white-offset;
     transition: all 0.2s;
+    margin-left: 0.25rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &:hover {
       color: darken($white-offset, 20%);

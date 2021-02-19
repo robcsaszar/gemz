@@ -3,8 +3,8 @@ title: "Barbershop SRL"
 image: "/barber.jpg"
 featured: true
 facebook: "https://facebook.com/"
-instagram: "https://instagram.com/"
-website: "https://nhg.design/"
+instagram: ""
+website: ""
 category: [Beauty, Servicii]
 layout: shop
 ---

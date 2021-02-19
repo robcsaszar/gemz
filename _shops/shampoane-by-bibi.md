@@ -1,7 +1,7 @@
 ---
 title: "Shampoane by Bibi"
 image: "/beauty.jpg"
-featured: false
+featured: true
 facebook: "https://facebook.com/"
 instagram: "https://instagram.com/"
 website: "https://nhg.design/"

@@ -3,7 +3,7 @@ title: Soap Diner
 image: "/soap.jpg"
 featured: true
 facebook: https://facebook.com/
-instagram: ''
+instagram: test.com
 website: ''
 category:
 - Sanatate

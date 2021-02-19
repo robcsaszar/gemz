@@ -1,24 +1,37 @@
-.main-menu {
-  display: none;
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
+.container {
   > ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
     > li {
-      list-style: none;
-      font-size: 1rem;
-      > a {
-        padding: 10px 12px 10px 12px;
-        display: inline-block;
-        font-weight: normal;
+      padding: 0;
+      margin: 0;
+      a, .menu-text {
         text-decoration: none;
-        color: $primary;
-        &:hover {
-          text-decoration: underline;
-        }
+        padding: 0.75em 1.5em;
+        display: block;
+        transition: all 0.5s;
+        font-weight: 500;
+      }
+      > .menu-text {
+        cursor: default;
+      }
+      &:hover {
+        background: $white-offset;
+        border-radius: 4px 4px 0 0;
+        color: darken($white-offset, 50%);
       }
       &.active {
         > a {
@@ -30,6 +43,93 @@
           }
         }
       }
+      > ul {
+        display: none;
+        width: 150%;
+        background: $white-offset;
+        border-radius: 4px;
+        padding: 1rem;
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+        }
+        &:after {
+          clear: both;
+        }
+        > li {
+          margin: 0;
+          padding-bottom: 0;
+          list-style: none;
+          width: 25%;
+          background: none;
+          float: left;
+          a {
+            color: $gray-800;
+            padding: .2em 0;
+            width: 95%;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            &:hover {
+              color: $primary;
+            }
+          }
+          > .menu-item-text {
+            cursor: default;
+          }
+          > ul {
+            display: block;
+            padding: 0;
+            margin: 10px 0 0;
+            list-style: none;
+            box-sizing: border-box;
+            &:before,
+            &:after {
+              content: "";
+              display: table;
+            }
+            &:after {
+              clear: both;
+            }
+            > li {
+              float: left;
+              width: 100%;
+              padding: 0.25rem 0;
+              margin: 0;
+              font-size: .8em;
+              font-weight: 500;
+              a {
+                border: 0;
+              }
+            }
+          }
+        }
+        &.normal-sub {
+          width: 300px;
+          left: auto;
+          padding: 10px 20px;
+          > li {
+            width: 100%;
+            a {
+              border: 0;
+              padding: 1em 0;
+            }
+          }
+        }
+      }
     }
   }
+}
+
+.menu-item-text {
+  color: darken($white-offset, 50%);
+  font-weight: 500;
 }
