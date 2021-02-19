@@ -18,7 +18,7 @@
             {% for item in item.children %}
             <li class="menu-item-{{ forloop.index }}">
                 {% if item.url %}
-                    <a href="{{ item.url | relative_url }}" title="go to {{ item.title }}">{{ item.title }}</a>
+                    <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
                 {% else %}
                     <span class="menu-item-text">{{ item.title }}</span>
                 {% endif %}
@@ -27,7 +27,7 @@
                     {% for item in item.children %}
                     <li class="sub-menu-item-{{ forloop.index }}">
                         {% if item.url %}
-                            <a href="{{ item.url | relative_url }}" title="go to {{ item.title }}">{{ item.title }}</a>
+                            <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
                         {% else %}
                             <span class="sub-menu-item-text">{{ item.title }}</span>
                         {% endif %}

@@ -1,7 +1,7 @@
 ---
 title: Jewlz
 image: "/jewelry.jpg"
-featured: false
+featured: true
 facebook: ''
 instagram: https://instagram.com/
 website: https://nhg.design/

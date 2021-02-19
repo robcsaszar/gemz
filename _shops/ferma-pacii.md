@@ -1,8 +1,8 @@
 ---
 title: Ferma Păcii
 image: "/farm.jpg"
-featured: false
-facebook: https://facebook.com/
+featured: true
+facebook: ''
 instagram: https://instagram.com/
 website: ''
 category:

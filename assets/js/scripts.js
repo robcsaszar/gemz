@@ -37,7 +37,9 @@ $(document).ready(function() {
 
     var randomIndexUsed = [];
     var counter = 0;
-    var numberOfShops = 3;
+    var displayedShops = 3;
+    var numberOfShops = featuredShops.length < displayedShops ? featuredShops.length : displayedShops;
+    
 
     while (counter < numberOfShops) {
         var randomIndex;
@@ -51,7 +53,7 @@ $(document).ready(function() {
         var hasInstagram;
         var hasWebsite;
 
-        randomIndex = Math.floor(Math.random() * shopsHREF.length);
+        randomIndex = Math.floor(Math.random() * featuredShops.length);
 
         if (randomIndexUsed.indexOf(randomIndex) == "-1") {
             shopUrl = featuredShops[randomIndex]["url"]; 
@@ -61,7 +63,7 @@ $(document).ready(function() {
             shopWebsite = featuredShops[randomIndex]["website"];
             shopImage = featuredShops[randomIndex]["image"];
 
-            hasFacebook = shopFacebook.length === 0 ? null : "<a aria-label='Facebook' class='card-link facebook' href='" + shopFacebook + "'></a>";
+            hasFacebook = shopFacebook.length === 0 ? '' : "<a aria-label='Facebook' class='card-link facebook' href='" + shopFacebook + "'></a>";
 
             hasInstagram = shopInstagram.length === 0 ? '' : "<a aria-label='Instagram' class='card-link instagram' href='" + shopInstagram + "'></a>";
             
