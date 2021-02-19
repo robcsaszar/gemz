@@ -1,7 +1,7 @@
 ---
 title: Soap Diner
 image: "/soap.jpg"
-featured: true
+featured: false
 facebook: https://facebook.com/
 instagram: test.com
 website: ''
