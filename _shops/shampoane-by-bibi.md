@@ -3,8 +3,8 @@ title: Shampoane by Bibi
 image: "/beauty.jpg"
 featured: false
 facebook: https://facebook.com/
-instagram: https://instagram.com/
-website: https://nhg.design/
+instagram: ''
+website: ''
 category: Beauty Sanatate
 layout: shop
 
