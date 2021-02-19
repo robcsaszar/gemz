@@ -1,6 +1,6 @@
 ---
 title: "Accesorii"
 image: "/accesorii.jpg"
-category: Alimente
+category: Accesorii
 layout: category
 ---

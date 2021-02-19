@@ -63,7 +63,7 @@ main:
           title: Carti si publicatii
         - url: "/categorii/cursuri"
           weight: 5
-          title: Carti si publicatii          
+          title: Cursuri         
         - url: "/categorii/gaming"
           weight: 6
           title: Gaming

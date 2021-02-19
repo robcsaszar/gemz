@@ -5,9 +5,10 @@
 .strip-white {
   background-color: white;
 }
-.strip-grey {
-  background-color: $white-offset;
+.strip-featured {
+  background-color: #FEEEEB;
 }
+
 .strip-diagonal {
   transform: skewY(5deg);
   padding-bottom: 50px;
