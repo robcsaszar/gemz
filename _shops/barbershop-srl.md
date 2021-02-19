@@ -1,7 +1,7 @@
 ---
 title: Barbershop SRL
 image: "/barber.jpg"
-featured: false
+featured: true
 facebook: https://facebook.com/
 instagram: ''
 website: ''
