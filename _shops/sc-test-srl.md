@@ -2,7 +2,7 @@
 image: "/placeholder-shop.jpg"
 layout: shop
 title: SC Test SRL
-featured: true
+featured: false
 facebook: facebook.com
 instagram: insta.com
 website: ''
@@ -12,6 +12,6 @@ category:
 published: false
 
 ---
-![](/images/shops/social/og_metatag.png)
+![](/images/shops/shops/salon.jpg)
 
 Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
