@@ -1,0 +1,43 @@
+.wrapper.login {
+  background: $brown-cafeaulait !important;
+  font-weight: 500 !important;
+
+  .login-form--container {
+    .login-form--card {
+      box-shadow: none !important;
+      background: $white-offset !important;
+
+      +div p {
+        color: $white !important;
+        text-transform: lowercase !important;
+      }
+    }
+
+    .login-form--logo {
+      height: 10rem !important;
+      margin: 0 !important;
+    }
+
+    .login-form--button .button {
+      background: $primary !important;
+      height: 100% !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-bottom: 1px solid $primary !important;
+    }
+
+    .forgot-password {
+        color: $white !important;
+        font-size: 0.8rem;
+        background: $brown-coffee;
+        margin-bottom: 0 !important;
+        padding: 0.75rem 1rem !important;
+        border: 0 !important;
+        border-radius: 4px;
+        transition: all 320ms ease;
+    }
+  }
+}
