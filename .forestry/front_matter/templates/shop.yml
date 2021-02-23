@@ -64,6 +64,8 @@ fields:
     config:
       required: false
     label: Street
+    description: Numele străzii, inclusiv numărul și eventuale scări sau numere de
+      apartament.
   - name: postcode
     type: text
     config:
