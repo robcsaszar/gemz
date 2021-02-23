@@ -14,6 +14,11 @@ sections:
 - type: heading
   label: DEVELOPMENT
 - type: directory
+  path: _data
+  label: Data
+  create: all
+  match: "**/*"
+- type: directory
   path: _categories
   label: Categories
   create: all
