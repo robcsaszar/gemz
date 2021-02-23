@@ -12,6 +12,15 @@ socials:
   website: ''
   telephone: '0732550678'
   email: robert@nhg.design
+physical_address: false
+address:
+  street: ''
+  city: ''
+  postcode: ''
+  county: ''
+  country: ''
+date: 2021-01-31 00:00:00 +0200
+
 ---
 A spa is a location where mineral-rich spring water (and sometimes seawater) is used to give medicinal baths. Spa towns or spa resorts (including hot springs resorts) typically offer various health treatments, which are also known as balneotherapy. The belief in the curative powers of mineral waters goes back to prehistoric times. Such practices have been popular worldwide, but are especially widespread in Europe and Japan. Day spas are also quite popular and offer various personal care treatments.
 
