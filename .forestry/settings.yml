@@ -18,7 +18,7 @@ sections:
   label: Data
   create: all
   match: "**/*"
-upload_dir: images
+upload_dir: images/shops
 public_path: "/images/shops"
 front_matter_path: ''
 use_front_matter_path: false
