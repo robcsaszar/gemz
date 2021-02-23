@@ -6,3 +6,11 @@
     font-size: 50px;
   }
 }
+
+.category-tag {
+  text-transform: uppercase;
+  color: $grey-silver;
+  font-weight: 700;
+  letter-spacing: $expanded;
+  font-size: 1.25rem;
+}
