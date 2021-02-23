@@ -9,10 +9,19 @@ category:
 layout: shop
 socials:
   instagram: ''
-  facebook: 'Barbershop'
+  facebook: Barbershop
   website: https://Barbershop.design
   telephone: '0732550678'
   email: robert@Barbershop.design
+physical_address: false
+address:
+  street: ''
+  city: ''
+  postcode: ''
+  county: ''
+  country: ''
+date: 2021-01-31 00:00:00 +0200
+
 ---
 A barber is a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums. They are the locations of open debates, voicing public concerns, and engaging citizens in discussions about contemporary issues.
 
