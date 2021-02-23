@@ -6,8 +6,8 @@ facebook: https://facebook.com/
 instagram: ''
 website: https://nhg.design/
 category:
-- Sanatate
 - Relaxare
+- Sănătate
 layout: shop
 
 ---
