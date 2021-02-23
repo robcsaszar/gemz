@@ -25,7 +25,7 @@ fields:
     source:
       type: documents
       section: categories
-      file: _categories/_categories.yml
+      file: _categories/categories.yml
       path: categories
   label: Category
 - type: text
