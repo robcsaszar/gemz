@@ -23,7 +23,7 @@ fields:
     min: 1
     max: 
     source:
-      type: pages
+      type: documents
       section: categories
       file: _categories/categories.yml
       path: ''
