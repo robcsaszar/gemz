@@ -39,6 +39,25 @@ fields:
   label: Website
   showOnly:
     value: false
+- name: telephone
+  type: number
+  label: Telefon
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: adress
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Adresa
 - type: text
   name: layout
   label: Layout
