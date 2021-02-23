@@ -6,8 +6,9 @@ facebook: https://facebook.com/
 instagram: ''
 website: ''
 category:
-- _categories/accesorii.md
 - _categories/frumusețe.md
+- _categories/sănătate.md
+- _categories/accesorii.md
 layout: shop
 
 ---
