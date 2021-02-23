@@ -95,6 +95,7 @@ fields:
       required: false
     label: Country
     default: România
+    hidden: true
   label: Address
   description: Adaugă adresa fizică a shopului.
 - type: text
