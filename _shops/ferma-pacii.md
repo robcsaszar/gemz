@@ -6,7 +6,8 @@ facebook: ''
 instagram: https://instagram.com/
 website: ''
 category:
-- Agricultura
+- Alimente
+- Agricultură
 layout: shop
 
 ---
