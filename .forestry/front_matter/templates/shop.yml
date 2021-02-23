@@ -65,6 +65,8 @@ fields:
       required: false
     label: E-mail
   label: Socials
+  description: Adaugă link-uri către rețele de socializare, numărul de telefon, sau
+    o adresă de e-mail
 - name: physical_address
   type: boolean
   description: Adresă fizică disponibilă
