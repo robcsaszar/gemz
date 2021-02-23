@@ -6,8 +6,8 @@ facebook: https://facebook.com/
 instagram: test.com
 website: ''
 category:
-- Sanatate
-- Beauty
+- Frumusețe
+- Sănătate
 layout: shop
 
 ---
