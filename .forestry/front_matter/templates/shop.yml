@@ -34,17 +34,18 @@ fields:
 - type: text
   name: facebook
   label: Facebook
-  description: Adaugă un link către pagina de Facebook.
+  description: Username care duce către pagina de Facebook
 - type: text
   name: instagram
   label: Instagram
-  description: Adaugă un link către pagina de Instagram.
+  description: Username-ul paginii de Instagram.
 - type: text
   name: website
   label: Website
   showOnly:
     value: false
-  description: Adaugă un link către pagina web a shopului.
+  description: Link-ul complet către pagina web (trebuie sa includa si 'https://'
+    sau 'http://')
 - name: telephone
   type: number
   label: Telephone
