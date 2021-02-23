@@ -126,17 +126,6 @@ fields:
   label: Layout
   hidden: true
   default: shop
-- name: date
-  type: datetime
-  label: Date
-  description: ''
-  config:
-    required: false
-    date_format: DD/MM/YYYY
-    time_format: 
-    display_utc: false
-    export_format: YYYY-MM-DD h:mm A
-  default: now
 pages:
 - _shops/barbershop-srl.md
 - _shops/ferma-pacii.md
