@@ -34,7 +34,7 @@ fields:
 - type: text
   name: facebook
   label: Facebook
-  description: Username care duce către pagina de Facebook
+  description: Username care duce către pagina de Facebook ("https://facebook.com/<strong><em>username</em></strong><em>"</em>)
 - type: text
   name: instagram
   label: Instagram
