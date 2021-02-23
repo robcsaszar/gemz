@@ -1,96 +1,148 @@
 ---
-footer:
-- url: "/"
-  weight: 1
-  title: Acasa
-- url: "/contact/"
-  weight: 2
-  title: Contact
 main:
-- weight: 2
-  url: "/despre-noi/"
-  title: Despre noi
-- url: "/shops/"
+- title: Shops
+  url: "/shops/"
   weight: 1
-  title: Shops
-- weight: 2
-  title: Categorii
+
+- title: Categorii
+  weight: 2
   children:
-    - weight: 1
-      title: De purtat
-      children: 
-        - url: "/categorii/imbracaminte"
+
+    - title: De purtat
+      weight: 1
+      children:
+
+        - title: Accesorii
+          url: "/categories/accesorii"
           weight: 1
-          title: Imbracaminte
-        - url: "/categorii/incaltaminte"
+
+        - title: Bijuterii
+          url: "/categories/bijuterii"
           weight: 2
-          title: Incaltaminte
-        - url: "/categorii/accesorii-si-bijuterii"
+
+        - title: Îmbrăcăminte
+          url: "/categories/îmbrăcăminte"
           weight: 3
-          title: Accesorii si bijuterii
-        - url: "/categorii/haine-si-accesorii-copii"
+
+        - title: Încălțăminte
+          url: "/categories/încălțăminte"
           weight: 4
-          title: Haine si accesorii pentru copii
-    - weight: 2
-      title: De consumat
-      children: 
-        - url: "/categorii/alimente"
-          weight: 1
-          title: Alimente
-        - url: "/categorii/bauturi"
-          weight: 2
-          title: Bauturi
-        - url: "/categorii/diete"
-          weight: 3
-          title: Diete
-        - url: "/categorii/hrana-animale"
-          weight: 4
-          title: Hrana animale          
-    - weight: 3
-      title: Pentru timpul liber
-      children: 
-        - url: "/categorii/hobby"
-          weight: 1
-          title: Hobby
-        - url: "/categorii/arta"
-          weight: 2
-          title: Arta
-        - url: "/categorii/turism"
-          weight: 3
-          title: Turism
-        - url: "/categorii/carti-si-publicatii"
-          weight: 4
-          title: Carti si publicatii
-        - url: "/categorii/cursuri"
+          
+        - title: Pentru copii
+          url: "/categories/pentru-copii"
           weight: 5
-          title: Cursuri         
-        - url: "/categorii/gaming"
-          weight: 6
-          title: Gaming
-        - url: "/categorii/it"
-          weight: 7
-          title: IT
-        - url: "/categorii/agricultura"
-          weight: 8
-          title: Agricultura
-        - url: "/categorii/amenajare-si-constructii"
-          weight: 9
-          title: Amenajare si constructii
-    - weight: 4
-      title: Pentru cei dragi
-      children: 
-        - url: "/categorii/cadouri"
+
+    - title: Alimentație
+      weight: 2
+      children:
+
+        - title: Agricultură
+          url: "/categories/agricultură"
           weight: 1
-          title: Cadouri
-        - url: "/categorii/jucarii"
+          
+        - title: Alimente
+          url: "/categories/alimente"
           weight: 2
-          title: Jucarii
-        - url: "/categorii/veterinar"
+          
+        - title: Băuturi
+          url: "/categories/băuturi"
           weight: 3
-          title: Veterinar
-        - url: "/categorii/gaming"
+          
+        - title: Diete 
+          url: "/categories/diete"
           weight: 4
-          title: Gaming          
-- url: "/contact/"
+                            
+        - title: Hrană animale 
+          url: "/categories/hrană-animale"
+          weight: 5
+
+    - title: Sănătate și recreere
+      weight: 3
+      children:
+
+        - title: Cursuri și training
+          url: "/categories/cursuri-și-training"
+          weight: 1
+          
+        - title: Gaming
+          url: "/categories/gaming"
+          weight: 2
+          
+        - title: Jucării
+          url: "/categories/jucării"
+          weight: 3
+          
+        - title: Relaxare
+          url: "/categories/relaxare"
+          weight: 4
+          
+        - title: Sănătate
+          url: "/categories/sănătate"
+          weight: 5
+                   
+        - title: Sport
+          url: "/categories/sport"
+          weight: 6
+          
+        - title: Turism
+          url: "/categories/turism"
+          weight: 7
+          
+        - title: Veterinar
+          url: "/categories/veterinar"
+          weight: 8
+
+    - title: Timp liber
+      weight: 4
+      children:
+
+        - title: Amenajare și construcții
+          url: "/categories/amenajare-și-construcții"
+          weight: 1
+          
+        - title: Artă
+          url: "/categories/artă"
+          weight: 2
+          
+        - title: Auto
+          url: "/categories/auto"
+          weight: 3
+          
+        - title: Cadouri
+          url: "/categories/cadouri"
+          weight: 4
+                    
+        - title: Cărți și publicații
+          url: "/categories/cărți-și-publicații"
+          weight: 5
+                    
+        - title: Casă și grădină
+          url: "/categories/casă-și-grădină"
+          weight: 6
+                    
+        - title: Hobby
+          url: "/categories/hobby"
+          weight: 7
+                    
+        - title: IT
+          url: "/categories/it"
+          weight: 8
+                    
+        - title: Online
+          url: "/categories/online"
+          weight: 9
+- title: Despre noi
+  url: "/despre-noi/"
   weight: 3
-  title: Contact
+  
+- title: Contact
+  url: "/contact/"
+  weight: 4
+
+footer:
+- title: Acasa
+  url: "/"
+  weight: 1
+- title: Contact
+  url: "/contact/"
+  weight: 2

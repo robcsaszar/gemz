@@ -10,7 +10,7 @@ layout: default
         {% if page.category %}
         Categorii: 
           {% for category in page.category %}
-            {{ category }}
+          <a href="/categories/{{ category | downcase }}">{{ category }}</a>
           {% endfor %}
         {% endif %}
         <hr>
