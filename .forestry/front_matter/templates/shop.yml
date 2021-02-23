@@ -31,31 +31,40 @@ fields:
       path: categories
   label: Category
   description: Selectează minim o categorie din listă.
-- type: text
-  name: facebook
-  label: Facebook
-  description: Username care duce către pagina de Facebook [<em>https://facebook.com/</em><strong><em>username</em></strong>]
-- type: text
-  name: instagram
-  label: Instagram
-  description: Username-ul paginii de Instagram. [<em>https://instagram.com/</em><strong><em>username</em></strong>]
-- type: text
-  name: website
-  label: Website
-  showOnly:
-    value: false
-  description: Link-ul complet către pagina web [trebuie să includă <strong><em>https://</em></strong>
-    sau <strong><em>http://</em></strong>]
-- name: telephone
-  type: number
-  label: Telephone
-  description: Adaugă un număr de telefon.
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
+- name: socials
+  type: field_group
+  config: {}
+  fields:
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+    description: Username-ul paginii de Instagram [<em>https://instagram.com/</em><strong><em>username</em></strong>]
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+    description: Username-ul paginii de Facebook [<em>https://facebook.com/</em><strong><em>username</em></strong>]
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+    description: Link-ul complet către pagina web [trebuie să includă <strong><em>https://</em></strong>
+      sau <strong><em>http://</em></strong>]
+  - name: telephone
+    type: text
+    config:
+      required: false
+    label: Telefon
+  - name: email
+    type: text
+    config:
+      required: false
+    label: E-mail
+  label: Socials
 - name: physical_address
   type: boolean
   description: Adresă fizică disponibilă
