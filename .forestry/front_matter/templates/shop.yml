@@ -50,13 +50,29 @@ fields:
     max: 
     step: 
 - name: adress
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
+  type: field_group
+  config: {}
+  fields:
+  - name: street
+    type: text
+    config:
+      required: false
+    label: Strada
+  - name: postcode
+    type: text
+    config:
+      required: false
+    label: Cod postal
+  - name: city
+    type: text
+    config:
+      required: false
+    label: Oras
+  - name: country
+    type: text
+    config:
+      required: false
+    label: Tara
   label: Adresa
 - type: text
   name: layout
