@@ -7,6 +7,22 @@ layout: default
     <div class="col-12 col-md-8">
       <div class="service service-single">
         <h1 class="title">{{page.title}}</h1>
+        <div class="shop-details">
+          <div class="shop-address">
+            {% if page.address %}
+              {%- assign street = page.address | map: 'street' -%}
+              {%- assign city = page.address | map: 'city' -%}
+              {%- assign postcode = page.address | map: 'postcode' -%}
+              {%- assign county = page.address | map: 'county' -%}
+              {%- assign country = page.address | map: 'country' -%}
+              {{street}}
+              {{city}}, {% if postcode %}
+              {{postcode}} - 
+              {% endif %}{{county}}, {{country}}
+
+            {% endif %}
+          </div>
+        </div>
         {% if page.category %}
         Categorii: 
           {% for category in page.category %}

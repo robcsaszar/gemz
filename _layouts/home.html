@@ -45,10 +45,10 @@ bodyClass: page-home
                     {% endif %}
                     <div class="card-social">
                         {% if shop.facebook != '' %}
-                        <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook }}"></a>
+                        <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook | prepend: 'https://facebook.com/' }}"></a>
                         {% endif %}
                         {% if shop.instagram != '' %}
-                        <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram }}"></a>
+                        <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram | prepend: 'https://instagram.com/' }}"></a>
                         {% endif %}
                         {% if shop.website != '' %}
                         <a aria-label="Website" class="card-link website" href="{{ shop.website }}"></a>

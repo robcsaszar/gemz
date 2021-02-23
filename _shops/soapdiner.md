@@ -10,7 +10,6 @@ category:
 - Sănătate
 layout: shop
 telephone: '0732550678'
-adress: ''
 address:
   street: Napoca 4, ap. 64
   postcode: "400000"
