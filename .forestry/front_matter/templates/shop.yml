@@ -52,8 +52,7 @@ fields:
     config:
       required: false
     label: Website
-    description: Link-ul complet către pagina web [trebuie să includă <strong><em>https://</em></strong>
-      sau <strong><em>http://</em></strong>]
+    description: Link-ul complet către pagina web
   - name: telephone
     type: text
     config:
