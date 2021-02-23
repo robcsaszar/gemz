@@ -26,7 +26,7 @@ fields:
       type: documents
       section: categories
       file: _categories/categories.yml
-      path: categories
+      path: ''
   label: Category
 - type: text
   name: facebook
