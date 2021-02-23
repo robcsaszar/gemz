@@ -34,11 +34,11 @@ fields:
 - type: text
   name: facebook
   label: Facebook
-  description: Username care duce către pagina de Facebook ("https://facebook.com/<strong><em>username</em></strong><em>"</em>)
+  description: Username care duce către pagina de Facebook [<em>https://facebook.com/</em><strong><em>username</em></strong>]
 - type: text
   name: instagram
   label: Instagram
-  description: Username-ul paginii de Instagram.
+  description: Username-ul paginii de Instagram. [<em>https://instagram.com/</em><strong><em>username</em></strong>]
 - type: text
   name: website
   label: Website
