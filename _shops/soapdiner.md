@@ -14,7 +14,7 @@ address:
   street: Napoca 4, ap. 64
   postcode: "400000"
   city: Cluj-Napoca
-  country: ''
+  country: România
   county: Cluj
 physical_address: true
 
