@@ -11,6 +11,13 @@ sections:
   label: Shops
   create: all
   match: "**/*"
+- type: heading
+  label: DEVELOPMENT
+- type: directory
+  path: _categories
+  label: Categories
+  create: all
+  match: "**/_*"
 upload_dir: images
 public_path: "/images/shops"
 front_matter_path: ''
