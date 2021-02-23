@@ -26,8 +26,8 @@ fields:
     max: 
     source:
       type: documents
-      section: categories
-      file: _categories/_categories.md
+      section: data
+      file: _data/categories.yml
       path: categories
   label: Category
   description: Selectează minim o categorie din listă.
@@ -66,6 +66,19 @@ fields:
     label: Street
     description: Numele străzii, inclusiv numărul și eventuale scări sau numere de
       apartament.
+  - name: city
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: data
+        file: _data/orase.yml
+        path: orase
+    label: City
+    description: Alege orașul
   - name: postcode
     type: text
     config:
@@ -84,16 +97,12 @@ fields:
         path: judete
     label: County
     description: Alege județul
-  - name: city
-    type: text
-    config:
-      required: false
-    label: City
   - name: country
     type: text
     config:
       required: false
     label: Country
+    default: România
   label: Address
   description: Adaugă adresa fizică a shopului.
 - type: text
