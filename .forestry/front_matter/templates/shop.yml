@@ -58,8 +58,8 @@ fields:
     step: 
 - name: physical_address
   type: boolean
+  description: Adresă fizică disponibilă
   label: Physical address
-  description: Adresă?
 - name: address
   type: field_group
   config: {}
