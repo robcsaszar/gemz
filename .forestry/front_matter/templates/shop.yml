@@ -95,12 +95,17 @@ fields:
     label: County
     description: Alege județul
   - name: country
-    type: text
+    type: select
+    default: România
     config:
       required: false
+      options: []
+      source:
+        type: documents
+        section: data
+        file: _data/countries.yml
+        path: countries
     label: Country
-    default: România
-    hidden: false
   label: Address
   description: Adaugă adresa fizică a shopului.
   showOnly:
