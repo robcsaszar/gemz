@@ -6,13 +6,15 @@ fields:
   name: image
   label: Cover
   default: "/placeholder-shop.jpg"
+  description: Imagine de cover
 - type: text
   name: title
-  label: Titlu
+  label: Title
   config:
     required: true
     max: 30
     min: 3
+  description: Numele shop-ului (maximum 30 de caractere)
 - type: boolean
   name: featured
   label: Featured
@@ -41,7 +43,7 @@ fields:
     value: false
 - name: telephone
   type: number
-  label: Telefon
+  label: Telephone
   description: ''
   default: 0
   required: true
@@ -49,7 +51,7 @@ fields:
     min: 
     max: 
     step: 
-- name: adress
+- name: address
   type: field_group
   config: {}
   fields:
@@ -57,23 +59,23 @@ fields:
     type: text
     config:
       required: false
-    label: Strada
+    label: Street
   - name: postcode
     type: text
     config:
       required: false
-    label: Cod postal
+    label: Postcode
   - name: city
     type: text
     config:
       required: false
-    label: Oras
+    label: City
   - name: country
     type: text
     config:
       required: false
-    label: Tara
-  label: Adresa
+    label: Country
+  label: Address
 - type: text
   name: layout
   label: Layout
