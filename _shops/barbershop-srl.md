@@ -2,15 +2,17 @@
 title: Barbershop SRL
 image: "/barber.jpg"
 featured: true
-facebook: https://facebook.com/
-instagram: ''
-website: ''
 category:
 - Frumusețe
 - Relaxare
 - Sănătate
 layout: shop
-
+socials:
+  instagram: ''
+  facebook: 'Barbershop'
+  website: https://Barbershop.design
+  telephone: '0732550678'
+  email: robert@Barbershop.design
 ---
 A barber is a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums. They are the locations of open debates, voicing public concerns, and engaging citizens in discussions about contemporary issues.
 

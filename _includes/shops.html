@@ -1,0 +1,23 @@
+<div class="col-12 col-md-4 mb-1">
+    <div class="card-shop">
+        {% if shop.featured %}
+        <span class="card-featured"></span>
+        {% endif %}
+        <div class="card-social">
+            {% if shop.socials.facebook != '' %}
+                <a aria-label="Facebook" class="card-link facebook" href="https://facebook.com/{{ shop.socials.facebook }}"></a>
+            {% endif %}
+            {% if shop.socials.instagram != '' %}
+                <a aria-label="Instagram" class="card-link instagram" href="https://facebook.com/{{ shop.socials.instagram }}"></a>
+            {% endif %}
+            {% if shop.socials.website != '' %}
+                <a aria-label="Website" class="card-link website" href="{{ website }}"></a>
+            {% endif %}
+        </div>
+        <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
+        <div class="card-overlay"></div>
+        <a href="{{site.baseurl}}{{ shop.url }}">
+            {% for image in shop.image %}
+            <img class="shop-image" src="{{site.baseurl}}{{ image | prepend: '/images/shops' }}" alt="{{ shop.title }}" loading="eager">{% endfor %}</a>
+    </div>
+</div>

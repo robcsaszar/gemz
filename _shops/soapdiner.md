@@ -18,9 +18,9 @@ address:
   county: Cluj
 physical_address: true
 socials:
-  instagram: test
-  facebook: test
-  website: https://nhg.design
+  instagram: instagrampage
+  facebook: facebookpage
+  website: nhg.design
   telephone: '0732550678'
   email: robert@nhg.design
 

@@ -18,40 +18,16 @@ bodyClass: page-services-list
   <div class="row">
     {% assign shop_categories = site.shops | map: 'category' | join: ',' %}
     {% assign shops_sorted = site.shops | sort: 'title' %}
-    {% for category in shop_categories %}
-    {% if category == '' %}
-    {% continue %}
-    {% endif %}
-    {% for shop in shops_sorted %}
-    {% assign categories_array = shop.category | join: ',' %}
-    {% if categories_array contains page.category %}
-    <div class="col-12 col-md-4 mb-1">
-        <div class="card-shop">
-            {% if shop.featured %}
-            <span class="card-featured"></span>
+      {% for category in shop_categories %}
+        {% if category == '' %}
+          {% continue %}
+        {% endif %}
+        {% for shop in shops_sorted %}
+          {% assign categories_array = shop.category | join: ',' %}
+            {% if categories_array contains page.category %}
+              {%- include shops.html -%}
             {% endif %}
-            <div class="card-social">
-                {% if shop.facebook %}
-                  <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook }}"></a>
-                {% endif %}
-                {% if shop.instagram %}
-                  <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram }}"></a>
-                {% endif %}
-                {% if shop.website %}
-                  <a aria-label="Website" class="card-link website" href="{{ shop.website }}"></a>
-                {% endif %}
-            </div>
-            <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
-            <div class="card-overlay"></div>
-            <a href="{{site.baseurl}}{{ shop.url }}">
-                {% for image in shop.image %}
-                <img class="shop-image" src="{{site.baseurl}}/images/shops/{{ image }}" alt="{{ shop.title }}">
-                {% endfor %}
-            </a>
-        </div>
-    </div>
-    {% endif %}
-    {% endfor %}
+        {% endfor %}
     {% endfor %}
 </div>
 </div>

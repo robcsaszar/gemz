@@ -38,31 +38,8 @@ bodyClass: page-home
     <div class="container pt-6 pb-6 pb-md-10">
         <div class="row justify-content-start">
             {% for shop in site.shops %}
-            <div class="col-12 col-md-4 mb-1">
-                <div class="card-shop">
-                    {% if shop.featured %}
-                    <span class="card-featured"></span>
-                    {% endif %}
-                    <div class="card-social">
-                        {% if shop.facebook != '' %}
-                        <a aria-label="Facebook" class="card-link facebook" href="{{ shop.facebook | prepend: 'https://facebook.com/' }}"></a>
-                        {% endif %}
-                        {% if shop.instagram != '' %}
-                        <a aria-label="Instagram" class="card-link instagram" href="{{ shop.instagram | prepend: 'https://instagram.com/' }}"></a>
-                        {% endif %}
-                        {% if shop.website != '' %}
-                        <a aria-label="Website" class="card-link website" href="{{ shop.website }}"></a>
-                        {% endif %}
-                    </div>
-                    <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
-                    <div class="card-overlay"></div>
-                    <a href="{{site.baseurl}}{{ shop.url }}">
-                        {% for image in shop.image %}
-                        <img class="shop-image" src="{{site.baseurl}}{{ image | prepend: '/images/shops' }}" alt="{{ shop.title }}" loading="eager">{% endfor %}</a>
-                </div>
-            </div>
+                {%- include shops.html facebook = facebook -%}
             {% endfor %}
-
         </div>
         <div class="row justify-content-center">
             <div class="col-auto">

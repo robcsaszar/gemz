@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="container pb-2 pt-2 pt-md-2 pb-md-2">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
@@ -9,18 +8,46 @@ layout: default
         <h1 class="title">{{page.title}}</h1>
         <div class="shop-details">
           <div class="shop-address">
-            {% if page.address %}
-              {%- assign street = page.address | map: 'street' -%}
-              {%- assign city = page.address | map: 'city' -%}
-              {%- assign postcode = page.address | map: 'postcode' -%}
-              {%- assign county = page.address | map: 'county' -%}
-              {%- assign country = page.address | map: 'country' -%}
-              {{street}}
-              {{city}}, {% if postcode %}
-              {{postcode}} - 
-              {% endif %}{{county}}, {{country}}
-
+            {%- assign address = page.address -%}
+            {% if page.physical_address %}
+              {{ address.street }}
+              <br>
+              {{ address.city }}, {% if address.postcode %}
+              {{ address.postcode }} - 
+              {% endif %}{{ address.county }}
+              <br>
+              {{country}}
             {% endif %}
+          </div>
+          <div class="shop-socials">
+            <div class="shop-pages">
+              <div class="shop-facebook">
+                {%- assign socials = page.socials -%}
+                {% if socials.facebook %}
+                  <a href="https://facebook.com/{{ socials.facebook }}">@{{ socials.facebook }}</a>
+                {% endif %}
+              </div>
+              <div class="shop-instagram">
+                {% if socials.instagram %}
+                  <a href="https://instagram.com/{{ socials.instagram }}">@{{ socials.instagram }}</a>
+                {% endif %}
+              </div>
+              <div class="shop-website">
+                {% if socials.website %}
+                  <a href="http://{{ socials.website }}">{{ socials.website }}</a>
+                {% endif %}
+              </div>
+              <div class="shop-telephone">
+                {% if socials.telephone %}
+                  <a href="tel:{{ socials.telephone }}">{{ socials.telephone }}</a>
+                {% endif %}
+              </div>
+              <div class="shop-email">
+                {% if socials.email %}
+                  <a href="mailto:{{ socials.email }}">{{ socials.email }}</a>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
         {% if page.category %}

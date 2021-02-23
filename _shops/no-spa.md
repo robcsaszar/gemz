@@ -2,14 +2,16 @@
 title: No Spa SRL
 image: "/salon.jpg"
 featured: true
-facebook: https://facebook.com/
-instagram: ''
-website: https://nhg.design/
 category:
 - Relaxare
 - Sănătate
 layout: shop
-
+socials:
+  instagram: test
+  facebook: ''
+  website: ''
+  telephone: '0732550678'
+  email: robert@nhg.design
 ---
 A spa is a location where mineral-rich spring water (and sometimes seawater) is used to give medicinal baths. Spa towns or spa resorts (including hot springs resorts) typically offer various health treatments, which are also known as balneotherapy. The belief in the curative powers of mineral waters goes back to prehistoric times. Such practices have been popular worldwide, but are especially widespread in Europe and Japan. Day spas are also quite popular and offer various personal care treatments.
 
