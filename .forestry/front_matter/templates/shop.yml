@@ -6,7 +6,7 @@ fields:
   name: image
   label: Cover
   default: "/placeholder-shop.jpg"
-  description: Imagine de cover
+  description: Adaugă o imagine de cover pentru shop.
 - type: text
   name: title
   label: Title
@@ -14,7 +14,7 @@ fields:
     required: true
     max: 30
     min: 3
-  description: Numele shop-ului (maximum 30 de caractere)
+  description: Numele shopului (maxim 30 de caractere).
 - type: boolean
   name: featured
   label: Featured
@@ -30,21 +30,25 @@ fields:
       file: _categories/_categories.md
       path: categories
   label: Category
+  description: Selectează minim o categorie din listă.
 - type: text
   name: facebook
   label: Facebook
+  description: Adaugă un link către pagina de Facebook.
 - type: text
   name: instagram
   label: Instagram
+  description: Adaugă un link către pagina de Instagram.
 - type: text
   name: website
   label: Website
   showOnly:
     value: false
+  description: Adaugă un link către pagina web a shopului.
 - name: telephone
   type: number
   label: Telephone
-  description: ''
+  description: Adaugă un număr de telefon.
   default: 0
   required: true
   config:
@@ -76,6 +80,7 @@ fields:
       required: false
     label: Country
   label: Address
+  description: Adaugă adresa fizică a shopului.
 - type: text
   name: layout
   label: Layout
