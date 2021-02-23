@@ -26,6 +26,8 @@ categories:
     name: "Cursuri și training"
   Diete:
     name: "Diete"
+  Frumusețe:
+    name: "Frumusețe"
   Gaming:
     name: "Gaming"
   Hobby:
