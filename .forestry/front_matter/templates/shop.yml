@@ -71,6 +71,19 @@ fields:
     config:
       required: false
     label: Postcode
+  - name: county
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: data
+        file: _data/judete.yml
+        path: judete
+    label: County
+    description: Alege județul
   - name: city
     type: text
     config:
