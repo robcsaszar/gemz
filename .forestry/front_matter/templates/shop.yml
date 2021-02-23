@@ -67,18 +67,10 @@ fields:
     description: Numele străzii, inclusiv numărul și eventuale scări sau numere de
       apartament.
   - name: city
-    type: select
-    default: []
+    type: text
     config:
       required: false
-      options: []
-      source:
-        type: documents
-        section: data
-        file: _data/orase.yml
-        path: orase
     label: City
-    description: Alege orașul
   - name: postcode
     type: text
     config:
