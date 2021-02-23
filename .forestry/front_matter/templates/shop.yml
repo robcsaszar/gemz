@@ -56,6 +56,10 @@ fields:
     min: 
     max: 
     step: 
+- name: physical_address
+  type: boolean
+  label: Physical address
+  description: Adresă?
 - name: address
   type: field_group
   config: {}
@@ -63,14 +67,14 @@ fields:
   - name: street
     type: text
     config:
-      required: false
+      required: true
     label: Street
     description: Numele străzii, inclusiv numărul și eventuale scări sau numere de
       apartament.
   - name: city
     type: text
     config:
-      required: false
+      required: true
     label: City
   - name: postcode
     type: text
@@ -81,7 +85,7 @@ fields:
     type: select
     default: []
     config:
-      required: false
+      required: true
       options: []
       source:
         type: documents
@@ -99,6 +103,9 @@ fields:
     hidden: true
   label: Address
   description: Adaugă adresa fizică a shopului.
+  showOnly:
+    field: physical_address
+    value: true
 - type: text
   name: layout
   label: Layout
