@@ -9,6 +9,12 @@ sections:
   label: Shops
   create: all
   match: "**/*"
+- type: directory
+  path: _categories
+  label: Categories
+  create: all
+  match: "**/*"
+  exclude: "**/*.yml"
 upload_dir: images
 public_path: "/images/shops"
 front_matter_path: ''

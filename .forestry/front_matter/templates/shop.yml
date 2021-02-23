@@ -23,10 +23,10 @@ fields:
     min: 1
     max: 
     source:
-      type: documents
+      type: pages
       section: categories
       file: _categories/categories.yml
-      path: categories
+      path: ''
   label: Category
 - type: text
   name: facebook
