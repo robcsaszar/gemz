@@ -63,34 +63,38 @@ main:
         - title: Cursuri și training
           url: "/categories/cursuri-și-training"
           weight: 1
+
+        - title: Frumusețe
+          url: "/categories/frumusețe"
+          weight: 2
           
         - title: Gaming
           url: "/categories/gaming"
-          weight: 2
+          weight: 3
           
         - title: Jucării
           url: "/categories/jucării"
-          weight: 3
+          weight: 4
           
         - title: Relaxare
           url: "/categories/relaxare"
-          weight: 4
+          weight: 5
           
         - title: Sănătate
           url: "/categories/sănătate"
-          weight: 5
+          weight: 6
                    
         - title: Sport
           url: "/categories/sport"
-          weight: 6
+          weight: 7
           
         - title: Turism
           url: "/categories/turism"
-          weight: 7
+          weight: 8
           
         - title: Veterinar
           url: "/categories/veterinar"
-          weight: 8
+          weight: 9
 
     - title: Timp liber
       weight: 4
