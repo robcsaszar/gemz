@@ -2,7 +2,7 @@
 title: Soap Diner
 image: "/soap.jpg"
 featured: true
-facebook: https://facebook.com/
+facebook: facebook.com
 instagram: test.com
 website: ''
 category:
