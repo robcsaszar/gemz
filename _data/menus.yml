@@ -21,11 +21,11 @@ main:
           weight: 2
 
         - title: Îmbrăcăminte
-          url: "/categories/îmbrăcăminte"
+          url: "/categories/imbracaminte"
           weight: 3
 
         - title: Încălțăminte
-          url: "/categories/încălțăminte"
+          url: "/categories/incaltaminte"
           weight: 4
           
         - title: Pentru copii
@@ -37,7 +37,7 @@ main:
       children:
 
         - title: Agricultură
-          url: "/categories/agricultură"
+          url: "/categories/agricultura"
           weight: 1
           
         - title: Alimente
@@ -45,7 +45,7 @@ main:
           weight: 2
           
         - title: Băuturi
-          url: "/categories/băuturi"
+          url: "/categories/bauturi"
           weight: 3
           
         - title: Diete 
@@ -53,7 +53,7 @@ main:
           weight: 4
                             
         - title: Hrană animale 
-          url: "/categories/hrană-animale"
+          url: "/categories/hrana-animale"
           weight: 5
 
     - title: Sănătate și recreere
@@ -61,11 +61,11 @@ main:
       children:
 
         - title: Cursuri și training
-          url: "/categories/cursuri-și-training"
+          url: "/categories/cursuri-si-training"
           weight: 1
 
         - title: Frumusețe
-          url: "/categories/frumusețe"
+          url: "/categories/frumusete"
           weight: 2
           
         - title: Gaming
@@ -73,7 +73,7 @@ main:
           weight: 3
           
         - title: Jucării
-          url: "/categories/jucării"
+          url: "/categories/jucarii"
           weight: 4
           
         - title: Relaxare
@@ -81,7 +81,7 @@ main:
           weight: 5
           
         - title: Sănătate
-          url: "/categories/sănătate"
+          url: "/categories/sanatate"
           weight: 6
                    
         - title: Sport
@@ -101,11 +101,11 @@ main:
       children:
 
         - title: Amenajare și construcții
-          url: "/categories/amenajare-și-construcții"
+          url: "/categories/amenajare-si-constructii"
           weight: 1
           
         - title: Artă
-          url: "/categories/artă"
+          url: "/categories/arta"
           weight: 2
           
         - title: Auto
@@ -117,11 +117,11 @@ main:
           weight: 4
                     
         - title: Cărți și publicații
-          url: "/categories/cărți-și-publicații"
+          url: "/categories/carti-si-publicatii"
           weight: 5
                     
         - title: Casă și grădină
-          url: "/categories/casă-și-grădină"
+          url: "/categories/casa-si-gradina"
           weight: 6
                     
         - title: Hobby

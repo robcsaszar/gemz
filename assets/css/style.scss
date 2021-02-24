@@ -4,10 +4,10 @@
 
 // Colors
 $primary: #f12705;
-$secondary-brass: #C49C87;
+$secondary-brass: #e6dbd5;
 $grey-silver: #AAA69B;
 $brown-cafeaulait: #A8774C;
-$brown-coffee: #815037;
+$brown-coffee: #c4a393;
 $blue-charcoal: #3A4950;
 $blue-sand: #BCC6C8;
 $green-artichoke: #949168;
@@ -57,7 +57,7 @@ $sub-footer-icon-hover-color: darken($white-offset, 70%);
 @import 'components/components';
 
 // Pages
-@import 'pages/home';
+@import 'pages/pages';
 @import 'pages/team/team-summary';
 @import 'pages/shops/page-shops-single';
 
@@ -69,4 +69,8 @@ body {
     font-size: 16px;
     line-height: 1.3;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

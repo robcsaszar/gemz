@@ -1,0 +1,122 @@
+.shop-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+
+    .shop-socials,
+    .shop-address {
+        padding: .75rem 1.5rem;
+        width: 45%;
+        border-radius: 4px;
+        background: $white-offset;
+        position: relative;
+        z-index: 1;
+    }
+
+    .shop-socials {
+        a {
+            color: $black-offset-coffee;
+            font-weight: 500;
+            transition: all 350ms;
+            &:hover {
+                color: lighten($black-offset-coffee, 30%)
+            }
+        }
+
+        div::before {
+            color: darken($white-offset, 30%);
+        }
+
+        .shop-facebook::before {
+            @extend %fa-icon;
+            @extend .fab;
+            content: fa-content($fa-var-facebook);
+        }
+        .shop-instagram::before {
+            @extend %fa-icon;
+            @extend .fab;
+            content: fa-content($fa-var-instagram);
+        }
+        .shop-website::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-link);
+        }
+        .shop-telephone::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-phone-square-alt);
+        }
+        .shop-email::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-envelope-square);
+        }
+
+        &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-bell);
+            font-size: 3rem;
+            position: absolute;
+            color: darken($white-offset, 15%);
+            z-index: -1;
+            transform: rotate(-20deg);
+            right: 1rem;
+            bottom: 1rem;
+        }
+    }
+
+    .shop-address {
+        color: $black-offset-coffee;
+        font-weight: 500;
+
+        &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-store);
+            font-size: 3rem;
+            position: absolute;
+            color: darken($white-offset, 15%);
+            z-index: -1;
+            transform: rotate(-20deg);
+            right: 1rem;
+            bottom: 1rem;
+        }
+    }
+}
+
+.shop-categories {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    a {
+        padding: 0.25rem 0.5rem;
+        background: lighten($primary, 45%);
+        border-radius: 3px;
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+        transition: all 350ms;
+
+        &:first-child {
+            margin-left: 0.5rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: darken($primary, 30%)
+        }
+
+        &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-circle);
+            font-size: 0.5rem;
+            margin-right: 0.25rem;
+        }
+    }
+}

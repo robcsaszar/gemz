@@ -1,64 +1,68 @@
 ---
 layout: default
+bodyClass: shop
 ---
 <div class="container pb-2 pt-2 pt-md-2 pb-md-2">
-  <div class="row justify-content-start">
-    <div class="col-12 col-md-8">
-      <div class="service service-single">
-        <h1 class="title">{{page.title}}</h1>
-        <div class="shop-details">
-          <div class="shop-address">
-            {%- assign address = page.address -%}
-            {% if page.physical_address %}
-              {{ address.street }}
-              <br>
-              {{ address.city }}, {% if address.postcode %}
-              {{ address.postcode }} - 
-              {% endif %}{{ address.county }}
-              <br>
-              {{country}}
-            {% endif %}
-          </div>
-          <div class="shop-socials">
-            <div class="shop-pages">
-              <div class="shop-facebook">
-                {%- assign socials = page.socials -%}
-                {% if socials.facebook %}
-                  <a href="https://facebook.com/{{ socials.facebook }}">@{{ socials.facebook }}</a>
-                {% endif %}
-              </div>
-              <div class="shop-instagram">
-                {% if socials.instagram %}
-                  <a href="https://instagram.com/{{ socials.instagram }}">@{{ socials.instagram }}</a>
-                {% endif %}
-              </div>
-              <div class="shop-website">
-                {% if socials.website %}
-                  <a href="http://{{ socials.website }}">{{ socials.website }}</a>
-                {% endif %}
-              </div>
-              <div class="shop-telephone">
-                {% if socials.telephone %}
-                  <a href="tel:{{ socials.telephone }}">{{ socials.telephone }}</a>
-                {% endif %}
-              </div>
-              <div class="shop-email">
-                {% if socials.email %}
-                  <a href="mailto:{{ socials.email }}">{{ socials.email }}</a>
-                {% endif %}
-              </div>
+    <div class="row justify-content-start">
+        <div class="col-12">
+            <div class="service service-single">
+                <h1 class="title">{{ page.title }}</h1>
+                <div class="shop-details">
+                    <div class="shop-socials">
+                        {%- assign socials = page.socials -%}
+                        {% if socials.facebook != '' %}
+                        <div class="shop-facebook">
+                            <a href="https://facebook.com/{{ socials.facebook }}" target="_blank">{{ socials.facebook }}</a>
+                        </div>
+                        {% endif %}
+                        {% if socials.instagram != '' %}
+                        <div class="shop-instagram">
+                            <a href="https://instagram.com/{{ socials.instagram }}" target="_blank">{{ socials.instagram }}</a>
+                        </div>
+                        {% endif %}
+                        {% if socials.website != '' %}
+                        <div class="shop-website">
+                            <a href="http://{{ socials.website }}" target="_blank">{{ socials.website }}</a>
+                        </div>
+                        {% endif %}
+                        {% if socials.telephone != '' %}
+                        <div class="shop-telephone">
+                            <a href="tel:{{ socials.telephone }}">{{ socials.telephone }}</a>
+                        </div>
+                        {% endif %}
+                        {% if socials.email != '' %}
+                        <div class="shop-email">
+                            <a href="mailto:{{ socials.email }}">{{ socials.email }}</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% if page.physical_address %}
+                    <div class="shop-address">
+                        {%- assign address = page.address -%}
+                        {{ address.street }}
+                        <br>
+                        {{ address.city }}
+                        <br>
+                        {% if address.postcode %}
+                        {{ address.postcode }}{% endif %} {{ address.county }}
+                        <br>
+                        {{ address.country }}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="shop-categories">
+                    {% if page.category != '' %}
+                    Categorii:
+                    {% for category in page.category %}
+                    <a href="/categories/{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">{{ category }}</a>
+                    {% endfor %}
+                    {% else %}
+                      😓 Această pagină nu are categorii. Ajută-ne să remediem situația, <a href="mailto:{{ site.data.contact.email }}">trimite-ne un email.</a>
+                    {% endif %}
+                </div>
+                <hr>
+                <div class="content">{{content}}</div>
             </div>
-          </div>
         </div>
-        {% if page.category %}
-        Categorii: 
-          {% for category in page.category %}
-          <a href="/categories/{{ category | downcase }}">{{ category }}</a>
-          {% endfor %}
-        {% endif %}
-        <hr>
-        <div class="content">{{content}}</div>
-      </div>
     </div>
-  </div>
 </div>

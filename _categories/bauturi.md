@@ -1,6 +1,6 @@
 ---
 title: "Băuturi"
-image: "/băuturi.jpg"
+image: "/bauturi.jpg"
 category: Băuturi
 layout: category
 tag: "Alimentație"

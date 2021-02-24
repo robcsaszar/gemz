@@ -48,9 +48,9 @@
         {%- for shop in featured_shops -%}{
             name: {{ shop.title | prepend: '"' | append: '"' }},
             url: {{ shop.url | prepend: '"' | append: '"' }},
-            facebook: {{ shop.facebook | prepend: '"' | append: '"' }},
-            instagram: {{ shop.instagram | prepend: '"' | append: '"' }},
-            website: {{ shop.website | prepend: '"' | append: '"' }},
+            facebook: {{ shop.socials.facebook | prepend: '"' | append: '"' }},
+            instagram: {{ shop.socials.instagram | prepend: '"' | append: '"' }},
+            website: {{ shop.socials.website | prepend: '"' | append: '"' }},
             image: {{ shop.image | prepend: '"' | append: '"' }}
     }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}];

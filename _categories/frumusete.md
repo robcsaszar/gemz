@@ -1,6 +1,6 @@
 ---
 title: "Frumusețe"
-image: "/frumusețe.jpg"
+image: "/frumusete.jpg"
 category: Frumusețe
 layout: category
 tag: "Sănătate și recreere"

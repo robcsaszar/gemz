@@ -1,6 +1,6 @@
 ---
 title: "Încălțăminte"
-image: "/încălțăminte.jpg"
+image: "/incaltaminte.jpg"
 category: Încălțăminte
 layout: category
 tag: "De purtat"

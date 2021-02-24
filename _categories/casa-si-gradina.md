@@ -1,6 +1,6 @@
 ---
 title: "Casă și grădină"
-image: "/casă-și-grădină.jpg"
+image: "/casa-si-gradina.jpg"
 category: Casă și grădină
 layout: category
 tag: "Timp liber"

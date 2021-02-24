@@ -1,6 +1,6 @@
 ---
-title: "Hrană animale"
-image: "/hrană-animale.jpg"
+title: "Hrană animale"
+image: "/hrana-animale.jpg"
 category: Hrană animale
 layout: category
 tag: "Timp liber"
