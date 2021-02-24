@@ -7,7 +7,7 @@
         {%- assign shop_date = shop.date | date: '%s' | times: 1 -%}
         {%- assign date_difference = today_date | minus: shop_date -%}
         {% if date_difference <= 604800 %}
-            <span class="card-new"></span>
+            <span class="card-new">NOU</span>
         {% endif %}
         <div class="card-social">
             {% if shop.socials.facebook != '' %}
