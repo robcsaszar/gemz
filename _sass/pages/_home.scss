@@ -56,7 +56,7 @@
     @extend %fa-icon;
     @extend .fas;
     content: fa-content($fa-var-star);
-    color: #9ca56b;
+    color: lighten($primary, 10%);
   }
 }
 

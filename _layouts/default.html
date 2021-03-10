@@ -20,9 +20,8 @@
     <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="{{ site.background-color }}">
     <meta name="msapplication-TileColor" content="{{ site.background-color }}">
     <meta name="theme-color" content="{{ site.theme-color }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="preload" href="{{ '/assets/css/fonts.css' | relative_url }}" as="style">
     <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
@@ -66,6 +65,11 @@
     {% include footer.html %}
     {% include sub-footer.html %}
     <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+    <script>
+        if (navigator && navigator.serviceWorker) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
   {% include google-analytics.html %}
 </body>
 </html>
