@@ -27,9 +27,8 @@ addEventListener('install', (event) => {
     }));
 });
 
-
-// listen for requests
-addEventListener('fetch', (event) => {
+async function handleRequest(request) {
+    const response = await fetch(request)
 
     // Get the request
     var request = event.request;
@@ -79,6 +78,14 @@ addEventListener('fetch', (event) => {
             }))
         );
     }
+
+    return response
+}
+
+// listen for requests
+addEventListener('fetch', (event) => {
+
+    event.respondWith(handleRequest(event.request));
 
 });
 
