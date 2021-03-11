@@ -27,7 +27,7 @@
 
 	<script>
 		if (navigator && navigator.serviceWorker) {
-			caches.open(pageID).then(function (cache) {
+			caches.open(/_pages/).then(function (cache) {
 				cache.keys().then(function (keys) {
 					var offline = document.querySelector('[data-offline]');
 					offline.innerHTML =
