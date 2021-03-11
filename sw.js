@@ -23,7 +23,7 @@ addEventListener('install', function (event) {
     self.skipWaiting();
     event.waitUntil(caches.open(coreID).then(function (cache) {
         cache.add(new Request('offline.html'));
-        cache.add(new Request('/assets/css/fonts.css'));
+        cache.add(new Request('assets/css/fonts.css'));
         fontFiles.forEach(function(file) {
             cache.add(new Request(file));
         });
@@ -68,7 +68,7 @@ addEventListener('fetch', function (event) {
 
     // Images & Fonts
     // Offline-first
-    if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v7') || request.url.includes('/assets/css/fonts.css')) {
+    if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v7') || request.url.includes('assets/css/fonts.css')) {
 		event.respondWith(
 			caches.match(request).then(function (response) {
 				return response || fetch(request).then(function (response) {
