@@ -1,4 +1,4 @@
-var version = '1.0.3';
+var version = '1.0.4';
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
@@ -23,6 +23,7 @@ self.addEventListener('install', function (event) {
 	self.skipWaiting();
 	event.waitUntil(caches.open(coreID).then(function (cache) {
 		cache.add(new Request('/offline/'));
+        cache.add(new Request('/images/illustrations/gemz-offline.svg'));
 		cache.add(new Request('/favicon.ico'));
 		fontFiles.forEach(function (file) {
 			cache.add(new Request(file));
