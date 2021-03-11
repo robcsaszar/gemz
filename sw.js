@@ -22,7 +22,7 @@ var fontFiles = [
 addEventListener('install', (event) => {
     self.skipWaiting();
     event.waitUntil(caches.open(coreID).then((cache) => {
-        cache.add(new Request('/offline/'));
+        cache.add(new Request('/offline'));
         cache.add(new Request('/favicon.ico'));
         return;
     }));
@@ -58,7 +58,7 @@ addEventListener('fetch', (event) => {
 
             }).catch(async (error) => {
                 const response = await caches.match(request);
-                return response || caches.match('/offline/');
+                return response || caches.match('/offline');
             })
         );
     }
