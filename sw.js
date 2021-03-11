@@ -18,6 +18,20 @@ var fontFiles = [
     '/fonts/fraunces-v7-latin-ext-500italic.woff2'
 ];
 
+/**
+ * Check if cached API data is still valid
+ * @param  {Object}  response The response object
+ * @return {Boolean}          If true, cached data is valid
+ */
+ var isValid = (response) => {
+     if (!response)
+         return false;
+     var fetched = response.headers.get('sw-fetched-on');
+     if (fetched && (parseFloat(fetched) + (1000 * 60 * 5)) > new Date().getTime())
+         return true;
+     return false;
+ };
+
 // On install, cache some stuff
 addEventListener('install', (event) => {
     self.skipWaiting();
