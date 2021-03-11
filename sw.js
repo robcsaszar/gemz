@@ -27,8 +27,12 @@ addEventListener('install', (event) => {
     }));
 });
 
-async function handleRequest(request) {
-    const response = await fetch(request)
+
+// listen for requests
+addEventListener('fetch', (event) => {
+
+    // Get the request
+    var request = event.request;
 
     // Bug fix
     // https://stackoverflow.com/a/49719964
@@ -75,14 +79,6 @@ async function handleRequest(request) {
             }))
         );
     }
-
-    return response
-}
-
-// listen for requests
-addEventListener('fetch', (event) => {
-
-    event.respondWith(handleRequest(event.request));
 
 });
 
