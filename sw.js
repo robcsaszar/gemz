@@ -30,9 +30,6 @@ addEventListener('install', (event) => {
 async function handleRequest(request) {
     const response = await fetch(request)
 
-    // Get the request
-    var request = event.request;
-
     // Bug fix
     // https://stackoverflow.com/a/49719964
     if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin')
