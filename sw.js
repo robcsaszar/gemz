@@ -66,10 +66,9 @@ addEventListener('fetch', function (event) {
 				// Then return it
 				return response;
 
-			}).catch(function (error) {
-				return caches.match(request).then(function (response) {
-					return response || caches.match('/offline.html');
-				});
+			}).catch(async function (error) {
+				const response = await caches.match(request);
+                return response || caches.match('/offline.html');
 			})
 		);
 	}
