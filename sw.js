@@ -1,4 +1,4 @@
-var version = '1.0.4';
+var version = '1.0.5';
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
@@ -26,7 +26,6 @@ addEventListener('install', (event) => {
         return;
     }));
 });
-
 
 // listen for requests
 addEventListener('fetch', (event) => {
