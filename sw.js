@@ -1,4 +1,4 @@
-var version = '1.0.6';
+var version = '1.0.0';
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
@@ -18,25 +18,12 @@ var fontFiles = [
     '/fonts/fraunces-v7-latin-ext-500italic.woff2'
 ];
 
-/**
- * Check if cached API data is still valid
- * @param  {Object}  response The response object
- * @return {Boolean}          If true, cached data is valid
- */
- var isValid = (response) => {
-     if (!response)
-         return false;
-     var fetched = response.headers.get('sw-fetched-on');
-     if (fetched && (parseFloat(fetched) + (1000 * 60 * 5)) > new Date().getTime())
-         return true;
-     return false;
- };
-
 // On install, cache some stuff
 addEventListener('install', (event) => {
     self.skipWaiting();
     event.waitUntil(caches.open(coreID).then((cache) => {
         cache.add(new Request('/offline.html'));
+        cache.add(new Request('/favicon.ico'));
         return;
     }));
 });
@@ -51,6 +38,8 @@ addEventListener('fetch', (event) => {
     // https://stackoverflow.com/a/49719964
     if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin')
         return;
+
+    if (request.method !== 'GET') return;
 
     // HTML files
     // Network-first
@@ -77,21 +66,25 @@ addEventListener('fetch', (event) => {
     // Images & Fonts
     // Offline-first
     if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v7') || request.url.includes('/assets/css/fonts.css')) {
-        event.respondWith(
-            caches.match(request).then((response) => response || fetch(request).then((response) => {
+		event.respondWith(
+			caches.match(request).then(function (response) {
+				return response || fetch(request).then(function (response) {
 
-                // If an image, stash a copy of this image in the images cache
-                if (request.headers.get('Accept').includes(imgID)) {
-                    var copy = response.clone();
-                    event.waitUntil(caches.open('images').then((cache) => cache.put(request, copy)));
-                }
+					// If an image, stash a copy of this image in the images cache
+					if (request.headers.get('Accept').includes('image')) {
+						var copy = response.clone();
+						event.waitUntil(caches.open(imgID).then(function (cache) {
+							return cache.put(request, copy);
+						}));
+					}
 
-                // Return the requested file
-                return response;
+					// Return the requested file
+					return response;
 
-            }))
-        );
-    }
+				});
+			})
+		);
+	}
 
 });
 
