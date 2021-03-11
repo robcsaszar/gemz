@@ -1,4 +1,4 @@
-var version = '1.0.0';
+var version = '1.0.1';
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
