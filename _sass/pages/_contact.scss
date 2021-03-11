@@ -1,0 +1,195 @@
+.list-info,
+.list-info li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sec-title {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.sec-title .title {
+  position: relative;
+  color: $primary;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 3rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.sec-title .title:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 7px;
+  width: 2.5rem;
+  height: 2px;
+  background-color: $primary-light;
+}
+
+.sec-title h2 {
+  position: relative;
+  display: block;
+}
+
+.contact-page-section {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-page-section .inner-container {
+  position: relative;
+  z-index: 1;
+  background-color: darken($white-offset, 15%);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  &::after {
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: ' ';
+    display: block;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    background-image: url('/images/illustrations/gemz-contact.svg');
+  }
+}
+
+.contact-page-section .form-column,
+.contact-page-section .info-column {
+  position: relative;
+}
+
+.contact-page-section .form-column .inner-column {
+  position: relative;
+  padding: 60px 45px 30px;
+  background-color: $white;
+}
+
+.contact-page-section .info-column .inner-column {
+  position: relative;
+  padding: 60px 35px;
+}
+
+.contact-page-section .info-column h2 {
+  position: relative;
+  color: darken($white-offset, 50%);
+  font-size: 1.5rem;
+}
+
+.contact-page-section .info-column .list-info {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.contact-page-section .info-column .list-info li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: darken($white-offset, 50%);
+  padding-left: 1rem;
+  font-weight: 500;
+
+  a {
+    color: darken($white-offset, 50%);
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($white-offset, 40%);
+    }
+  }
+}
+
+.contact-page-section .info-column .list-info li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-page-section .info-column .list-info li i {
+  margin-right: 0.5rem;
+}
+
+.contact-form {
+  position: relative;
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid $gray-200;
+  background-color: $white;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: $primary-light;
+}
+
+.contact-form textarea {
+  height: 250px;
+  resize: none;
+}
+
+.contact-form input.error,
+.contact-form select.error,
+.contact-form textarea.error {
+  border-color: red !important;
+}
+
+.contact-form label.error {
+  display: block;
+  line-height: 24px;
+  padding: 5px 0 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: red;
+  font-weight: 500;
+}
+
+.social-icon-four {
+  position: relative;
+}
+
+.social-icon-four li {
+  position: relative;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.social-icon-four li.follow {
+  color: darken($white-offset, 50%);
+  display: block;
+}
+
+.social-icon-four li a {
+  position: relative;
+  color: darken($white-offset, 50%);
+  transition: all 0.3s ease;
+}
+
+.social-icon-four li a:hover {
+  color: darken($white-offset, 40%);
+}

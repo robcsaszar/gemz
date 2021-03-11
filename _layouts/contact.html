@@ -4,14 +4,89 @@ layout: default
 bodyClass: page-contact
 ---
 
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                {% include call.html show_button=false %}
-                <div class="content mt-4">{{content}}</div>
+<section class="contact-page-section">
+    <div class="container">
+        <div class="sec-title">
+            <div class="title">{{page.title}}</div>
+            <h2>Let's get in touch!</h2>
+            <div class="content mt-4">
+                {{content}}
+            </div>
+        </div>
+        <div class="inner-container">
+            <div class="row clearfix">
+
+                <!--Form Column-->
+                <div class="form-column col-md-8 col-sm-12 col-xs-12">
+                    <div class="inner-column">
+
+                        <!--Contact Form-->
+                        <div class="contact-form">
+                            <form method="post" action="" id="contact-form">
+                                <div class="row clearfix">
+                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                        <input type="text" name="name" value="" placeholder="Numele companiei" required>
+                                    </div>
+                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                        <input type="text" name="contactperson" value="" placeholder="Persoan de contact">
+                                    </div>
+                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                        <input type="email" name="email" value="" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
+                                        <input type="tel" name="phone" value="" placeholder="Telefon" required>
+                                    </div>
+
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <hr>
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <input type="text" name="facebook" value="" placeholder="Facebook">
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <input type="text" name="instagram" value="" placeholder="Instagram">
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <input type="url" name="website" value="" placeholder="Website">
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <input type="text" name="address" value="" placeholder="Adresă">
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <textarea name="message" placeholder="Scrie câteva cuvinte despre business-ul tău"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
+                                        <button type="submit" class="button">Trimite</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End Contact Form-->
+
+                    </div>
+                </div>
+
+                <!--Info Column-->
+                <div class="info-column col-md-4 col-sm-12 col-xs-12">
+                    <div class="inner-column">
+                        <h2>Informații de contact</h2>
+                        <ul class="list-info">
+                            <li><i class="fas fa-map-marker-alt"></i>Timișoara, România</li>
+                            <li><i class="fas fa-envelope-square"></i><a href="mailto:hello@gemz.ro">hello@gemz.ro</a></li>
+                            <li><i class="fas fa-phone-square"></i><a href="tel:+40 732-550-678">+40 732-550-678</a></li>
+                        </ul>
+                        <ul class="social-icon-four">
+                            <li class="follow">
+                                <h2>Urmărește-ne</h2>
+                            </li>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-</div>
+</section>
