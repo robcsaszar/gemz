@@ -33,7 +33,7 @@ var fontFiles = [
 // On install, cache some stuff
 addEventListener('install', function (event) {
     self.skipWaiting();
-	event.waitUntil(caches.open('core').then(function (cache) {
+	event.waitUntil(caches.open(coreID).then(function (cache) {
 		cache.add(new Request('/offline.html'));
 		return;
 	}));
@@ -59,7 +59,7 @@ addEventListener('fetch', function (event) {
 				// Save the response to cache
 				if (response.type !== 'opaque') {
 					var copy = response.clone();
-					event.waitUntil(caches.open('pages').then(function (cache) {
+					event.waitUntil(caches.open(pageID).then(function (cache) {
 						return cache.put(request, copy);
 					}));
 				}
@@ -82,7 +82,7 @@ addEventListener('fetch', function (event) {
                 return response || fetch(request).then(function (response) {
 
                     // If an image, stash a copy of this image in the images cache
-                    if (request.headers.get('Accept').includes('image')) {
+                    if (request.headers.get('Accept').includes(imgID)) {
                         var copy = response.clone();
                         event.waitUntil(caches.open('images').then(function (cache) {
                             return cache.put(request, copy);
@@ -97,4 +97,17 @@ addEventListener('fetch', function (event) {
         );
     }
 
+});
+
+// On version update, remove old cached files
+self.addEventListener('activate', function (event) {
+	event.waitUntil(caches.keys().then(function (keys) {
+		return Promise.all(keys.filter(function (key) {
+			return !cacheIDs.includes(key);
+		}).map(function (key) {
+			return caches.delete(key);
+		}));
+	}).then(function () {
+		return self.clients.claim();
+	}));
 });
