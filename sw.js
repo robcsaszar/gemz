@@ -73,4 +73,27 @@ addEventListener('fetch', function (event) {
 		);
 	}
 
+    // Images & Fonts
+    // Offline-first
+    if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v7') || request.url.includes('/assets/css/fonts.css')) {
+        event.respondWith(
+            caches.match(request).then(function (response) {
+                return response || fetch(request).then(function (response) {
+
+                    // If an image, stash a copy of this image in the images cache
+                    if (request.headers.get('Accept').includes('image')) {
+                        var copy = response.clone();
+                        event.waitUntil(caches.open('images').then(function (cache) {
+                            return cache.put(request, copy);
+                        }));
+                    }
+
+                    // Return the requested file
+                    return response;
+
+                });
+            })
+        );
+    }
+
 });
