@@ -20,6 +20,7 @@ var fontFiles = [
 
 // On install, cache some stuff
 addEventListener('install', function (event) {
+    self.skipWaiting();
     event.waitUntil(caches.open(coreID).then(function (cache) {
         cache.add(new Request('offline.html'));
         cache.add(new Request('/assets/css/fonts.css'));
