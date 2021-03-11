@@ -16,6 +16,9 @@ $white: #ffffff;
 $white-offset: #F0F5EE;
 $black-offset-coffee: #393333;
 
+$primary-light: lighten($primary, 20%);
+$primary-dark: darken($primary, 20%);
+
 // Letter-spacing
 
 $expanded: 0.075rem;

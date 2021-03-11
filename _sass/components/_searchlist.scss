@@ -1,0 +1,105 @@
+.search-box {
+  float: left;
+  clear: left;
+  width: 70%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  color: $grey-silver;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 0;
+  background: $gray-200;
+}
+
+.list-count {
+  float: left;
+  width: 30%;
+  padding: 0.5rem;
+  color: $primary-light;
+  font-weight: 500;
+}
+
+.empty-item {
+  transition-property: opacity;
+  transition-duration: 0s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+}
+
+.empty .empty-item {
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-delay: .3s;
+  transition-timing-function: ease;
+}
+
+.hiding {
+  margin-left: -100%;
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+#list {
+  float: left;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+  position: relative;
+}
+
+#list:before {
+  content: 'offline';
+  position: absolute;
+  left: -7rem;
+  font-size: 3rem;
+  text-align: right;
+  top: 1.5rem;
+  color: $gray-400;
+  font-weight: bold;
+  font-family: 'Fraunces', serif;
+  transform: rotate(-90deg);
+}
+
+#list li {
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0.8rem;
+  list-style: none;
+  background-color: $white-offset;
+  border-left: 5px solid $primary-dark;
+  cursor: pointer;
+  color: $gray-800;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 4px 4px 0;
+}
+
+#list li:hover {
+  background-color: darken($white-offset, 10%);
+  border-color: $primary;
+}
+
+.empty-item {
+  background: $white;
+  color: darken($white-offset, 20%);
+  margin: 0.2rem 0;
+  padding: 0.5rem 0.8rem;
+  font-style: italic;
+  border: none;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  float: left;
+  clear: left;
+  width: 100%;
+}
+
+.empty .empty-item {
+  opacity: 1;
+  visibility: visible;
+}

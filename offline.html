@@ -1,56 +1,97 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>You're offline</title>
-
-    <style type="text/css">
-        body {
-            margin: 0 auto;
-            max-width: 40em;
-            width: 88%;
-        }
-
-        img {
-            height: auto;
-            max-width: 100%;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>Offline</h1>
-
-    <p>On no, you're not online! Don't worry. You can visit any pages you've already been to.</p>
-
+---
+layout: empty
+title: Ești offline!
+---
+<div class="container pt-6">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-5 col-lg-6 position-relative">
+            <img class="intro-image" src="/images/illustrations/gemz-offline.svg" />
+        </div>
+    </div>
+</div>
+<div class="container pt-6 pb-10 pb-md-10">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h1>Ești offline!</h1>
+        </div>
+    </div>
+    <p>Oh nu, nu mai ești online! Nu-ți face griji, deoarece și așa poți accesa toate paginile pe care le-ai accesat deja.</p>
+    <input type="text" id="search-text" placeholder="Caută în listă" class="search-box">
+    <span class="list-count"></span>
     <div data-offline></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+        var jobCount = $('#list .in').length;
+        $('.list-count').text(jobCount + ' elemente');
 
 
-    <script>
-        (function() {
-            if (!navigator || !navigator.serviceWorker) return;
-            caches.keys().then(function(keys) {
-                return keys.filter(function(key) {
-                    return key.includes('_pages');
-                }).forEach(function(key) {
-                    caches.open(key).then(function(cache) {
-                        cache.keys().then(function(keys) {
-                            var offline = document.querySelector('[data-offline]');
-                            offline.innerHTML =
-                                '<ul>' +
-                                keys.map(function(key) {
-                                    if (!key.url.endsWith('/')) return '';
-                                    return '<li><a href="' + key.url + '">' + key.url + '</a></li>';
-                                }).join('') +
-                                '</ul>';
-                        });
+        $("#search-text").keyup(function() {
+
+            var searchTerm = $("#search-text").val();
+            var listItem = $('#list').children('li');
+
+
+            var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+
+            //extends :contains to be case insensitive
+            $.extend($.expr[':'], {
+                'containsi': function(elem, i, match, array) {
+                    return (elem.textContent || elem.innerText || '').toLowerCase()
+                        .indexOf((match[3] || "").toLowerCase()) >= 0;
+                }
+            });
+
+
+            $("#list li").not(":containsi('" + searchSplit + "')").each(function(e) {
+                $(this).addClass('hiding out').removeClass('in');
+                setTimeout(function() {
+                    $('.out').addClass('hidden');
+                }, 300);
+            });
+
+            $("#list li:containsi('" + searchSplit + "')").each(function(e) {
+                $(this).removeClass('hidden out').addClass('in');
+                setTimeout(function() {
+                    $('.in').removeClass('hiding');
+                }, 1);
+            });
+
+
+            var jobCount = $('#list .in').length;
+            $('.list-count').text(jobCount + ' elemente');
+
+            if (jobCount == '0') {
+                $('#list').addClass('empty');
+            } else {
+                $('#list').removeClass('empty');
+            }
+
+        });
+    });
+</script>
+<script>
+    (function() {
+        if (!navigator || !navigator.serviceWorker) return;
+        caches.keys().then(function(keys) {
+            return keys.filter(function(key) {
+                return key.includes('_pages');
+            }).forEach(function(key) {
+                caches.open(key).then(function(cache) {
+                    cache.keys().then(function(keys) {
+                        var offline = document.querySelector('[data-offline]');
+                        offline.innerHTML =
+                            '<ul id="list" class="pb-6">' +
+                            keys.map(function(key) {
+                                if (!key.url.endsWith('/')) return '';
+                                return '<li class="in"><a href="' + key.url + '">' + key.url + '</a></li>';
+                            }).join('') +
+                            '<span class="empty-item">Niciun rezultat</span></ul>';
                     });
                 });
             });
-        })();
-    </script>
-
-</body>
-
-</html>
+        });
+    })();
+</script>
