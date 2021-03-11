@@ -1,8 +1,8 @@
 <div class="col-6 col-md-3 mb-1">
     <div class="card-category">
-        <a class="card-title" href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">{{ categories.title }}</a>
+        <a class="card-title" href="{{site.baseurl}}/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">{{ categories.title }}</a>
         <div class="card-overlay"></div>
-        <a href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">
+        <a href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">
             {% for image in categories.image %}
                 <img class="category-image" src="{{site.baseurl}}{{ image | prepend: '/images/categories' }}" alt="{{ categories.title }}" loading="eager">
             {% endfor %}
