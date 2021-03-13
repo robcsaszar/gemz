@@ -1,8 +1,12 @@
+---
+layout: null
+---
 {
-    "name": "",
-    "short_name": "",
-    "icons": [
-        {
+    "name": "{{site.title}}",
+    "short_name": "{{site.short_title}}",
+    "description": "{{site.seo.meta_og_description}}",
+    "orientation": "portrait",
+    "icons": [{
             "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
@@ -13,7 +17,34 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#f0f5ee",
-    "background_color": "#f0f5ee",
-    "display": "standalone"
+    "theme_color": "{{site.theme-color}}",
+    "background_color": "{{site.background-color}}",
+    "display": "standalone",
+    "start_url": "/index.html",
+    "shortcuts": [{
+        "name": "Vizitează toate shopurile",
+        "short_name": "Shops",
+        "description": "Vizitează toate magazinele disponibile pe Gemz.ro",
+        "url": "/shops",
+        "icons": [{
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192"
+        }]
+    },{
+        "name": "Contactează-ne",
+        "short_name": "Contact",
+        "description": "Adaugă magazinul tău pe Gemz.ro",
+        "url": "/shops",
+        "icons": [{
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192"
+        }]
+    }],
+    "screenshots": [
+        {
+          "src": "/images/social/og_metatag.png",
+          "type": "image/png",
+          "sizes": "1200x630"
+        }
+      ]
 }

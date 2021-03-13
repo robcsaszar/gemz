@@ -2,6 +2,7 @@ baseurl: ''
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 permalink: pretty
 title: 'Gemz.ro — Shop smart, shop local'
+short_title: 'Gemz.ro'
 language: "ro"
 lang_direction: "ltr"
 background-color: "#f12705"
