@@ -67,7 +67,13 @@
     <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
     <script>
         if (navigator && navigator.serviceWorker) {
-            navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}");
+            navigator.serviceWorker.register("/sw.js").then(function(registration) {
+                // register success
+                console.log('ServiceWorker registration successful with score: ', registration.scope);
+            }, function(err) {
+                //register fail
+                console.log('ServiceWorker registration failed: ', err);
+            });
         }
     </script>
   {% include google-analytics.html %}
