@@ -13,7 +13,7 @@ featured: true
 category:
 - Animale
 socials:
-  instagram: "[https://instagram.com/petland"
+  instagram: petland
   facebook: ''
   website: www.petland.ro
   telephone: ''
