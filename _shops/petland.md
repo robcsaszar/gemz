@@ -7,11 +7,11 @@ address:
   city: ''
   postcode: ''
 layout: shop
-date: 2021-03-16 11:42:07 +0200
+date: 2021-03-16T11:42:07.000+02:00
 title: Petland
 featured: true
 category:
-- Hrană animale
+- Animale
 socials:
   instagram: "[https://instagram.com/petland"
   facebook: ''
