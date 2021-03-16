@@ -12,6 +12,7 @@ title: Petland
 featured: true
 category:
 - Animale
+- Online
 socials:
   instagram: petland
   facebook: ''

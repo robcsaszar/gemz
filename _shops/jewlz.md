@@ -5,6 +5,7 @@ featured: true
 category:
 - Bijuterii
 - Accesorii
+- Online
 layout: shop
 socials:
   instagram: test

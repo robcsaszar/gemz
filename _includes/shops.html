@@ -1,23 +1,28 @@
 <div class="col-12 col-md-4 mb-1">
-    <div class="card-shop">
+    <div class="card-shop {% if shop.featured %}featured{% endif %}">
         {% if shop.featured %}
-            <span class="card-featured"></span>
+        <span class="card-featured"></span>
         {% endif %}
-        {%- assign today_date = 'today' | date: '%s' | times: 1 -%}
-        {%- assign shop_date = shop.date | date: '%s' | times: 1 -%}
-        {%- assign date_difference = today_date | minus: shop_date -%}
-        {% if date_difference <= 604800 %}
+        <div class="badges">
+            {% if shop.category contains 'Online' %}
+            <span class="card-online">ONLINE</span>
+            {% endif %}
+            {%- assign today_date = 'today' | date: '%s' | times: 1 -%}
+            {%- assign shop_date = shop.date | date: '%s' | times: 1 -%}
+            {%- assign date_difference = today_date | minus: shop_date -%}
+            {% if date_difference <= 604800 %}
             <span class="card-new">NOU</span>
-        {% endif %}
+            {% endif %}
+        </div>
         <div class="card-social">
             {% if shop.socials.facebook != '' %}
-                <a aria-label="Facebook" class="card-link facebook" href="https://facebook.com/{{ shop.socials.facebook }}"></a>
+            <a aria-label="Facebook" class="card-link facebook" href="https://facebook.com/{{ shop.socials.facebook }}"></a>
             {% endif %}
             {% if shop.socials.instagram != '' %}
-                <a aria-label="Instagram" class="card-link instagram" href="https://instagram.com/{{ shop.socials.instagram }}"></a>
+            <a aria-label="Instagram" class="card-link instagram" href="https://instagram.com/{{ shop.socials.instagram }}"></a>
             {% endif %}
             {% if shop.socials.website != '' %}
-                <a aria-label="Website" class="card-link website" href="http://{{ shop.socials.website }}"></a>
+            <a aria-label="Website" class="card-link website" href="http://{{ shop.socials.website }}"></a>
             {% endif %}
         </div>
         <a class="card-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>

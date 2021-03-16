@@ -14,6 +14,10 @@
     object-fit: cover;
     position: relative;
   }
+
+  // &.featured {
+  //   box-shadow: 0 0 0px 2px $primary-light;
+  // }
 }
 
 .card-category {
@@ -35,33 +39,75 @@
 }
 
 .card-featured {
+  width: 5rem;
+  background: $primary;
   position: absolute;
+  top: 0;
+  left: -27px;
+  text-align: center;
+  line-height: 1.5rem;
+  transform: rotate(-45deg);
+  z-index: 2;
+
+  &:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-star);
+    color: $white;
+    transform: rotate(45deg);
+  }
+}
+
+.badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.card-new {
+  position: relative;
   cursor: default;
   top: 0;
-  left: 0;
+  right: 0;
   color: $primary;
   font-weight: 700;
   letter-spacing: $condensed;
   z-index: 2;
   font-size: 0.7rem;
   padding: 0.25rem 0.35rem;
-  margin: 0.25rem;
-  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
   background: $white;
   line-height: 1;
   display: inline-table;
   text-align: center;
 
-  &:before {
-    @extend %fa-icon;
-    @extend .fas;
-    content: fa-content($fa-var-star);
-    color: lighten($primary, 10%);
+  &:first-child {
+    margin: 0 0.5rem;
   }
 }
 
-.card-new {
-  position: absolute;
+.card-online {
+  // position: absolute;
+  // top: 50%;
+  // right: 0;
+  // color: $primary;
+  // font-weight: 700;
+  // z-index: 2;
+  // font-size: 0.7rem;
+  // padding: 0.25rem 0.35rem;
+  // margin: 0.5rem 0;
+  // border-radius: 0.25rem 0 0 0.25rem;
+  // background: $white;
+  // line-height: 1rem;
+  // display: inline-table;
+  // text-align: center;
+  // margin-top: -1rem;
+
+
+  position: relative;
   cursor: default;
   top: 0;
   right: 0;
@@ -77,7 +123,13 @@
   line-height: 1;
   display: inline-table;
   text-align: center;
-  color: $primary;
+
+  &:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-globe-americas);
+    margin-right: 0.25rem;
+  }
 }
 
 .card-title {
