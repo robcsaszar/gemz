@@ -19,7 +19,6 @@ socials:
   telephone: ''
   email: ''
 physical_address: false
-published: false
 
 ---
 A pet store with adoptable dogs and cats, fish, reptiles, birds,small animals, and lots of supplies!
