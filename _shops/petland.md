@@ -1,5 +1,5 @@
 ---
-image: "/images/shops/re63a0bf7e15dfde2db36e848d54952f3.jfif"
+image: "/images/shops/f2e25fa89ad3e970aeb994db60a81303.jpg"
 address:
   county: []
   country: România
@@ -19,6 +19,7 @@ socials:
   telephone: ''
   email: ''
 physical_address: false
+published: false
 
 ---
 A pet store with adoptable dogs and cats, fish, reptiles, birds,small animals, and lots of supplies!
