@@ -12,7 +12,6 @@
   h1 {
     color: $black;
     font-size: 42px;
-    font-weight: bold;
     line-height: 1.2;
     @include media-breakpoint-up(md) {
       width: 80%;

@@ -34,8 +34,8 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: 'Inter', Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Fraunces', serif, -apple-system;
+$font-family-base: 'Inter', sans-serif;
+$font-family-heading: 'Fraunces', serif;
 
 // Footer
 $footer-background-color: $white-offset;
