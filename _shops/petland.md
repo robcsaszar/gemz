@@ -1,5 +1,5 @@
 ---
-image: "/images/shops/oip.jfif"
+image: "/images/shops/pets.jpg"
 address:
   county: []
   country: România
