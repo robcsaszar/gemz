@@ -1,6 +1,6 @@
 ---
 title: Ferma Păcii
-image: "/farm.jpg"
+image: "/images/shops/farm.jpg"
 featured: true
 category:
 - Alimente

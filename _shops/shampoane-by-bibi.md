@@ -1,6 +1,6 @@
 ---
 title: Shampoane by Bibi
-image: "/beauty.jpg"
+image: "/images/shops/beauty.jpg"
 featured: false
 facebook: shampoane
 instagram: ''

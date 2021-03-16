@@ -24,6 +24,6 @@
         <div class="card-overlay"></div>
         <a href="{{site.baseurl}}{{ shop.url }}">
             {% for image in shop.image %}
-            <img class="shop-image" src="{{site.baseurl}}{{ image | prepend: '/images/shops' }}" alt="{{ shop.title }}" loading="eager">{% endfor %}</a>
+            <img class="shop-image" src="{{site.baseurl}}{{ image }}" alt="{{ shop.title }}" loading="eager">{% endfor %}</a>
     </div>
 </div>

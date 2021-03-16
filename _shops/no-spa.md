@@ -1,6 +1,6 @@
 ---
 title: No Spa SRL
-image: "/salon.jpg"
+image: "/images/shops/salon.jpg"
 featured: true
 category:
 - Relaxare

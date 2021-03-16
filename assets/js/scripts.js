@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 
 
-            var featuredShop = $('<div class="featured-shop col-12 col-md-4 mb-1"><div class="card-shop"><span class="card-featured"></span><div class="card-social">' + hasFacebook + hasInstagram + hasWebsite + '</div><a class="card-title" href="' + shopUrl + '">' + shopName + '</a><div class="card-overlay"></div><a class="card-url" href="' + shopUrl + '"><img class="shop-image" src="/images/shops' + shopImage + '" alt="' + shopName + '" loading="eager"></a></div></div>');
+            var featuredShop = $('<div class="featured-shop col-12 col-md-4 mb-1"><div class="card-shop"><span class="card-featured"></span><div class="card-social">' + hasFacebook + hasInstagram + hasWebsite + '</div><a class="card-title" href="' + shopUrl + '">' + shopName + '</a><div class="card-overlay"></div><a class="card-url" href="' + shopUrl + '"><img class="shop-image" src="' + shopImage + '" alt="' + shopName + '" loading="eager"></a></div></div>');
 
             if (counter == (numberOfShops - 1)) {
                 $('#featured-shops').append(featuredShop);

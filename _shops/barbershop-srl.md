@@ -1,6 +1,6 @@
 ---
 title: Barbershop SRL
-image: "/barber.jpg"
+image: "/images/shops/barber.jpg"
 featured: true
 category:
 - Frumusețe

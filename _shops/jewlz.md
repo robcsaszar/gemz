@@ -1,6 +1,6 @@
 ---
 title: Jewlz
-image: "/jewelry.jpg"
+image: "/images/shops/jewelry.jpg"
 featured: true
 category:
 - Bijuterii
