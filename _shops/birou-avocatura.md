@@ -14,7 +14,7 @@ category:
 - Servicii
 socials:
   instagram: ''
-  facebook: "[https://facebook.com/birouavocaturatimisoara"
+  facebook: https://facebook.com/birouavocaturatimisoara
   website: ''
   telephone: '0712345678'
   email: avocat.timisoara@gmail.com
