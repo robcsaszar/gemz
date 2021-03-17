@@ -19,7 +19,6 @@ socials:
   telephone: '0712345678'
   email: avocat.timisoara@gmail.com
 physical_address: true
-published: false
 
 ---
 Birou Avocatura Timisoara- Societate civila profesionala de avocati, este unul din principalii actori pe scena avocaturii din vestul tarii n special, acoperind totodata si vasta arie geografica de aplicabilitate a dreptului romnesc.Cu o pondere sensibil egala intre litigii si consultanta, Birou Avocatura Timisoara, abordeaza problematici att din sfera dreptului privat ct si din cea a dreptului public.
