@@ -68,6 +68,10 @@ body {
   font-size: 16px;
   line-height: 1.2;
   font-family: $font-family-base;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 1.3;
