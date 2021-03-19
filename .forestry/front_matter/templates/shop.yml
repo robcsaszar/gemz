@@ -31,6 +31,10 @@ fields:
       path: categories
   label: Category
   description: Selectează minim o categorie din listă.
+- name: keywords
+  type: tag_list
+  default: []
+  label: Keywords
 - name: socials
   type: field_group
   config: {}
