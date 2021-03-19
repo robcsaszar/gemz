@@ -30,10 +30,10 @@
     font-family: $font-family-base;
   }
   p {
-    font-size: 1.2rem;
-    font-weight: light;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.5;
-    color: $blue-charcoal;
+    color: $gray-600;
     @include media-breakpoint-up(md) {
       width: 80%;
     }
