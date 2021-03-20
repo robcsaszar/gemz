@@ -22,6 +22,5 @@ socials:
   telephone: '0756863985'
   email: ''
 physical_address: false
-published: false
 
 ---
