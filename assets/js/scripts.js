@@ -36,6 +36,82 @@ $(document).ready(function() {
         swap();
     });
 
+    // init Isotope
+    var $grid = $('.shops').isotope({
+        itemSelector: '.shop',
+        transitionDuration: 500,
+        stagger: 30,
+        layoutMode: 'fitRows',
+        // fade in from bottom
+        visibleStyle: {
+            opacity: 1,
+            transform: 'translateY(0)',
+        },
+        hiddenStyle: {
+            opacity: 0,
+            transform: 'translateY(100px)',
+        },
+    });
+
+    var iso = $grid.data('isotope');
+    var $filterCount = $('.filter-count');
+
+    // store filter for each group
+    var filters = {};
+
+    // filter items on button click
+    $('.filters').on('click', '.button', function(event) {
+        var $button = $(event.currentTarget);
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[filterGroup] = $button.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues(filters);
+        // set filter for Isotope
+        $grid.isotope({
+            filter: filterValue
+        });
+        updateFilterCount();
+    });
+
+    updateFilterCount();
+
+    // bind filter on select change
+    $('.select-filters').on('change', function(event) {
+        var $select = $(event.target);
+        // get group key
+        var filterGroup = $select.attr('data-filter-group');
+        // set filter for group
+        filters[filterGroup] = event.target.value;
+        // combine filters
+        var filterValue = concatValues(filters);
+        // set filter for Isotope
+        $grid.isotope({
+            filter: filterValue
+        });
+        updateFilterCount();
+    });
+
+    // flatten object by concatting values
+    function concatValues(obj) {
+        var value = '';
+        for (var prop in obj) {
+            value += obj[prop];
+        }
+        return value;
+    }
+    
+    function updateFilterCount() {
+        $filterCount.text(iso.filteredItems.length + ' rezultate');
+    }
+    // add active class to button
+    $('.button-group a.button').on('click', function() {
+        $('.button-group a.button').removeClass('active');
+        $(this).addClass('active');
+    });
+
     var randomIndexUsed = [];
     var counter = 0;
     var displayedShops = 3;
@@ -50,9 +126,13 @@ $(document).ready(function() {
         var shopInstagram;
         var shopWebsite;
         var shopImage;
+        var shopNew;
+        var shopOnline;
         var hasFacebook;
         var hasInstagram;
         var hasWebsite;
+        var isNew;
+        var isOnline;
 
         randomIndex = Math.floor(Math.random() * featuredShops.length);
 
@@ -63,16 +143,20 @@ $(document).ready(function() {
             shopInstagram = featuredShops[randomIndex]["instagram"];
             shopWebsite = featuredShops[randomIndex]["website"];
             shopImage = featuredShops[randomIndex]["image"];
+            shopNew = featuredShops[randomIndex]["new"];
+            shopOnline = featuredShops[randomIndex]["online"];
 
-            hasFacebook = shopFacebook.length === 0 ? '' : "<a aria-label='Facebook' class='card-link facebook' href='" + shopFacebook + "'></a>";
+            hasFacebook = shopFacebook.length === 0 ? '' : "<a aria-label='Facebook' target='_blank' class='card-link facebook' href='https://facebook.com/" + shopFacebook + "'></a>";
 
-            hasInstagram = shopInstagram.length === 0 ? '' : "<a aria-label='Instagram' class='card-link instagram' href='" + shopInstagram + "'></a>";
+            hasInstagram = shopInstagram.length === 0 ? '' : "<a aria-label='Instagram' target='_blank' class='card-link instagram' href='https://instagram.com/" + shopInstagram + "'></a>";
 
-            hasWebsite = shopWebsite.length === 0 ? '' : "<a aria-label='Website' class='card-link website' href='" + shopWebsite + "'></a>";
+            hasWebsite = shopWebsite.length === 0 ? '' : "<a aria-label='Website' target='_blank' class='card-link website' href='http://" + shopWebsite + "'></a>";
 
+            isNew = shopNew.length === 0 ? '' : "<span class='card-new'>NOU</span>";
 
+            isOnline = shopOnline.length === 0 ? '' : "<span class='card-online'>ONLINE</span>";
 
-            var featuredShop = $('<div class="featured-shop col-12 col-md-4 mb-1"><div class="card-shop"><span class="card-featured"></span><div class="card-social">' + hasFacebook + hasInstagram + hasWebsite + '</div><a class="card-title" href="' + shopUrl + '">' + shopName + '</a><div class="card-overlay"></div><a class="card-url" href="' + shopUrl + '"><img class="shop-image" src="' + shopImage + '" alt="' + shopName + '" loading="eager"></a></div></div>');
+            var featuredShop = $('<div class="featured-shop col-12 col-md-4 mb-1"><div class="card-shop"><span class="card-featured"></span><div class="badges">' + isOnline + isNew + '</div><div class="card-social">' + hasFacebook + hasInstagram + hasWebsite + '</div><a class="card-title" href="' + shopUrl + '">' + shopName + '</a><div class="card-overlay"></div><a class="card-url" href="' + shopUrl + '"><img class="shop-image" src="' + shopImage + '" alt="' + shopName + '" loading="eager"></a></div></div>');
 
             if (counter == (numberOfShops - 1)) {
                 $('#featured-shops').append(featuredShop);
@@ -84,7 +168,7 @@ $(document).ready(function() {
 
             counter++;
         }
-    }
+    };
 });
 
 window.onscroll = function(e) {

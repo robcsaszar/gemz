@@ -3,6 +3,24 @@ title: Gemz.ro
 layout: default
 bodyClass: page-home
 ---
+<script type="text/javascript">
+    {% assign featured_shops = site.shops | where: 'featured', true %}
+    var featuredShops = [
+        {%- for shop in featured_shops -%}{
+            name: "{{ shop.title }}",
+            url: "{{ shop.url }}",
+            facebook: "{{ shop.socials.facebook }}",
+            instagram: "{{ shop.socials.instagram }}",
+            website: "{{ shop.socials.website }}",
+            image: "{{ shop.image }}",
+            new: "{%- assign today_date = 'today' | date: '%s' | times: 1 -%}{%- assign shop_date = shop.date | date: '%s' | times: 1 -%}{%- assign date_difference = today_date | minus: shop_date -%}{% if date_difference <= 604800 %}true{% endif %}",
+            online: "{% if shop.category contains 'Online' %}true{% endif %}"
+
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}];
+</script>
+
+
 
 <div class="intro">
     <div class="container">
@@ -18,6 +36,14 @@ bodyClass: page-home
                 <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
             </div>
             {% endif %}
+        </div>
+        
+    </div>
+</div>
+<div class="strip">
+    <div class="container pt-6 pb-6 pb-md-10">
+        <div class="row justify-content-center">
+            {%- include search-input-light.html -%}
         </div>
     </div>
 </div>

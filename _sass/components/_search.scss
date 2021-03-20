@@ -1,0 +1,128 @@
+.search-input {
+  border-radius: 5px;
+  border: 2px solid darken($white-offset, 10%);
+  background: $white-offset;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 2px solid $primary-light;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-submit,
+.search-reset {
+  @extend .fas;
+  margin-left: 0.25rem;
+  width: 50px;
+  background: darken($white-offset, 20%);
+  border: 0;
+  color: lighten($white-offset, 20%);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken($white-offset, 15%);
+    color: darken($white-offset, 30%);
+  }
+}
+
+select.filters-select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.select-filters .select {
+  flex: 1;
+  margin-left: 1rem;
+  &:first-child {
+      margin-left: 0;
+  }
+}
+
+.select-filters {
+  display: flex;
+  align-content: stretch;
+  margin-top: 1rem;
+}
+
+.select {
+  position: relative;
+  min-width: 200px;
+}
+
+.select svg {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: $gray-700;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.select select {
+  -webkit-appearance: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border: 1px solid $gray-200;
+  border-radius: 5px;
+  background: $white;
+  box-shadow: 0 1px 3px -2px $gray-700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 3rem;
+  font-weight: 500;
+}
+
+.select select:required:invalid {
+  color: $gray-700;
+}
+
+.select select option,
+.select select:hover {
+  color: $primary;
+}
+
+.select select option[value=""][disabled] {
+  display: none;
+}
+
+.select select:hover+svg {
+  stroke: $primary;
+}
+
+.sprites {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}

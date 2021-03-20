@@ -1,0 +1,23 @@
+---
+layout: none
+---
+searchJSON = {
+    {% for shop in site.shops %}
+    "{{ shop.url | slugify }}": {
+        "title": "{{ shop.title | xml_escape }}",
+        "county": "{{ shop.address.county | xml_escape }}",
+        "category": "{%- for category in shop.category -%}{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}",
+        "categories": [{%- for category in shop.category -%}"{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}"{% unless forloop.last %}, {% endunless %}{%- endfor -%}],
+        "url": "{{ shop.url | xml_escape }}",
+        "keywords": "{%- for keywords in shop.keywords -%}{{ keywords | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}",
+        "facebook": "{{ shop.socials.facebook }}",
+        "instagram": "{{ shop.socials.instagram }}",
+        "website": "{{ shop.socials.website }}",
+        "featured": {{ shop.featured }},
+        "image": "{{ shop.image }}",
+        "new": {%- assign today_date = 'today' | date: '%s' | times: 1 -%}{%- assign shop_date = shop.date | date: '%s' | times: 1 -%}{%- assign date_difference = today_date | minus: shop_date -%}{% if date_difference <= 604800 %} true {% else %} false{% endif %},
+        "online": {% if shop.category contains 'Online' %}true{% else %}false{% endif %}
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+}

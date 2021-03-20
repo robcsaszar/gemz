@@ -4,7 +4,7 @@ keywords:
 - fashion
 - bijuterii
 address:
-  county: []
+  county: Timiș
   country: România
   street: ''
   city: ''

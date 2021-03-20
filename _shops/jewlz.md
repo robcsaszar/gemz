@@ -18,7 +18,7 @@ address:
   street: ''
   city: ''
   postcode: ''
-  county: ''
+  county: 'Cluj'
   country: ''
 date: 2021-02-24T00:00:00.000+02:00
 keywords:
