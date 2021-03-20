@@ -142,6 +142,7 @@ fields:
   hidden: true
   default: now
 pages:
+- _shops/alienwear-clothing.md
 - _shops/barbershop-srl.md
 - _shops/birou-avocatura.md
 - _shops/ferma-pacii.md
