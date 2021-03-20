@@ -23,7 +23,12 @@ socials:
   website: nhg.design
   telephone: '0732550678'
   email: robert@nhg.design
-date: 2021-02-24 00:00:00 +0200
+date: 2021-02-24T00:00:00.000+02:00
+keywords:
+- soap
+- cosmetics
+- handmade
+- cleansing
 
 ---
 Soap is a salt of a fatty acid[1] used in a variety of cleansing and lubricating products. In a domestic setting, soaps are surfactants usually used for washing, bathing, and other types of housekeeping. In industrial settings, soaps are used as thickeners, components of some lubricants, and precursors to catalysts.
