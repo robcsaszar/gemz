@@ -20,6 +20,14 @@ socials:
   telephone: ''
   email: ''
 physical_address: false
+keywords:
+- animale
+- pets
+- cat
+- dog
+- canin
+- pisici
+- shop
 
 ---
 A pet store with adoptable dogs and cats, fish, reptiles, birds,small animals, and lots of supplies!
