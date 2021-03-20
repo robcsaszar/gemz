@@ -26,6 +26,9 @@ keywords:
 - whatever vreau sa scriu aici pot scrie
 - cat de lung poate fi acest tag? blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
 - destul de lung
+- phahaha cat de mare poate fi un om mic?
+- beauty
+- spa
 
 ---
 A spa is a location where mineral-rich spring water (and sometimes seawater) is used to give medicinal baths. Spa towns or spa resorts (including hot springs resorts) typically offer various health treatments, which are also known as balneotherapy. The belief in the curative powers of mineral waters goes back to prehistoric times. Such practices have been popular worldwide, but are especially widespread in Europe and Japan. Day spas are also quite popular and offer various personal care treatments.
