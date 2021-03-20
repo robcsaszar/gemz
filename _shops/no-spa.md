@@ -19,7 +19,13 @@ address:
   postcode: ''
   county: ''
   country: ''
-date: 2021-01-31 00:00:00 +0200
+date: 2021-01-31T00:00:00.000+02:00
+keywords:
+- barba
+- frizer
+- whatever vreau sa scriu aici pot scrie
+- cat de lung poate fi acest tag? blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
+- destul de lung
 
 ---
 A spa is a location where mineral-rich spring water (and sometimes seawater) is used to give medicinal baths. Spa towns or spa resorts (including hot springs resorts) typically offer various health treatments, which are also known as balneotherapy. The belief in the curative powers of mineral waters goes back to prehistoric times. Such practices have been popular worldwide, but are especially widespread in Europe and Japan. Day spas are also quite popular and offer various personal care treatments.
