@@ -30,6 +30,7 @@ keywords:
 - handmade
 - cleansing
 - beauty
+social_links: true
 
 ---
 Soap is a salt of a fatty acid[1] used in a variety of cleansing and lubricating products. In a domestic setting, soaps are surfactants usually used for washing, bathing, and other types of housekeeping. In industrial settings, soaps are used as thickeners, components of some lubricants, and precursors to catalysts.
