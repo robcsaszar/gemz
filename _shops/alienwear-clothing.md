@@ -9,13 +9,13 @@ keywords:
 - t-shirts
 - hoodies
 address:
-  county: []
+  county: Timiș
   country: România
-  street: ''
-  city: ''
+  street: SDADSA 1
+  city: TEst
   postcode: ''
 layout: shop
-date: 2021-03-20 15:05:43 +0200
+date: 2021-03-20T15:05:43.000+02:00
 title: AlienWeAr Clothing
 featured: true
 category:
@@ -27,7 +27,8 @@ socials:
   website: https://www.aliexpress.com/popular/alien-clothing.html
   telephone: ''
   email: ''
-physical_address: false
+physical_address: true
+social_links: false
 
 ---
 Unique and out of this world clothing and footwear
