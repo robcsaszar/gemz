@@ -12,13 +12,13 @@ socials:
   website: ''
   telephone: '0732550678'
   email: ''
-physical_address: false
+physical_address: true
 address:
-  street: ''
-  city: ''
+  street: rerere
+  city: rererer
   postcode: ''
   county: Alba
-  country: ''
+  country: România
 date: 2021-01-31T00:00:00.000+02:00
 keywords:
 - fructe

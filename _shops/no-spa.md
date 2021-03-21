@@ -12,10 +12,10 @@ socials:
   website: ''
   telephone: '0732550678'
   email: robert@nhg.design
-physical_address: false
+physical_address: true
 address:
-  street: ''
-  city: ''
+  street: strada 1
+  city: orasul 2
   postcode: ''
   county: Alba
   country: România
