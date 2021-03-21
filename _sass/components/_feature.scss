@@ -1,7 +1,7 @@
 .feature {
   border: 1px solid $white-offset;
   border-radius: 5px;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .075);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
   padding: 1rem;
   background-color: $white;
   display: flex;
@@ -11,12 +11,10 @@
 
   .feature-image {
     flex: 0 0 auto;
-    max-width: 10rem;
+    width: 10rem;
     display: flex;
     margin-bottom: 0.5rem;
     text-align: center;
-    height: auto;
-    width: auto;
   }
 
   img {
