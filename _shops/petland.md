@@ -1,10 +1,10 @@
 ---
 image: "/images/shops/pets.jpg"
 address:
-  county: []
+  county: Covasna
   country: România
-  street: ''
-  city: ''
+  street: BLA
+  city: Un oras din Covasna
   postcode: ''
 layout: shop
 date: 2021-03-16T11:42:07.000+02:00
@@ -19,7 +19,7 @@ socials:
   website: www.petland.ro
   telephone: ''
   email: ''
-physical_address: false
+physical_address: true
 keywords:
 - animale
 - pets
@@ -28,6 +28,7 @@ keywords:
 - canin
 - pisici
 - shop
+social_links: true
 
 ---
 A pet store with adoptable dogs and cats, fish, reptiles, birds,small animals, and lots of supplies!
