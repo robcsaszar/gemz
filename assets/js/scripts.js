@@ -47,8 +47,8 @@ $(document).ready(function() {
     var $buttons = $('.filters .button');
 
     updateFilterCount();
-    $selects.add($buttons);
-    $selects.add($checkboxes).click(function() {
+
+    $selects.add($checkboxes).change(function() {
         // map input values to an array
         var exclusives = [];
         var inclusives = [];
@@ -65,18 +65,7 @@ $(document).ready(function() {
                 inclusives.push(elem.value);
             }
         });
-        $buttons.each(function(event) {
-            // if clicked, use attribute
-            var filters = {};
-            var $button = $(event.currentTarget);
-            // get group key
-            var $buttonGroup = $button.parents('.button-group');
-            var filterGroup = $buttonGroup.attr('data-filter-group');
-            // set filter for group
-            filters[filterGroup] = $button.attr('data-filter');
-            var buttonFilter = concatValues(filters);
-            inclusives.push(buttonFilter);
-        });
+
 
         // combine exclusive and inclusive filters
 
@@ -111,6 +100,20 @@ $(document).ready(function() {
             }
         })
         updateFilterCount();
+    });
+
+    // inclusive filters from buttons
+    $buttons.click(function(event) {
+        // if clicked, use attribute
+        var filters = {};
+        var $button = $(event.currentTarget);
+        // get group key
+        var $buttonGroup = $button.parents('.button-group');
+        var filterGroup = $buttonGroup.attr('data-filter-group');
+        // set filter for group
+        filters[filterGroup] = $button.attr('data-filter');
+        var buttonFilter = concatValues(filters);
+        inclusives.push(buttonFilter);
     });
 
     // $buttons.click(function(event) {
