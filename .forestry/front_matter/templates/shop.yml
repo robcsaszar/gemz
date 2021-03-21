@@ -35,6 +35,9 @@ fields:
   type: tag_list
   default: []
   label: Keywords
+- name: social_links
+  type: boolean
+  label: Social media
 - name: socials
   type: field_group
   config: {}
@@ -67,9 +70,12 @@ fields:
     config:
       required: false
     label: E-mail
-  label: Socials
+  label: Social media links
   description: Adaugă link-uri către rețele de socializare, numărul de telefon, sau
     o adresă de e-mail
+  showOnly:
+    field: social_links
+    value: true
 - name: physical_address
   type: boolean
   description: Adresă fizică disponibilă
