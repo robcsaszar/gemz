@@ -1,0 +1,242 @@
+.card-shop,
+.card-related-shop {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  overflow: hidden;
+  border-radius: .25rem;
+  border-width: 0;
+  border-style: solid;
+  border-color: #dae4e9;
+  position: relative;
+
+  .shop-image {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .related-image {
+    width: 100%;
+    height: 5rem;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+
+
+.card-category {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  overflow: hidden;
+  border-radius: .25rem;
+  border-width: 0;
+  border-style: solid;
+  border-color: #dae4e9;
+  position: relative;
+
+  .category-image {
+    width: 100%;
+    height: 5rem;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+.card-featured {
+  width: 5rem;
+  background: $primary;
+  position: absolute;
+  top: 0;
+  left: -27px;
+  text-align: center;
+  line-height: 1.5rem;
+  transform: rotate(-45deg);
+  z-index: 2;
+
+  &:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-star);
+    color: $white;
+    transform: rotate(45deg);
+  }
+}
+
+.badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.card-badge {
+  position: relative;
+  cursor: default;
+  top: 0;
+  right: 0;
+  color: $primary;
+  font-weight: 700;
+  letter-spacing: $condensed;
+  z-index: 2;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.35rem;
+  margin-right: 0.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background: $white;
+  line-height: 1;
+  display: inline-table;
+  text-align: center;
+
+  &:first-child {
+    margin: 0 0.5rem;
+  }
+}
+
+.card-online {
+  // position: absolute;
+  // top: 50%;
+  // right: 0;
+  // color: $primary;
+  // font-weight: 700;
+  // z-index: 2;
+  // font-size: 0.7rem;
+  // padding: 0.25rem 0.35rem;
+  // margin: 0.5rem 0;
+  // border-radius: 0.25rem 0 0 0.25rem;
+  // background: $white;
+  // line-height: 1rem;
+  // display: inline-table;
+  // text-align: center;
+  // margin-top: -1rem;
+
+
+  position: relative;
+  cursor: default;
+  top: 0;
+  right: 0;
+  color: $primary;
+  font-weight: 700;
+  letter-spacing: $condensed;
+  z-index: 2;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.35rem;
+  margin: 0 0.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background: $white;
+  line-height: 1;
+  display: inline-table;
+  text-align: center;
+
+  &:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-globe-americas);
+    margin-right: 0.25rem;
+  }
+}
+
+.card-title {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 75%;
+  font-size: 2rem;
+  margin: 0.5rem;
+  font-weight: 700;
+  color: $white;
+  font-family: $font-family-heading;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.related-title {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 75%;
+  font-size: 1.25rem;
+  margin: 0.5rem;
+  font-weight: 700;
+  color: $white;
+  font-family: $font-family-base;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.related-card {
+  padding: 0;
+
+  @include media-breakpoint-up(sm) {
+    &:not(:first-child) {
+      padding-left: 0.5rem;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &:nth-child(2n) {
+      padding-left: 0.25rem;
+    }
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-social {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem;
+  justify-content: space-between;
+  display: flex;
+
+  .card-link {
+    @extend %fa-icon;
+
+    color: $white-offset;
+    transition: all 0.2s;
+    margin-left: 0.25rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: darken($white-offset, 20%);
+    }
+
+    &.facebook:before {
+      @extend .fab;
+      content: fa-content($fa-var-facebook);
+    }
+
+    &.instagram:before {
+      @extend .fab;
+      content: fa-content($fa-var-instagram);
+    }
+
+    &.website:before {
+      @extend .fas;
+      content: fa-content($fa-var-link);
+    }
+  }
+
+}

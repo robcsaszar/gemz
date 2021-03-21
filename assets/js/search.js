@@ -57,7 +57,7 @@
                 var item = store[results[i].ref];
                 var isFeatured = item.featured ? '<span class="card-featured"></span>' : '';
                 var isOnline = item.online ? '<span class="card-online">ONLINE</span>' : '';
-                var isNew = item.new ? '<span class="card-new">NOU</span>' : '';
+                var isNew = item.new ? '<span class="card-badge">NOU</span>' : '';
                 var hasFacebook = item.facebook.length === 0 ? '' : "<a aria-label='Facebook' target='_blank' class='card-link facebook' href='https://facebook.com/" + item.facebook + "'></a>";
                 var hasInstagram = item.instagram.length === 0 ? '' : "<a aria-label='Instagram' target='_blank' class='card-link instagram' href='https://instagram.com/" + item.instagram + "'></a>";
                 var hasWebsite = item.website.length === 0 ? '' : "<a aria-label='Website' target='_blank' class='card-link website' href='http://" + item.website + "'></a>";

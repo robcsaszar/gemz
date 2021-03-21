@@ -3,7 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
-    
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
 
     .shop-socials,
     .shop-address {
@@ -13,6 +15,10 @@
         background: $white-offset;
         position: relative;
         z-index: 1;
+        margin: 0.25rem 0;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
     }
 
     .shop-socials {
@@ -59,7 +65,7 @@
             @extend %fa-icon;
             @extend .fas;
             content: fa-content($fa-var-bell);
-            font-size: 3rem;
+            font-size: 4rem;
             position: absolute;
             color: darken($white-offset, 15%);
             z-index: -1;
@@ -92,6 +98,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     a {
         padding: 0.25rem 0.5rem;
@@ -101,6 +108,7 @@
         display: flex;
         align-items: center;
         transition: all 350ms;
+        margin-top: 0.25rem;
 
         &:first-child {
             margin-left: 0.5rem;

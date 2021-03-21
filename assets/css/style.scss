@@ -85,3 +85,8 @@ html {
 input:focus, textarea:focus, select:focus{
   outline: none;
 }
+
+::selection {
+  background: lighten($primary, 45%);
+  color: $primary;
+}

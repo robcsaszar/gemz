@@ -8,6 +8,7 @@ bodyClass: shop
             <div class="service service-single">
                 <h1 class="title">{{ page.title }}</h1>
                 <div class="shop-details">
+                    {% if page.social_links %}
                     <div class="shop-socials">
                         {%- assign socials = page.socials -%}
                         {% if socials.facebook != '' %}
@@ -36,6 +37,7 @@ bodyClass: shop
                         </div>
                         {% endif %}
                     </div>
+                    {% endif %}
                     {% if page.physical_address %}
                     <div class="shop-address">
                         {%- assign address = page.address -%}
@@ -57,12 +59,17 @@ bodyClass: shop
                     <a href="/categories/{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">{{ category }}</a>
                     {% endfor %}
                     {% else %}
-                      😓 Această pagină nu are categorii. Ajută-ne să remediem situația, <a href="mailto:{{ site.data.contact.email }}">trimite-ne un email.</a>
+                    😓 Această pagină nu are categorii. Ajută-ne să remediem situația, <a href="mailto:{{ site.data.contact.email }}">trimite-ne un email.</a>
                     {% endif %}
                 </div>
                 <hr>
                 <div class="content">{{content}}</div>
             </div>
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-12">
+            {%- include related.html -%}
         </div>
     </div>
 </div>

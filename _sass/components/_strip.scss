@@ -15,11 +15,11 @@
 }
 
 .strip-diagonal {
-  transform: skewY(3deg);
+  transform: skewY(2deg);
   padding-bottom: 50px;
   margin-bottom: 65px;
   > div {
-    transform: skewY(-3deg);
+    transform: skewY(-2deg);
   }
 }
 .strip-primary-gradient {

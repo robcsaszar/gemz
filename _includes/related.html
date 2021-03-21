@@ -1,0 +1,42 @@
+<h2>Similare</h2>
+<div class="related">
+    {% assign maxRelated = 4 %}
+    {% assign minCommonTags =  2 %}
+    {% assign maxRelatedCounter = 0 %}
+
+    {% for shop in site.shops %}
+
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for category in shop.category %}
+    {% if shop.url != page.url %}
+    {% if page.category contains category %}
+    {% assign sameTagCount = sameTagCount | plus: 1 %}
+    {% capture tagmarkup %} <span class="card-badge">{{ category }}</span> {% endcapture %}
+    {% assign commonTags = commonTags | append: tagmarkup %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    {% if sameTagCount >= minCommonTags %}
+    <div class="related-card col-6 col-md-3 mb-1">
+        <div class="card-related-shop">
+            <div class="badges">{{ commonTags }}</div>
+            <a class="related-title" href="{{site.baseurl}}{{ shop.url }}">{{ shop.title }}</a>
+            <div class="card-overlay"></div>
+            <a href="{{site.baseurl}}{{ shop.url }}">
+                {% for image in shop.image %}
+                <img class="related-image" src="{{site.baseurl}}{{ image }}" alt="{{ shop.title }}" loading="lazy">{% endfor %}
+            </a>
+        </div>
+    </div>
+    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+    {% if maxRelatedCounter >= maxRelated %}
+    {% break %}
+    {% endif %}
+    {% endif %}
+
+    {% endfor %}
+
+</div>

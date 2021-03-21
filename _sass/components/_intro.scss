@@ -2,13 +2,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   overflow: hidden;
-  @include media-breakpoint-up(md) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
+
   h1 {
     color: $black;
     font-size: 42px;

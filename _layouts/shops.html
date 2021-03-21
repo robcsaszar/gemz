@@ -8,6 +8,10 @@ bodyClass: page-services-list
         <div class="row justify-content-start">
             <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
                 {{ content }}
+                {%- include search-input-full.html -%}
+                {%- include filter-dropdowns.html -%}
+                {%- include filter-checkboxes.html -%}
+                <!-- {%- include filter-buttons.html -%} -->
             </div>
             {% if page.intro_image %}
             <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -18,10 +22,15 @@ bodyClass: page-services-list
     </div>
 </div>
 
-<div class="container pt-6 pb-6">
-    {%- include search.html -%}
+<div class="container pt-2 pb-6">
+    <p class="filter-count"></p>
+    <div id="search" class="shops row">
+        {% for shop in site.shops %}
+        {%- include shops.html -%}
+        {% endfor %}
+    </div>
 </div>
 
-<script src="/search.json"></script>
-<script src="/assets/js/lunr.min.js"></script>
-<script src="/assets/js/search.js"></script>
+<script type="text/javascript" src="{{ '/search.json' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/search.js' | relative_url }}"></script>

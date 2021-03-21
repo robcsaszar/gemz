@@ -3,25 +3,6 @@ title: Gemz.ro
 layout: default
 bodyClass: page-home
 ---
-<script type="text/javascript">
-    {% assign featured_shops = site.shops | where: 'featured', true %}
-    var featuredShops = [
-        {%- for shop in featured_shops -%}{
-            name: "{{ shop.title }}",
-            url: "{{ shop.url }}",
-            facebook: "{{ shop.socials.facebook }}",
-            instagram: "{{ shop.socials.instagram }}",
-            website: "{{ shop.socials.website }}",
-            image: "{{ shop.image }}",
-            new: "{%- assign today_date = 'today' | date: '%s' | times: 1 -%}{%- assign shop_date = shop.date | date: '%s' | times: 1 -%}{%- assign date_difference = today_date | minus: shop_date -%}{% if date_difference <= 604800 %}true{% endif %}",
-            online: "{% if shop.category contains 'Online' %}true{% endif %}"
-
-    }{% unless forloop.last %},{% endunless %}
-    {%- endfor -%}];
-</script>
-
-
-
 <div class="intro">
     <div class="container">
         <div class="row justify-content-start">
@@ -37,11 +18,11 @@ bodyClass: page-home
             </div>
             {% endif %}
         </div>
-        
+
     </div>
 </div>
 <div class="strip">
-    <div class="container pt-6 pb-6 pb-md-10">
+    <div class="container pt-3 pb-3">
         <div class="row justify-content-center">
             {%- include search-input-light.html -%}
         </div>
@@ -49,7 +30,7 @@ bodyClass: page-home
 </div>
 
 <div class="strip-featured strip-diagonal">
-    <div class="container pt-6 pb-6 pb-md-10">
+    <div class="container pt-3 pb-3">
         <div class="row justify-content-center">
             <div class="col-auto">
                 <h2>Featured Gemz</h2>
@@ -61,7 +42,7 @@ bodyClass: page-home
 </div>
 
 <div class="strip">
-    <div class="container pt-6 pb-6 pb-md-10">
+    <div class="container pt-3 pb-3">
         <div class="row justify-content-center">
             <div class="col-auto">
                 <h2>Categorii</h2>
@@ -69,14 +50,14 @@ bodyClass: page-home
         </div>
         <div class="row justify-content-start">
             {% for categories in site.categories %}
-                {%- include categories.html -%}
+            {%- include categories.html -%}
             {% endfor %}
         </div>
     </div>
 </div>
 
 <div class="strip">
-    <div class="container pt-6 pb-6 pb-md-10">
+    <div class="container pt-3 pb-3">
         <div class="row justify-content-center">
             <div class="col-auto">
                 <h2>Gemz</h2>
@@ -84,7 +65,7 @@ bodyClass: page-home
         </div>
         <div class="row justify-content-start">
             {% for shop in site.shops %}
-                {%- include shops.html -%}
+            {%- include shops.html -%}
             {% endfor %}
         </div>
         <div class="row justify-content-center">
@@ -97,7 +78,7 @@ bodyClass: page-home
 
 {% if site.data.features %}
 <div class="strip strip-offwhite">
-    <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="container pt-3 pb-3 pt-md-10">
         <div class="row justify-content-center">
 
             {% for feature in site.data.features %}
@@ -116,3 +97,62 @@ bodyClass: page-home
     </div>
 </div>
 {% endif %}
+<script type="text/javascript">
+    var randomIndexUsed = [];
+    var counter = 0;
+    var displayedShops = 3;
+    var numberOfShops = featuredShops.length < displayedShops ? featuredShops.length : displayedShops;
+
+
+    while (counter < numberOfShops) {
+        var randomIndex;
+        var shopUrl;
+        var shopName;
+        var shopFacebook;
+        var shopInstagram;
+        var shopWebsite;
+        var shopImage;
+        var shopNew;
+        var shopOnline;
+        var hasFacebook;
+        var hasInstagram;
+        var hasWebsite;
+        var isNew;
+        var isOnline;
+
+        randomIndex = Math.floor(Math.random() * featuredShops.length);
+
+        if (randomIndexUsed.indexOf(randomIndex) == "-1") {
+            shopUrl = featuredShops[randomIndex]["url"];
+            shopName = featuredShops[randomIndex]["name"];
+            shopFacebook = featuredShops[randomIndex]["facebook"];
+            shopInstagram = featuredShops[randomIndex]["instagram"];
+            shopWebsite = featuredShops[randomIndex]["website"];
+            shopImage = featuredShops[randomIndex]["image"];
+            shopNew = featuredShops[randomIndex]["new"];
+            shopOnline = featuredShops[randomIndex]["online"];
+
+            hasFacebook = shopFacebook.length === 0 ? '' : "<a aria-label='Facebook' target='_blank' class='card-link facebook' href='https://facebook.com/" + shopFacebook + "'></a>";
+
+            hasInstagram = shopInstagram.length === 0 ? '' : "<a aria-label='Instagram' target='_blank' class='card-link instagram' href='https://instagram.com/" + shopInstagram + "'></a>";
+
+            hasWebsite = shopWebsite.length === 0 ? '' : "<a aria-label='Website' target='_blank' class='card-link website' href='http://" + shopWebsite + "'></a>";
+
+            isNew = shopNew.length === 0 ? '' : "<span class='card-badge'>NOU</span>";
+
+            isOnline = shopOnline.length === 0 ? '' : "<span class='card-online'>ONLINE</span>";
+
+            var featuredShop = $('<div class="featured-shop col-12 col-md-4 mb-1"><div class="card-shop"><span class="card-featured"></span><div class="badges">' + isOnline + isNew + '</div><div class="card-social">' + hasFacebook + hasInstagram + hasWebsite + '</div><a class="card-title" href="' + shopUrl + '">' + shopName + '</a><div class="card-overlay"></div><a class="card-url" href="' + shopUrl + '"><img class="shop-image" src="' + shopImage + '" alt="' + shopName + '" loading="eager"></a></div></div>');
+
+            if (counter == (numberOfShops - 1)) {
+                $('#featured-shops').append(featuredShop);
+            } else {
+                $('#featured-shops').append(featuredShop);
+            }
+
+            randomIndexUsed.push(randomIndex);
+
+            counter++;
+        }
+    };
+</script>
