@@ -4,13 +4,13 @@ keywords:
 - fashion
 - bijuterii
 address:
-  county: Timiș
+  county: București
   country: România
-  street: ''
-  city: ''
+  street: Test
+  city: Hm
   postcode: ''
 layout: shop
-date: 2021-03-20 14:50:40 +0200
+date: 2021-03-20T14:50:40.000+02:00
 title: 'Paris Bijoux '
 featured: false
 category:
@@ -21,6 +21,7 @@ socials:
   website: ''
   telephone: '0756863985'
   email: ''
-physical_address: false
+physical_address: true
+social_links: false
 
 ---
