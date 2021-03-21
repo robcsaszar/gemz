@@ -18,13 +18,14 @@ address:
   street: ''
   city: ''
   postcode: ''
-  county: ''
+  county: Alba
   country: ''
 date: 2021-01-31T00:00:00.000+02:00
 keywords:
 - barber
 - haircut
 - beard
+social_links: true
 
 ---
 A barber is a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards. A barber's place of work is known as a "barbershop" or a "barber's". Barbershops are also places of social interaction and public discourse. In some instances, barbershops are also public forums. They are the locations of open debates, voicing public concerns, and engaging citizens in discussions about contemporary issues.
