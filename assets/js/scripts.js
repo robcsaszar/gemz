@@ -157,18 +157,13 @@ $(document).ready(function() {
     });
 });
 
-$('#search-box').focus(function () {
-    $('html, body').animate({ scrollTop: ($('#search-box').offset().top - 10) }, 1);
+$('#search-box').focus(function() {
+    var $htmlOrBody = $('html, body');
+    $htmlOrBody.animate({
+        scrollTop: ($('#search-box').offset().top - 10)
+    }, 500);
     return false;
 })
-
-// if (/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
-//     var $htmlOrBody = $('html, body'),
-//         scrollTopPadding = 8;
-//     $('#search-box').focus(function() {
-//         $htmlOrBody.scrollTop($('#search').offset().top), 4000;
-//     });
-// }
 
 var progressPath = document.querySelector('.progress-wrap path');
 var pathLength = progressPath.getTotalLength();
