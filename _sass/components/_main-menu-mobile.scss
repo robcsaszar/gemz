@@ -103,7 +103,7 @@
     position: relative;
     top: 50%;
     @extend .fas;
-    content: fa-content($fa-var-bars);
+    content: fa-content($fa-var-ellipsis-v);
   }
 }
 
@@ -213,5 +213,14 @@
         opacity: 1;
       }
     }
+  }
+}
+a.mobile-search {
+  display: none;
+  @include media-breakpoint-down(md) {
+display: block;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
   }
 }

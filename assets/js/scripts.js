@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('.container > ul > li:has( > ul)').addClass('menu-dropdown-icon');
     $('.container > ul > li > ul:not(:has(ul))').addClass('normal-sub');
     $(".container > ul").after("<a class=\"menu-mobile\"></a>");
+    $(".container > ul").after("<a href='/shops#search-box' class='mobile-search'><i class='fas fa-search'></i></a>");
     $(".container > ul > li").hover(function(e) {
         if ($(window).width() > 943) {
             $(this).children("ul").stop(true, false).fadeToggle(150);
@@ -154,30 +155,20 @@ $(document).ready(function() {
         $('.button-group a.button').removeClass('active');
         $(this).addClass('active');
     });
-
-    $('#search-box').keyup('input', function() {
-        if ($(this).val().length > 0) {
-            $(window).scrollTop($('#search-box').offset().top), 4000;
-        }
-    });
 });
 
-$('#search-box').focusin(function(e) {
-    var container = $('#search-box'),
-        scrollTo = $(e.target);
+$('#search-box').focus(function () {
+    $('html, body').animate({ scrollTop: ($('#search-box').offset().top - 10) }, 1);
+    return false;
+})
 
-    container.animate({
-        scrollTop: scrollTo.offset().top
-    }, 300);
-});
-
-if (/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
-    var $htmlOrBody = $('html, body'),
-        scrollTopPadding = 8;
-    $('#search-box').focus(function() {
-        $htmlOrBody.scrollTop($('#search-box').offset().top), 4000;
-    });
-}
+// if (/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
+//     var $htmlOrBody = $('html, body'),
+//         scrollTopPadding = 8;
+//     $('#search-box').focus(function() {
+//         $htmlOrBody.scrollTop($('#search').offset().top), 4000;
+//     });
+// }
 
 var progressPath = document.querySelector('.progress-wrap path');
 var pathLength = progressPath.getTotalLength();

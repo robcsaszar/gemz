@@ -9,27 +9,27 @@
     {% for item in mainmenu %}
     <li class="{% if item.url == page.url %}active{% endif %}">
         {% if item.url %}
-            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
         {% else %}
-            <span class="menu-text">{{ item.title }}</span>
+        <span class="menu-text">{{ item.title }}</span>
         {% endif %}
         {% if item.children %}
         <ul class="sub-menu">
             {% for item in item.children %}
             <li class="menu-item-{{ forloop.index }}">
                 {% if item.url %}
-                    <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
+                <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
                 {% else %}
-                    <span class="menu-item-text">{{ item.title }}</span>
+                <span class="menu-item-text">{{ item.title }}</span>
                 {% endif %}
                 {% if item.children %}
                 <ul class="sub-sub-menu">
                     {% for item in item.children %}
                     <li class="sub-menu-item-{{ forloop.index }}">
                         {% if item.url %}
-                            <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
+                        <a href="{{ item.url | relative_url }}" title="Mergi la {{ item.title }}">{{ item.title }}</a>
                         {% else %}
-                            <span class="sub-menu-item-text">{{ item.title }}</span>
+                        <span class="sub-menu-item-text">{{ item.title }}</span>
                         {% endif %}
                     </li>
                     {% endfor %}
