@@ -17,7 +17,7 @@ address:
   street: ''
   city: ''
   postcode: ''
-  county: ''
+  county: Alba
   country: ''
 date: 2021-01-31T00:00:00.000+02:00
 keywords:
