@@ -29,7 +29,7 @@ socials:
   telephone: ''
   email: ''
 physical_address: true
-social_links: true
+social_links: false
 
 ---
 Pet's Cut- Canine Hairdresser este locul unde caini si pisicile sunt rasfatate cu cele mai bune tratamente de ingrijire. Echipa noastra formata din personal calificat, iubitor de animele si va sta la dispozitie pentru a ii oferi animalului dumneavoastra de companie un tratament regal.
