@@ -12,17 +12,18 @@ address:
   city: ''
   postcode: ''
 layout: shop
-date: 2021-03-20 15:12:43 +0200
+date: 2021-03-20T15:12:43.000+02:00
 title: Art corner
 featured: false
 category:
 - Artă
 socials:
-  instagram: ''
-  facebook: ''
-  website: ''
+  instagram: test
+  facebook: test
+  website: test
   telephone: ''
   email: ''
 physical_address: false
+social_links: true
 
 ---
