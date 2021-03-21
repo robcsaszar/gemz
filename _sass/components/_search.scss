@@ -82,6 +82,12 @@ select.filters-select {
   &:first-child {
     margin: 0;
   }
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
 }
 
 .select svg {
@@ -151,7 +157,7 @@ select.filters-select {
     cursor: pointer;
     font-weight: 500;
   }
-  
+
   input[type=checkbox] {
     display: none;
   }
@@ -171,6 +177,7 @@ select.filters-select {
     content: fa-content($fa-var-check-circle);
     color: darkgreen;
   }
+
   input[type=checkbox]:checked+label {
     color: darkgreen;
   }
