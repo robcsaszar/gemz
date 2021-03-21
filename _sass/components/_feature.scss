@@ -1,10 +1,9 @@
 .feature {
-  height: 100%;
   border: 1px solid $white-offset;
-  border-radius: 0.25rem;
+  border-radius: 5px;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
-  padding: 20px;
-  background-color: #ffffff;
+  padding: 1rem;
+  background-color: $white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -15,7 +14,7 @@
     width: 10rem;
     height: auto;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
     text-align: center;
   }
 
