@@ -30,6 +30,7 @@ keywords:
 - shampoo
 - beauty
 - cleansing
+social_links: true
 
 ---
 Shampoo (/ʃæmˈpuː/) is a hair care product, typically in the form of a viscous liquid, that is used for cleaning hair. Less commonly, shampoo is available in bar form, like a bar of soap. Shampoo is used by applying it to wet hair, massaging the product into the scalp, and then rinsing it out. Some users may follow a shampooing with the use of hair conditioner.
