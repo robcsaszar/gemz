@@ -183,6 +183,7 @@ $(document).ready(function() {
     function updateFilterCount() {
         var $items = iso.filteredItems;
         if ($items.length) {
+            $empty.css('display', '');
             if ($items.length == 1) {
                 $filterCount.text($items.length + ' rezultat');
             } else {
