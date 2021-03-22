@@ -1,4 +1,3 @@
-
 .shops {
   transition-duration: 0.5s;
   transition-property: height, width;
@@ -192,10 +191,12 @@ select.filters-select {
 .sort-count {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   .filter-count {
     font-weight: 500;
     color: darken($white-offset, 30%);
-}
+  }
 }
 
 .no-results {
@@ -221,8 +222,11 @@ select.filters-select {
   label {
     cursor: pointer;
     font-weight: 500;
-    &:not(:first-of-type) {
-      margin-left: 1rem;
+
+    @include media-breakpoint-up(sm) {
+      &:not(:first-of-type) {
+        margin-left: 1rem;
+      }
     }
   }
 
