@@ -56,6 +56,7 @@
             for (var i = 0; i < results.length; i++) {
                 var item = store[results[i].ref];
                 var isFeatured = item.featured ? '<span class="card-featured"></span>' : '';
+                var featuredClass = item.featured ? 'featured ' : '';
                 var isOnline = item.online ? '<span class="card-online">ONLINE</span>' : '';
                 var isNew = item.new ? '<span class="card-badge">NOU</span>' : '';
                 var hasFacebook = item.facebook.length === 0 ? '' : "<a aria-label='Facebook' target='_blank' class='card-link facebook' href='https://facebook.com/" + item.facebook + "'></a>";
@@ -63,7 +64,7 @@
                 var hasWebsite = item.website.length === 0 ? '' : "<a aria-label='Website' target='_blank' class='card-link website' href='http://" + item.website + "'></a>";
 
 
-                appendString += '<div class="shop col-12 col-md-4 mb-1 ' + item.categories.join(' ') + '' + '">' +
+                appendString += '<div class="shop col-12 col-md-4 mb-1 ' + featuredClass + item.categories.join(' ') + '' + '">' +
                     '<div class="card-shop ' + '' + '">' +
                     isFeatured +
                     '<div class="badges">' +

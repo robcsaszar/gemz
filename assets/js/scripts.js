@@ -116,22 +116,23 @@ $(document).ready(function() {
     $sorts.change(function() {
         var inclusives = [];
         let x = $(this).prop('checked');
-        $sorts.prop('checked',false);
-        $(this).prop('checked',x);
-        
+        $sorts.prop('checked', false);
+        $(this).prop('checked', x);
+
         $sorts.each(function(i, elem) {
             if (elem.checked) {
                 inclusives.push(elem.value);
             }
-            
+
             var sortedValue;
 
-            if ( inclusives?.length ) {
+            if (inclusives.length) {
                 sortedValue = inclusives;
-              } else {
+            } else {
                 sortedValue = 'original-order';
-              }
-                          
+            }
+
+            // console.log('Filtered on:', sortedValue); //for testing/debugging
             $container.isotope({
                 sortBy: sortedValue
             });
