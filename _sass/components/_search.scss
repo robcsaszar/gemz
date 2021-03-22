@@ -186,3 +186,51 @@ select.filters-select {
     color: darkgreen;
   }
 }
+
+.checkbox-sorts {
+
+  label {
+    cursor: pointer;
+    font-weight: 500;
+    &:not(:first-of-type) {
+      margin-left: 1rem;
+    }
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input+label:before {
+    @extend %fa-icon;
+    @extend .fas;
+    margin-right: 0.25rem;
+    cursor: pointer;
+  }
+
+  #alphabetical-sort+label:before {
+    content: fa-content($fa-var-sort-alpha-up);
+  }
+
+  #alphabetical-sort:checked+label:before {
+    content: fa-content($fa-var-sort-alpha-up);
+  }
+
+  #featured-sort+label:before {
+    content: fa-content($fa-var-sort-numeric-up);
+  }
+
+  #featured-sort:checked+label:before {
+    content: fa-content($fa-var-sort-numeric-up);
+  }
+
+  input+label {}
+
+  input:checked+label:before {
+    color: lighten($primary, 10%);
+  }
+
+  input:checked+label {
+    color: lighten($primary, 10%);
+  }
+}

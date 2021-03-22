@@ -24,6 +24,7 @@ bodyClass: page-services-list
 
 <div class="container pt-2 pb-6">
     <p class="filter-count"></p>
+    {%- include sort-checkboxes.html -%}
     <div id="search" class="shops row">
         {% for shop in site.shops %}
         {%- include shops.html -%}

@@ -41,7 +41,13 @@ $(document).ready(function() {
     });
 
     var $container = $('.shops').isotope({
-        itemSelector: '.shop'
+        itemSelector: '.shop',
+        getSortData: {
+            name: '.card-title',
+            featured: function(item) {
+                return $(item).hasClass('featured') ? 0 : 1;
+            }
+        }
     });
 
     var iso = $container.data('isotope');
@@ -49,6 +55,7 @@ $(document).ready(function() {
     var $selects = $('.select-filters select');
     var $checkboxes = $('.checkbox-filters input');
     var $buttons = $('.filters .button');
+    var $sorts = $('.checkbox-sorts input');
 
     updateFilterCount();
 
@@ -104,6 +111,31 @@ $(document).ready(function() {
             }
         })
         updateFilterCount();
+    });
+
+    $sorts.change(function() {
+        var inclusives = [];
+        let x = $(this).prop('checked');
+        $sorts.prop('checked',false);
+        $(this).prop('checked',x);
+        
+        $sorts.each(function(i, elem) {
+            if (elem.checked) {
+                inclusives.push(elem.value);
+            }
+            
+            var sortedValue;
+
+            if ( inclusives?.length ) {
+                sortedValue = inclusives;
+              } else {
+                sortedValue = 'original-order';
+              }
+                          
+            $container.isotope({
+                sortBy: sortedValue
+            });
+        });
     });
 
     // inclusive filters from buttons

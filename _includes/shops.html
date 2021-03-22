@@ -1,4 +1,4 @@
-<div class="shop col-12 col-md-4 mb-1 {%- for category in shop.category -%}{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' | prepend: " "}}{%- endfor -%}{%- for county in shop.address.county -%}{{ county | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' | prepend: " "}}{%- endfor -%}">
+<div class="shop col-12 col-md-4 mb-1 {% if shop.featured %}featured{% endif %} {%- for category in shop.category -%}{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' | prepend: " "}}{%- endfor -%}{%- for county in shop.address.county -%}{{ county | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' | prepend: " "}}{%- endfor -%}">
     <div class="card-shop {% if shop.featured %}featured{% endif %}">
         {% if shop.featured %}
         <span class="card-featured"></span>
