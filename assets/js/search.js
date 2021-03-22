@@ -49,6 +49,7 @@
 
     function displaySearchResults(results, store) {
         var searchResults = document.getElementById('search');
+        var element = document.getElementById("empty");
 
         if (results.length) {
             var appendString = '';
@@ -87,7 +88,9 @@
 
             searchResults.innerHTML = appendString;
         } else {
-            searchResults.innerHTML = '<p class="no-results">Nu am găsit nici un rezultat 😢</p>';
+            searchResults.innerHTML = '';
+            element.style.display = "flex";
+            searchResults.appendChild(element);
         }
     }
 })();

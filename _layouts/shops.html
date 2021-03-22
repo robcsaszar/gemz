@@ -23,9 +23,15 @@ bodyClass: page-services-list
 </div>
 
 <div class="container pt-2 pb-6">
-    <p class="filter-count"></p>
-    {%- include sort-checkboxes.html -%}
+    <div class="sort-count">
+        {%- include sort-checkboxes.html -%}
+        <span class="filter-count"></span>
+    </div>
     <div id="search" class="shops row">
+        <div id="empty" class="no-results">
+            <img alt="No results" src="/images/illustrations/gemz-noresults.svg">
+            <p>Nu am găsit nici un rezultat</p>
+        </div>
         {% for shop in site.shops %}
         {%- include shops.html -%}
         {% endfor %}

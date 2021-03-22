@@ -152,7 +152,7 @@ select.filters-select {
   transition-property: height, width;
   display: flex;
   height: 100%;
-  min-height: 0;
+  min-height: 500px;
 }
 
 .checkbox-filters {
@@ -184,6 +184,32 @@ select.filters-select {
 
   input[type=checkbox]:checked+label {
     color: darkgreen;
+  }
+}
+
+.sort-count {
+  display: flex;
+  justify-content: space-between;
+  .filter-count {
+    font-weight: 500;
+    color: darken($white-offset, 30%);
+}
+}
+
+.no-results {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  img {
+    height: 250px;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: darken($white-offset, 20%);
   }
 }
 

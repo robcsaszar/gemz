@@ -51,6 +51,7 @@ $(document).ready(function() {
     });
 
     var iso = $container.data('isotope');
+    var $empty = $('#empty');
     var $filterCount = $('.filter-count');
     var $selects = $('.select-filters select');
     var $checkboxes = $('.checkbox-filters input');
@@ -180,7 +181,17 @@ $(document).ready(function() {
     }
 
     function updateFilterCount() {
-        $filterCount.text(iso.filteredItems.length + ' rezultate');
+        var $items = iso.filteredItems;
+        if ($items.length) {
+            if ($items.length == 1) {
+                $filterCount.text($items.length + ' rezultat');
+            } else {
+                $filterCount.text($items.length + ' rezultate');
+            }
+        } else {
+            $empty.css('display', 'flex');
+            $filterCount.text('');
+        }
     }
 
     // add active class to button
