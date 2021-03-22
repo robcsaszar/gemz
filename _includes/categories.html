@@ -4,7 +4,9 @@
         <div class="card-overlay"></div>
         <a href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">
             {% for image in categories.image %}
-                <img class="category-image" src="{{site.baseurl}}{{ image | prepend: '/images/categories' }}" alt="{{ categories.title }}" loading="eager">
+                <div class="category-image" style="-webkit-mask: url(
+                    {{site.baseurl}}{{ image | prepend: '/images/categories' }})">
+                </div>
             {% endfor %}
         </a>
     </div>

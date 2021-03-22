@@ -1,6 +1,6 @@
 ---
 title: "Accesorii"
-image: "/accesorii.jpg"
+image: "/accesorii.svg"
 category: Accesorii
 layout: category
 tag: "De purtat"

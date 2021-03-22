@@ -37,9 +37,12 @@
   .category-image {
     width: 100%;
     height: 5rem;
-    object-fit: cover;
     position: relative;
-  }
+    // background-size: 50%;
+    // background-position: center;
+    background: $primary;
+    -webkit-mask-size: cover;
+    }
 
   .card-title {
     font-size: 1.25rem;
