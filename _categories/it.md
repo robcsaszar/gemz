@@ -1,6 +1,6 @@
 ---
 title: "IT"
-image: "/it.jpg"
+image: "/it.svg"
 category: IT
 layout: category
 tag: "Timp liber"

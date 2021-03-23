@@ -1,6 +1,6 @@
 ---
 title: "Turism"
-image: "/turism.jpg"
+image: "/turism.svg"
 category: Turism
 layout: category
 tag: "Sănătate și recreere"

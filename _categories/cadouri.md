@@ -1,6 +1,6 @@
 ---
 title: "Cadouri"
-image: "/cadouri.jpg"
+image: "/cadouri.svg"
 category: Cadouri
 layout: category
 tag: "Timp liber"

@@ -200,6 +200,7 @@ $(document).ready(function() {
         $('.button-group a.button').removeClass('active');
         $(this).addClass('active');
     });
+
 });
 
 $('#search-box').focus(function() {

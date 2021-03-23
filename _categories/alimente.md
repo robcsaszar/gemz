@@ -1,6 +1,6 @@
 ---
 title: "Alimente"
-image: "/alimente.jpg"
+image: "/alimente.svg"
 category: Alimente
 layout: category
 tag: "Alimentație"

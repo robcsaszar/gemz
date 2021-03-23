@@ -1,6 +1,6 @@
 ---
 title: "Veterinar"
-image: "/veterinar.jpg"
+image: "/veterinar.svg"
 category: Veterinar
 layout: category
 tag: "Sănătate și recreere"

@@ -1,6 +1,6 @@
 ---
 title: "Bijuterii"
-image: "/bijuterii.jpg"
+image: "/bijuterii.svg"
 category: Bijuterii
 layout: category
 tag: "De purtat"

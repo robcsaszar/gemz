@@ -1,6 +1,6 @@
 ---
 title: "Diete"
-image: "/diete.jpg"
+image: "/diete.svg"
 category: Diete
 layout: category
 tag: "Alimentație"

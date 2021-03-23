@@ -1,13 +1,19 @@
 <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-1">
-    <div class="card-category">
+    <div class="card-category {{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">
         <a class="card-title" href="{{site.baseurl}}/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">{{ categories.title }}</a>
         <div class="card-overlay"></div>
         <a href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">
             {% for image in categories.image %}
-                <div class="category-image" style="background-image: url(
+            <!-- <div class="category-image" style="background-image: url(
                     {{site.baseurl}}{{ image | prepend: '/images/categories' }})">
-                </div>
+            </div> -->
+            <svg class="category-image">
+                <use xlink:href="#bg-{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}" />
+            </svg>
             {% endfor %}
         </a>
+        <svg class="category-icon">
+            <use xlink:href="#icon-{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}" />
+        </svg>
     </div>
 </div>

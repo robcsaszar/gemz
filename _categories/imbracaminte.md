@@ -1,6 +1,6 @@
 ---
 title: "Îmbrăcăminte"
-image: "/imbracaminte.jpg"
+image: "/imbracaminte.svg"
 category: Îmbrăcăminte
 layout: category
 tag: "De purtat"

@@ -1,6 +1,6 @@
 ---
 title: "Agricultură"
-image: "/agricultura.jpg"
+image: "/agricultura.svg"
 category: Agricultură
 layout: category
 tag: "Alimentație"

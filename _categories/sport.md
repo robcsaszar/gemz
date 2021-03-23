@@ -1,6 +1,6 @@
 ---
 title: "Sport"
-image: "/sport.jpg"
+image: "/sport.svg"
 category: Sport
 layout: category
 tag: "Sănătate și recreere"

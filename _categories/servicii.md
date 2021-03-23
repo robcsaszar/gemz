@@ -1,6 +1,6 @@
 ---
 title: "Servicii"
-image: "/servicii.jpg"
+image: "/servicii.svg"
 category: Servicii
 layout: category
 tag: "Timp liber"

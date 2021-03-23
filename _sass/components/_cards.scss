@@ -1,3 +1,33 @@
+$accesorii: rgb(79, 160, 105);
+$agricultura: rgb(166, 130, 87);
+$alimente: rgb(151, 79, 80);
+$amenajare-si-constructii: #5ecbbe;
+$animale: rgb(223, 59, 118);
+$arta: rgb(87, 148, 221);
+$auto: rgb(144, 105, 194);
+$bauturi: rgb(142, 144, 66);
+$bijuterii: rgb(255, 255, 255);
+$cadouri: rgb(255, 255, 255);
+$carti-si-publicatii: rgb(255, 255, 255);
+$casa-si-gradina: rgb(255, 255, 255);
+$cursuri-si-training: rgb(255, 255, 255);
+$diete: rgb(255, 255, 255);
+$frumusete: rgb(255, 255, 255);
+$gaming: rgb(255, 255, 255);
+$hobby: rgb(255, 255, 255);
+$imbracaminte: rgb(255, 255, 255);
+$incaltaminte: rgb(255, 255, 255);
+$it: rgb(255, 255, 255);
+$jucarii: rgb(255, 255, 255);
+$online: rgb(255, 255, 255);
+$pentru-copii: rgb(255, 255, 255);
+$relaxare: rgb(255, 255, 255);
+$sanatate: rgb(255, 255, 255);
+$servicii: rgb(255, 255, 255);
+$sport: rgb(255, 255, 255);
+$turism: rgb(255, 255, 255);
+$veterinar: rgb(255, 255, 255);
+
 .card-shop,
 .card-related-shop {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
@@ -26,13 +56,19 @@
 
 
 .card-category {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
   overflow: hidden;
   border-radius: .25rem;
   border-width: 0;
   border-style: solid;
   border-color: #dae4e9;
   position: relative;
+  transition: all .22s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+  }
 
   .category-image {
     width: 100%;
@@ -40,11 +76,44 @@
     position: relative;
     background-size: 50%;
     background-position: center;
-    }
+  }
 
   .card-title {
     font-size: 1.25rem;
+    top: 0;
   }
+
+  .card-overlay {
+    position: absolute;
+    background: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .category-icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-right: 0.5rem;
+    pointer-events: none;
+  }
+
+  @include category('accesorii', $accesorii);
+  @include category('agricultura', $agricultura);
+  @include category('alimente', $alimente);
+  @include category('amenajare-si-constructii', $amenajare-si-constructii);
+  @include category('animale', $animale);
+  @include category('arta', $arta);
+  @include category('auto', $auto);
+  @include category('bauturi', $bauturi);
 }
 
 .card-featured {

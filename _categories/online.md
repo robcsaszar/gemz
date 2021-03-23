@@ -1,6 +1,6 @@
 ---
 title: "Online"
-image: "/online.jpg"
+image: "/online.svg"
 category: Online
 layout: category
 tag: "Timp liber"

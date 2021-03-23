@@ -1,6 +1,6 @@
 ---
 title: "Animale"
-image: "/animale.jpg"
+image: "/animale.svg"
 category: Animale
 layout: category
 tag: "Sănătate și recreere"

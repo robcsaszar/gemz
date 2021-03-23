@@ -1,6 +1,6 @@
 ---
 title: "Jucării"
-image: "/jucarii.jpg"
+image: "/jucarii.svg"
 category: Jucării
 layout: category
 tag: "Sănătate și recreere"

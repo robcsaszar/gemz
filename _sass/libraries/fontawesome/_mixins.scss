@@ -44,6 +44,7 @@
 // Credit: HTML5 Boilerplate
 
 @mixin sr-only-focusable {
+
   &:active,
   &:focus {
     clip: auto;
@@ -52,5 +53,29 @@
     overflow: visible;
     position: static;
     width: auto;
+  }
+}
+
+@mixin category-colors($color) {
+  .card-overlay {
+    background: linear-gradient(to right, lighten(rgba($color, 0.5), 10%) 0%, darken(rgba($color, 0.5), 10%) 100%);
+  }
+
+  .category-icon,
+  .card-title {
+    filter: drop-shadow(0 0 10px $color);
+  }
+}
+
+@mixin category($category, $color) {
+  &.#{$category} {
+    .card-overlay {
+      background: linear-gradient(to right, lighten(rgba($color, 0.5), 10%) 0%, darken(rgba($color, 0.5), 10%) 100%);
+    }
+
+    .category-icon,
+    .card-title {
+      filter: drop-shadow(0 0 10px $color);
+    }
   }
 }

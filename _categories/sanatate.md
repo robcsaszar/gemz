@@ -1,6 +1,6 @@
 ---
 title: "Sănătate"
-image: "/sanatate.jpg"
+image: "/sanatate.svg"
 category: Sănătate
 layout: category
 tag: "Sănătate și recreere"

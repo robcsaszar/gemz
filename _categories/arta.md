@@ -1,6 +1,6 @@
 ---
 title: "Artă"
-image: "/arta.jpg"
+image: "/arta.svg"
 category: Artă
 layout: category
 tag: "Timp liber"

@@ -1,6 +1,6 @@
 ---
 title: "Auto"
-image: "/auto.jpg"
+image: "/auto.svg"
 category: Auto
 layout: category
 tag: "Timp liber"

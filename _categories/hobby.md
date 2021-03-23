@@ -1,6 +1,6 @@
 ---
 title: "Hobby"
-image: "/hobby.jpg"
+image: "/hobby.svg"
 category: Hobby
 layout: category
 tag: "Timp liber"
