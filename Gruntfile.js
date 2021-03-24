@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       },
       watch: {
         scripts: {
-          files: ['**/*.svg'],
+          files: ['icons/*.svg'],
           tasks: ['svgstore'],
           options: {
             spawn: false,
