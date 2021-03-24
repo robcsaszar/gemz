@@ -45,7 +45,7 @@
       }
       > ul {
         display: none;
-        width: 150%;
+        width: 100%;
         background: $white-offset;
         border-radius: 4px;
         padding: 1rem;
@@ -57,6 +57,9 @@
         box-sizing: border-box;
         border-radius: 0 0 4px 4px;
         box-shadow: 0 2px 3px 0 rgba(0,0,0,.075);
+        @include media-breakpoint-up(md) {
+          width: 150%;
+        }
         &:before,
         &:after {
           content: "";
