@@ -19,10 +19,10 @@ $imbracaminte: #DA2770;
 $incaltaminte: #78BB31;
 $it: #D3652E;
 $jucarii: #DC6770;
-$online: #5C8FA2;
+$online: #558597;
 $pentru-copii: #A7AB5E;
 $relaxare: #66CC91;
-$sanatate: #CB6439;
+$sanatate: #A139A5;
 $servicii: #CA7074;
 $sport: #7976E1;
 $turism: #3C715F;
@@ -52,8 +52,6 @@ $veterinar: #C88E49;
     position: relative;
   }
 }
-
-
 
 .card-category {
   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
@@ -184,23 +182,6 @@ $veterinar: #C88E49;
 }
 
 .card-online {
-  // position: absolute;
-  // top: 50%;
-  // right: 0;
-  // color: $primary;
-  // font-weight: 700;
-  // z-index: 2;
-  // font-size: 0.7rem;
-  // padding: 0.25rem 0.35rem;
-  // margin: 0.5rem 0;
-  // border-radius: 0.25rem 0 0 0.25rem;
-  // background: $white;
-  // line-height: 1rem;
-  // display: inline-table;
-  // text-align: center;
-  // margin-top: -1rem;
-
-
   position: relative;
   cursor: default;
   top: 0;
@@ -233,7 +214,6 @@ $veterinar: #C88E49;
   width: 75%;
   font-size: 2rem;
   margin: 0.5rem;
-  font-weight: 700;
   color: $white;
   font-family: $font-family-heading;
 
