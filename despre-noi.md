@@ -5,6 +5,11 @@ layout: page
 bodyClass: page-about
 
 ---
+Gem= “someone or something that is very good, pleasing, or useful.” Cineva sau ceva care este foarte bun, satisfacator sau util.
+Ex: The coffee house is a hidden gem (= something that not a lot of people know about).
+Cafeneaua asta e un hidden gem. (=e ceva despre care nu stie foarte multa lume).
+*Sursa: Cambridge Dictionary*
+
 ### Toate afacerile locale stranse intr-un singur loc? 
 Da, asta ne propunem noi, cei de la Gemz.
 Initiativa noastra de a sustine micile afaceri locale a trecut de la un simplu slogan la o platforma online!

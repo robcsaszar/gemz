@@ -2,7 +2,17 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
   .wrapper {
     flex: 1 0 0;
   }
+}
+
+.category-background {
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  background-size: 250px;
+  z-index: -1;
+  opacity: 0.07;
 }

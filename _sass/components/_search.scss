@@ -18,7 +18,7 @@
   font-weight: 500;
 
   &::placeholder {
-    color: darken($white-offset, 20%);
+    color: darken($white-offset, 30%);
   }
 }
 
@@ -265,5 +265,32 @@ select.filters-select {
 
   input:checked+label {
     color: lighten($primary, 10%);
+  }
+}
+
+.filter-button-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  background: $white-offset;
+  margin: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: darken($white-offset, 35%) !important;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+
+  &.active {
+    background: darken($white-offset, 30%);
+    color: $white !important;
+  }
+
+  &:hover {
+    background: darken($white-offset, 10%);
   }
 }

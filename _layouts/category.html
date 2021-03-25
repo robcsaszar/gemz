@@ -2,32 +2,47 @@
 layout: default
 bodyClass: page-services-list
 ---
-
-<div class="intro pt-1 pb-1">
-  <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        <div class="category-tag">{{ page.tag }}</div>
-        <h1 class="category-title">{{ page.title }}</h1>       
-      </div>
-    </div>
+<div class="category-background" style="background-image: linear-gradient(to bottom, #fff 0%, transparent 20%, #fff 100%), url(
+  /images/svg/categories/pagebg-{{ page.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}.svg)">
   </div>
+<div class="intro">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-10">
+                <div class="category-tag">{{ page.tag }}</div>
+                <h1 class="category-title">{{ page.title }}</h1>
+                <p>Caută după nume, filtrează, sau sortează magazinele din această categorie. </p>
+                {%- include filter-search.html -%}
+                {%- include filter-dropdowns.html -%}
+                {%- include filter-checkboxes.html -%}
+                <!-- {%- include filter-buttons.html -%} -->
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container pt-6 pb-6">
-  <div class="row">
-    {% assign shop_categories = site.shops | map: 'category' | join: ',' %}
-    {% assign shops_sorted = site.shops | sort: 'title' %}
-      {% for category in shop_categories %}
+<div class="container pt-2 pb-6">
+    <div class="sort-count">
+        {%- include sort-checkboxes.html -%}
+        <span class="filter-count"></span>
+    </div>
+    <div class="shops row">
+        <div id="empty" class="no-results">
+            <img alt="No results" src="/images/illustrations/gemz-noresults.svg">
+            <p>Nu am găsit nici un rezultat</p>
+        </div>
+        {% assign shop_categories = site.shops | map: 'category' | join: ',' %}
+        {% assign shops_sorted = site.shops | sort: 'title' %}
+        {% for category in shop_categories %}
         {% if category == '' %}
-          {% continue %}
+        {% continue %}
         {% endif %}
         {% for shop in shops_sorted %}
-          {% assign categories_array = shop.category | join: ',' %}
-            {% if categories_array contains page.category %}
-              {%- include shops.html -%}
-            {% endif %}
+        {% assign categories_array = shop.category | join: ',' %}
+        {% if categories_array contains page.category %}
+        {%- include shops.html -%}
+        {% endif %}
         {% endfor %}
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
 </div>

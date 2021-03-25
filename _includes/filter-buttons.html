@@ -1,17 +1,17 @@
 <div class="filters">
     <div class="button-group filter-button-group" data-filter-group="category">
-        <a class="button active" data-filter="*">Vezi toate</a>
+        <a class="filter-button active" data-filter="*">Vezi toate</a>
         {%- assign active_categories = site.shops | map: 'category' | join: ',' | split: ',' | uniq -%}
         {%- for category in active_categories -%}
-        <a class="button" data-filter=".{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">{{ category }}</a>
+        <a class="filter-button" data-filter=".{{ category | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">{{ category }}</a>
         {%- endfor -%}
     </div>
     <div class="button-group filter-button-group" data-filter-group="county">
-        <a class="button active" data-filter="*">Vezi toate</a>
+        <a class="filter-button active" data-filter="*">Vezi toate</a>
         {%- assign active_counties = site.shops | map: 'address' | map: 'county' | join: ',' | split: ',' | uniq -%}
         {%- for county in active_counties -%}
         {%- if county != empty -%}
-        <a class="button" data-filter=".{{- county | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' -}}">{{- county -}}</a>
+        <a class="filter-button" data-filter=".{{- county | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' -}}">{{- county -}}</a>
         {%- endif -%}
         {%- endfor -%}
     </div>

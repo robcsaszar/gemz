@@ -38,4 +38,4 @@ forms:
         placeholder: Submit form
         required: true
 ---
-Pentru a adăuga shop-ul tău, completează detaliile mai jos și te contactăm pentru mai multe informații privind acesta. După aceasta, shop-ul tău va fi disponibil online în câteva minute! 
+Pentru a adăuga business-ul tău, completează detaliile mai jos și te contactăm pentru mai multe informații privind acesta. După aceasta, pagina magazinului tău va fi disponibilă online în câteva minute! 

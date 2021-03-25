@@ -1,12 +1,14 @@
 a {
   color: $primary;
 }
+
 p {
   line-height: 26px;
   color: $blue-charcoal;
   font-family: $font-family-base;
   margin-bottom: 20px;
 }
+
 h1 {
   font-size: 20px;
   font-family: $font-family-heading;
@@ -14,35 +16,64 @@ h1 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
+
   @include media-breakpoint-up(md) {
     font-size: 32px;
     line-height: 1.2;
   }
 }
+
 h2 {
   font-size: 24px;
   font-family: $font-family-heading;
   line-height: 1.4;
   margin-bottom: 10px;
+
   @include media-breakpoint-up(md) {
     font-size: 26px;
     line-height: 1.4;
   }
 }
+
 h3 {
   font-size: 16px;
   line-height: 1.4;
+
   @include media-breakpoint-up(md) {
     font-size: 20px;
     line-height: 1.4;
   }
 }
+
 ul,
 ol {
   margin: 0;
   padding: 0;
+
   li {
     padding: 0;
     margin: 0;
   }
+}
+
+.sketch-underline {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='119' height='6' viewBox='0 0 119 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M117.434 3.853C59.027 5.933 84.784-2.46 1.566 3.436' stroke='%23FB664B' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") bottom left/100% 0.75rem no-repeat;
+  padding-bottom: 0.5rem
+}
+
+.scribble-underline {
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' viewBox='0 0 283.22 16.05' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m20.43 4.25a2297.57 2297.57 0 0 0 256.32-3.25l-249.82 14.05 255.29-6.79c-93.75 3.31-187.46-.38-281.22 2.94' fill='none' stroke='%231d2d35' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E") bottom center/100% 0.2em no-repeat;
+  padding-bottom: 0.05em
+}
+
+.sketch-rule {
+  width: 100%;
+  height: 0.4em;
+  margin: 3em 0;
+  border: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAxMTkgNiI%2BPHBhdGggZD0iTTExOSAzLjhjLTYwIDIuNS0zMy41LTctMTE5IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFkMmQzNSIgc3Ryb2tlLXdpZHRoPSIyIi8%2BPC9zdmc%2B) center/5em 100% repeat-x;
+}
+
+.text-center {
+  text-align: center !important;
 }
