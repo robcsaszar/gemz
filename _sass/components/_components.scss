@@ -1,3 +1,5 @@
+@import 'mixins';
+@import 'variables';
 @import 'type';
 @import 'page';
 @import 'header';
@@ -16,7 +18,6 @@
 @import 'strip';
 @import 'feature';
 @import 'social';
-@import 'variables';
 @import 'searchlist';
 @import 'search';
 @import 'cards';

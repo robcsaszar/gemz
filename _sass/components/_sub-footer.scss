@@ -28,44 +28,4 @@
       color: inherit;
     }
   }
-
-  .social {
-    a {
-      margin-left: -10px;
-      text-decoration: none;
-      color: $sub-footer-icon-color;
-      transition: all 0.3s;
-
-      &:hover {
-        color: $sub-footer-icon-hover-color;
-      }
-
-      &.icon-facebook {
-        @extend %fa-icon;
-        @extend .fab;
-      
-        &:before {
-          content: fa-content($fa-var-facebook);
-        }
-      }
-
-      &.icon-instagram {
-        @extend %fa-icon;
-        @extend .fab;
-      
-        &:before {
-          content: fa-content($fa-var-instagram);
-        }
-      }
-
-      &.icon-linkedin {
-        @extend %fa-icon;
-        @extend .fab;
-      
-        &:before {
-          content: fa-content($fa-var-linkedin);
-        }
-      }
-    }
-  }
 }

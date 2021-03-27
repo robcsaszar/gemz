@@ -1,17 +1,17 @@
 [
   {
     "title": "Categorii",
-    "description": "Fiecare business este categorizat in functie de industrie si interese.",
-    "image": "images/features/categories.svg"
+    "description": "Fiecare business este categorizat în funcție de industrie și interesele tale.",
+    "image": "feature-categories"
   },
   {
     "title": "100% local",
-    "description": "Toate business-urile sunt detinute si operate in Romania.",
-    "image": "images/features/local.svg"
+    "description": "Toate business-urile sunt deținute și operate în România.",
+    "image": "feature-local"
   },
   {
-    "title": "Platforma mobila",
-    "description": "Business-ul tau are pagina proprie si este vizibil pe orice marime de ecran, oricand.",
-    "image": "images/features/mobile.svg"
+    "title": "Platformă mobilă",
+    "description": "Fiecare business are pagina proprie, vizibilă chiar și offline.",
+    "image": "feature-mobile"
   }
 ]

@@ -186,6 +186,10 @@ select.filters-select {
   input[type=checkbox]:checked+label {
     color: darkgreen;
   }
+
+  .error ~ label {
+    color: red;
+  }
 }
 
 .sort-count {

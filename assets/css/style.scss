@@ -1,7 +1,6 @@
----
-# this ensures Jekyll reads the file to be transformed into CSS later
----
-
+--- 
+# this ensures Jekyll reads the file to be transformed into CSS later 
+--- 
 // Colors
 $primary: #f12705;
 $secondary-brass: #e6dbd5;
@@ -34,8 +33,10 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: 'Inter', sans-serif;
-$font-family-heading: 'Fraunces', serif;
+$font-family-base: 'Inter',
+sans-serif;
+$font-family-heading: 'Fraunces',
+serif;
 
 // Footer
 $footer-background-color: $white-offset;
@@ -72,6 +73,7 @@ body {
   font-feature-settings: "kern";
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
+
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 1.3;
@@ -82,7 +84,7 @@ html {
   scroll-behavior: smooth;
 }
 
-input:focus, textarea:focus, select:focus{
+:focus {
   outline: none;
 }
 
@@ -93,16 +95,14 @@ input:focus, textarea:focus, select:focus{
 
 //remove iOS input inner shadow
 textarea,
-input:matches(
-  [type="email"],
+input:matches([type="email"],
   [type="number"],
   [type="password"],
   [type="search"],
   [type="tel"],
   [type="text"],
-  [type="url"]
-) {
-  -webkit-appearance: none;
+  [type="url"]) {
+  -webkit-appearance: none !important;
 }
 
 :target {

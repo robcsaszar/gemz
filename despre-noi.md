@@ -1,22 +1,43 @@
 ---
 title: Despre noi
-date: 2021-01-21T17:01:34.000+07:00
-layout: page
+layout: about
 bodyClass: page-about
 
 ---
-Gem= “someone or something that is very good, pleasing, or useful.” Cineva sau ceva care este foarte bun, satisfacator sau util.
-Ex: The coffee house is a hidden gem (= something that not a lot of people know about).
-Cafeneaua asta e un hidden gem. (=e ceva despre care nu stie foarte multa lume).
-*Sursa: Cambridge Dictionary*
+<div class="dictionary">
+<div class="holes">
+    <div class="hole"></div>
+    <div class="hole"></div>
+    <div class="hole"></div>
+</div>
+<span class="word">gem</span>
+<span class="pronounciation">/dʒɛm/</span>
+<span class="type">(noun, substantiv)</span>
+<div class="definition">
+<span>Someone or something that is very good, pleasing, or useful.</span>
+<span>Cineva sau ceva care este foarte bun, plăcut sau util.</span>
+</div>
+<div class="example">
+<span>The coffee house is a hidden gem (something that not a lot of people know about).</span>
+<span>Cafeneaua asta e o nestemată ascunsă (e ceva despre care nu știe foarte multă lume).</span>
+</div>
+<span class="source">Sursa: Cambridge Dictionary</span>
+</div>
 
-### Toate afacerile locale stranse intr-un singur loc? 
+# Despre noi
+
+## Toate afacerile locale strânse într-un singur loc? 
 Da, asta ne propunem noi, cei de la Gemz.
-Initiativa noastra de a sustine micile afaceri locale a trecut de la un simplu slogan la o platforma online!
 
-Aici puteti descoperi orice cautati - de la mici magazine locale la furnizori de servicii din toate domeniile.
-Criza pandemiei COVID-19 ne-a determinat pe toti sa regandim modul in care cheltuim banii- unde si in ce ne dorim sa ii investim. Pentru ca a cumpara local inseamna a sustine si a ajuta comunitatea locala, adica oameni ca si noi. Doar noi ii putem ajuta sa isi continue activitatea in aceasta perioada grea.
-Natives.ro sustine revenirea la normal a anteprenoriatului romanesc in perioada post-pandemie.
 
-### Pentru anteprenori:
-Daca detineti si operati un business in Romania va puteti inscrie gratiut pe platforma Natives.ro. Fie ca aveti un magazin online si/sau fizic, singura conditie de eligibilitate e ca business-ul sa fie detinut si operat in Romania.
+Inițiativa noastră de a susține micile afaceri locale a trecut de la un simplu slogan la o platformă online!
+
+Aici poți descoperi orice cauți - de la mici magazine locale la furnizori de servicii din toate domeniile.
+
+Criza pandemiei COVID-19 ne-a determinat pe toți să regândim modul în care cheltuim banii -- unde și în ce ne dorim să îi investim. Pentru că a cumpăra local înseamnă a susține și a ajuta comunitatea locală, adică oameni ca și noi. Doar noi îi putem ajuta să își continue activitatea în această perioadă grea.
+
+Gemz.ro susține revenirea la normal a anteprenoriatului românesc în perioada post-pandemie.
+
+## Pentru antreprenori
+
+Dacă deții și operezi un business în România te poți înscrie gratuit pe platforma noastră. Fie că ai un magazin online și/sau fizic, singura condiție de eligibilitate e ca business-ul tău să fie deținut și operat în România.

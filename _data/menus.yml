@@ -153,6 +153,9 @@ footer:
 - title: Acasa
   url: "/"
   weight: 1
+- title: Shops
+  url: "/shops/"
+  weight: 2
 - title: Contact
   url: "/contact/"
-  weight: 2
+  weight: 3

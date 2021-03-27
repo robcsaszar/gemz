@@ -9,7 +9,7 @@ bodyClass: page-contact
         <div class="sec-title">
             <div class="title">{{page.title}}</div>
             <h2>Let's get in touch!</h2>
-            <div class="content mt-4">
+            <div class="content mt-2">
                 {{content}}
             </div>
         </div>
@@ -22,44 +22,7 @@ bodyClass: page-contact
 
                         <!--Contact Form-->
                         <div class="contact-form">
-                            <form method="post" action="" id="contact-form">
-                                <div class="row clearfix">
-                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                        <input type="text" name="name" value="" placeholder="Numele companiei" required>
-                                    </div>
-                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                        <input type="text" name="contactperson" value="" placeholder="Persoan de contact">
-                                    </div>
-                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                        <input type="email" name="email" value="" placeholder="Email" required>
-                                    </div>
-                                    <div class="form-group col-md-6 col-sm-6 co-xs-12">
-                                        <input type="tel" name="phone" value="" placeholder="Telefon" required>
-                                    </div>
-
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <hr>
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <input type="text" name="facebook" value="" placeholder="Facebook">
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <input type="text" name="instagram" value="" placeholder="Instagram">
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <input type="url" name="website" value="" placeholder="Website">
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <input type="text" name="address" value="" placeholder="Adresă">
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <textarea name="message" placeholder="Scrie câteva cuvinte despre business-ul tău"></textarea>
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12 co-xs-12">
-                                        <button type="submit" class="button">Trimite</button>
-                                    </div>
-                                </div>
-                            </form>
+                            {% if page.forms[0] %}{% include form.html form="1" %}{% endif %}
                         </div>
                         <!--End Contact Form-->
 
@@ -71,17 +34,23 @@ bodyClass: page-contact
                     <div class="inner-column">
                         <h2>Informații de contact</h2>
                         <ul class="list-info">
-                            <li><i class="fas fa-map-marker-alt"></i>Timișoara, România</li>
-                            <li><i class="fas fa-envelope-square"></i><a href="mailto:hello@gemz.ro">hello@gemz.ro</a></li>
-                            <li><i class="fas fa-phone-square"></i><a href="tel:+40 732-550-678">+40 732-550-678</a></li>
+                            {% if site.data.contact.address %}
+                            <li><i class="fas fa-map-marker-alt"></i>{{ site.data.contact.address }}</li>
+                            {% endif %}
+                            {%- if site.data.contact.email -%}
+                            <li><i class="fas fa-envelope-square"></i><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
+                            {%- endif -%}
+                            {%- if site.data.contact.phone -%}
+                            <li><i class="fas fa-phone-square"></i><a href="tel:{{ site.data.contact.phone }}">{{ site.data.contact.phone }}</a></li>
+                            {%- endif -%}
                         </ul>
-                        <ul class="social-icon-four">
-                            <li class="follow">
+                        <ul class="social">
+                            <li class="listheader">
                                 <h2>Urmărește-ne</h2>
                             </li>
-                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            {%- for item in site.data.social -%}
+                            <li><a href="{{ item.link }}" class="{{ item.class }}" target="blank"></a></li>
+                            {%- endfor -%}
                         </ul>
                     </div>
                 </div>

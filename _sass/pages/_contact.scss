@@ -7,7 +7,7 @@
 
 .sec-title {
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 1rem;
 }
 
 .sec-title .title {
@@ -34,6 +34,7 @@
 .sec-title h2 {
   position: relative;
   display: block;
+  font-weight: 400;
 }
 
 .contact-page-section {
@@ -73,19 +74,20 @@
 
 .contact-page-section .form-column .inner-column {
   position: relative;
-  padding: 60px 45px 30px;
+  padding: 2rem 1rem;
   background-color: $white;
 }
 
 .contact-page-section .info-column .inner-column {
   position: relative;
-  padding: 60px 35px;
+  padding: 2rem 2rem;
 }
 
 .contact-page-section .info-column h2 {
   position: relative;
   color: darken($white-offset, 50%);
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .contact-page-section .info-column .list-info {
@@ -98,7 +100,6 @@
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: darken($white-offset, 50%);
-  padding-left: 1rem;
   font-weight: 500;
 
   a {
@@ -126,7 +127,7 @@
 
 .contact-form .form-group {
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .contact-form input,
@@ -144,7 +145,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: $primary-light;
+  border-color: darken($white-offset, 20%);
 }
 
 .contact-form textarea {
@@ -158,38 +159,78 @@
   border-color: red !important;
 }
 
-.contact-form label.error {
-  display: block;
-  line-height: 24px;
-  padding: 5px 0 0;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: red;
-  font-weight: 500;
+.optional {
+  font-size: 0.75rem;
 }
 
-.social-icon-four {
+span.error {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 2rem;
+  font-size: 0.85rem;
+  background: $white;
+  padding: 0 0.25rem;
+  border-radius: 3px;
+  color: red;
+  z-index: 1;
+}
+
+.social {
   position: relative;
 }
 
-.social-icon-four li {
+.social li {
   position: relative;
   margin-right: 1rem;
   display: inline-block;
 }
 
-.social-icon-four li.follow {
+.social li.listheader {
   color: darken($white-offset, 50%);
   display: block;
 }
 
-.social-icon-four li a {
+.social li a {
   position: relative;
   color: darken($white-offset, 50%);
   transition: all 0.3s ease;
 }
 
-.social-icon-four li a:hover {
+.social li a:hover {
   color: darken($white-offset, 40%);
+}
+
+.input-label {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all .25s ease;
+  color: $grey-silver;
+  pointer-events: none;
+}
+
+textarea ~ .input-label {
+  top: 1.5rem;
+}
+
+#contact-form .input-field {
+
+  &:focus,
+  &:valid {
+    &+.input-label {
+      color: darken($white-offset, 40%);
+      transform: translateY(-2rem);
+      background: $white;
+      padding: 0 0.25rem;
+      border-radius: 3px;
+    }
+  }
+}
+
+#contact-form .button::before {
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-paper-plane);
+  margin-right: 0.5rem;
 }

@@ -6,6 +6,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 
 ---
-# Business-uri locale la indemana
+# Business-uri locale la îndemână
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula purus, laoreet vel turpis ac, sagittis ullamcorper dui. 

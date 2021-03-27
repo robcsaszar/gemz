@@ -20,3 +20,50 @@
     text-decoration: none;
   }
 }
+
+.cta {
+  overflow: hidden;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: $primary;
+  color: $white;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($primary, 5%);
+  }
+}
+
+.cta :is(a) {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: $white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta:hover :is(a) {
+  transform: translateX(10px);
+}
+
+.cta:hover svg {
+  opacity: 1;
+  transform: translate(15px, -50%);
+}
+
+.cta :is(a) {
+  transition: transform .3s cubic-bezier(.455,.03,.515,.955);
+}
+
+.cta svg {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  fill: $white;
+  opacity: 0;
+  transform: translate(-10px, -50%);
+  transition: opacity .3s .05s cubic-bezier(.455,.03,.515,.955), transform .3s .05s cubic-bezier(.455,.03,.515,.955);
+}
