@@ -1,4 +1,4 @@
-var version = '1.0.54';
+var version = '1.0.55';
 var coreID = version + '_core';
 var pageID = version + '_pages';
 var imgID = version + '_img';
@@ -15,7 +15,11 @@ var fontFiles = [
     '/fonts/fraunces-v8-latin-ext-700.woff',
     '/fonts/fraunces-v8-latin-ext-700.woff2',
     '/fonts/fraunces-v8-latin-ext-700italic.woff',
-    '/fonts/fraunces-v8-latin-ext-700italic.woff2'
+    '/fonts/fraunces-v8-latin-ext-700italic.woff2',
+	'/fonts/libre-baskerville-v9-latin-ext-regular.woff',
+    '/fonts/libre-baskerville-v9-latin-ext-regular.woff2',
+    '/fonts/libre-baskerville-v9-latin-ext-700.woff',
+    '/fonts/libre-baskerville-v9-latin-ext-700.woff2'
 ];
 
 // On install, cache some stuff
@@ -81,7 +85,7 @@ self.addEventListener('fetch', function (event) {
 
     // Images & Fonts
     // Offline-first
-    if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v8') || request.url.includes('/assets/css/fonts.css')) {
+    if (request.headers.get('Accept').includes('image') || request.url.includes('inter-v3') || request.url.includes('fraunces-v8')|| request.url.includes('libre-baskerville-v9') || request.url.includes('/assets/css/fonts.css')) {
 		event.respondWith(
 			caches.match(request).then(function (response) {
 				return response || fetch(request).then(function (response) {
