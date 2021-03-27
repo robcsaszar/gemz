@@ -10,6 +10,7 @@ bodyClass: page-about
     <div class="hole"></div>
     <div class="hole"></div>
 </div>
+<hr>
 <span class="word">gem</span>
 <span class="pronounciation">/dʒɛm/</span>
 <span class="type">(noun, substantiv)</span>
