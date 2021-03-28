@@ -1,17 +1,27 @@
 <div class="sub-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer-inner">
-          {% if site.data.social %}
-            {% include social.html %}
-          {% endif %}
-          {% if site.footer.copyright_text %}
-          <div class="copyright">©{{ 'now' | date: "%Y" }} Gemz.ro · {{ site.footer.copyright_text }}</div>
-          {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="sub-footer-inner">
+                    {% if site.data.social %}
+                    {% include social.html %}
+                    {% endif %}
+                    {% if site.footer.copyright_text %}
+                    <div class="copyright">©{{ 'now' | date: "%Y" }} Gemz.ro · {{ site.footer.copyright_text }}</div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+<div id='install-to-homescreen'>
+  <span>Poți instala Gemz ca aplicație mobilă. <br />
+      Găsește butonul de share în browser
+      <img src="/images/svg/icons/icon-share.svg" class="share_img" />
+      și selectați 
+      <img src="/images/svg/icons/icon-addtohomescreen.svg" class="addtohomescreen_img" />
+      pentru a instala.      
+  </span>
+  <a id='dismiss-install-to-homescreen' class='dismiss'>Nu, mulțumesc</a>
 </div>
 {% include add-to-homescreen.html %}
