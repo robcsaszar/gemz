@@ -88,6 +88,10 @@
   max-width: 540px;
   width: calc(100% - 2rem);
   display: flex;
+
+  @include media-breakpoint-up(sm) {
+    bottom: 1rem;
+  }
 }
 
 .cookie-icon {

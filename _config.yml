@@ -9,7 +9,7 @@ lang_direction: "ltr"
 background-color: "#f12705"
 theme-color: "#f0f5ee"
 
-google_analytics_id: ""
+google_analytics_id: "H2HMEBZC25" # without the G-
 homepage:
   show_call_box: true
 logo:

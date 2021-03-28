@@ -94,16 +94,23 @@
       $(function() {
           var $banner = $('.cookie-message');
 
+          $(window).resize(function() {
+              if ($(window).width() < 576) {
+                $banner.removeClass("popped");
+              } else {
+                $banner.addClass("popped");
+              }
+          });
           $("#cookie-button").click(function() {
               if ($banner.hasClass("popped")) {
-                    $banner.animate({
+                  $banner.animate({
                       bottom: '-500px'
                   }, {
                       queue: false,
                       duration: 500
                   }).removeClass("popped");
               } else {
-                $banner.animate({
+                  $banner.animate({
                       bottom: "1rem"
                   }, {
                       queue: false,
@@ -120,12 +127,16 @@
               dataLayer.push(arguments);
           }
           gtag('js', new Date());
-          gtag('config', '{{ site.google_analytics_id }}', {
+          gtag('config', 'G-{{ site.google_analytics_id }}', {
               'anonymize_ip': true,
               'forceSSL': true
           });
       } else {
-          document.getElementById('cookie-notice').style.display = 'block';
+        document.getElementById('cookie-notice').style.display = 'block';
+
+        document.cookie = '_ga=; domain=.cszr.dev; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+        document.cookie = '_ga_{{ site.google_analytics_id }}=; domain=.cszr.dev; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+        document.cookie = '_gid=; domain=cszr.dev; expires=Thu, 01 Jan 1970 00:00:01 GMT';
       }
       document.getElementById('cookie-notice-accept').addEventListener("click", function() {
           createCookie('cookie-notice-dismissed', 'true', 31);
