@@ -1,14 +1,14 @@
 <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-1">
-    <div class="card-category {{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">
-        <a class="card-title" href="{{site.baseurl}}/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">{{ categories.title }}</a>
+    <div class="card-category {{ categories | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}">
+        <a class="card-title" href="{{site.baseurl}}/categories/{{ categories | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">{{ categories }}</a>
         <div class="card-overlay"></div>
-        <a href="/categories/{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">
+        <a href="/categories/{{ categories | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}/">
             <div class="category-image" style="background-image: url(
-                    /images/categories/bg-{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}.svg)">
+                    /images/categories/bg-{{ categories | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}.svg)">
             </div>
         </a>
         <svg class="category-icon">
-            <use xlink:href="#icon-{{ categories.title | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}" />
+            <use xlink:href="#icon-{{ categories | slugify | replace: 'ș', 's' | replace: 'ț', 't' | replace: 'ă', 'a' | replace: 'î', 'i' | replace: 'â', 'a' }}" />
         </svg>
     </div>
 </div>
