@@ -208,6 +208,7 @@ span.error {
   transition: all .25s ease;
   color: $grey-silver;
   pointer-events: none;
+  width: 100%;
 }
 
 textarea ~ .input-label {
