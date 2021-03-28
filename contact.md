@@ -69,7 +69,7 @@ forms:
         item_class: input-field
       - name: terms
         input_type: checkbox
-        placeholder: Accept termenii și condițiile pentru colectarea datelor mele personale
+        placeholder: Accept termenii și condițiile pentru <a href="/privacy" class='href-underline'>colectarea datelor mele personale</a>
         class: checkbox-filters
         required: true
         half: false

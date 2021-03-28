@@ -46,7 +46,7 @@
       a {
         color: $footer-text-color;
         text-decoration: none;
-        padding: 12px 14px 12px 0;
+        padding: 0.25rem 0;
         display: block;
 
         &:hover {
@@ -74,9 +74,42 @@
 
         a {
           display: inline-block;
-          height: 40px;
-          padding: 10px 8px 10px 8px;
+          padding: 0.25rem 0;
         }
+      }
+    }
+  }
+
+  .footer-privacy ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 0.25rem;
+    color: darken($white-offset, 30%);
+    
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+
+      content: fa-content($fa-var-lock);
+      margin-right: 0.5rem;
+    }
+
+
+    a {
+      padding: 0;
+      margin-right: 1rem;
+      margin-top: 0.25rem;
+      color: darken($white-offset, 30%);
+      transition: all 0.5s ease;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05rem;
+      font-weight: 700;
+      
+      &:hover {
+        color: darken($white-offset, 50%);
+        text-decoration: none;
       }
     }
   }

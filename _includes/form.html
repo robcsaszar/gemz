@@ -39,7 +39,7 @@
                     </div>
                     {% elsif item.input_type == 'checkbox' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" value="{{ item.placeholder }}" required>
+                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" value="{{ item.name }}" required>
                         <label for="{{ item.name }}">{{ item.placeholder }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
@@ -75,7 +75,7 @@
                     var id = '#{{ pageform.id }}';
                     validateForm(id);
                 });
-                
+
                 var form = document.getElementById("{{ pageform.id }}");
 
                 async function handleSubmit(event) {

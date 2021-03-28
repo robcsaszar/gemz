@@ -1,0 +1,138 @@
+.privacy {
+  h1 {
+    counter-reset: h2counter;
+  }
+
+  .privacy-heading {
+    counter-reset: h3counter;
+  }
+
+  .privacy-heading-2 {
+    counter-reset: h4counter;
+  }
+
+  .privacy-heading-3 {
+    counter-reset: h5counter;
+  }
+
+  .privacy-heading-4 {
+    counter-reset: h6counter;
+  }
+
+  .privacy-heading:before {
+    counter-increment: h2counter;
+    content: counter(h2counter) ".\0000a0\0000a0";
+  }
+
+  .privacy-heading-2:before {
+    counter-increment: h3counter;
+    content: counter(h2counter) "."counter(h3counter) ".\0000a0\0000a0";
+  }
+
+  .privacy-heading-3:before {
+    counter-increment: h4counter;
+    content: counter(h2counter) "."counter(h3counter) "."counter(h4counter) ".\0000a0\0000a0";
+  }
+
+  .privacy-heading-4:before {
+    counter-increment: h5counter;
+    content: counter(h2counter) "."counter(h3counter) "."counter(h4counter) "."counter(h5counter) ".\0000a0\0000a0";
+  }
+
+  .privacy-heading-5:before {
+    counter-increment: h6counter;
+    content: counter(h2counter) "."counter(h3counter) "."counter(h4counter) "."counter(h5counter) "."counter(h6counter) ".\0000a0\0000a0";
+  }
+
+  .privacy-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.016rem;
+    line-height: 1.24;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+
+      @extend %fa-icon;
+      @extend .fas;
+
+      color: #ddd;
+      content: fa-content($fa-var-link);
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      transition: all 0.1s ease;
+
+    }
+
+    &:hover::after {
+      color: $primary;
+    }
+  }
+
+  .anchor {
+    color: $black;
+    text-decoration: none;
+  }
+
+  .privacy-heading-2 {
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.035rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-heading-3 {
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.035rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: darken($white, 70%)
+  }
+
+  .privacy-heading-4 {
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.035rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: darken($white, 70%)
+  }
+
+
+
+  em {
+    color: green;
+    display: block;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.035rem;
+    line-height: 1.24;
+    margin-top: 0.5rem;
+
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+
+      content: fa-content($fa-var-info-circle);
+    }
+  }
+
+  .privacy-updated {
+    opacity: 0.5;
+
+    &::before {
+      @extend %fa-icon;
+      @extend .fas;
+
+      content: fa-content($fa-var-clock);
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -159,3 +159,14 @@ footer:
 - title: Contact
   url: "/contact/"
   weight: 3
+
+privacy:
+  - title: Confidențialitate
+    url: "/privacy"
+    weight: 1
+  - title: Cookies
+    url: "/cookies"
+    weight: 2
+  - title: Termeni
+    url: "/terms"
+    weight: 3

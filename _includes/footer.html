@@ -27,5 +27,19 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="footer-privacy">
+                  <ul>
+                    {% assign privacymenu = site.data.menus.privacy | sort: 'weight'  %}
+                    {%- for item in privacymenu -%}
+                    <li class="{% if item.url == page.url %}active{% endif %}">
+                        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
