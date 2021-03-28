@@ -84,8 +84,8 @@
 
 .progress-wrap {
   position: fixed;
-  right: 32px;
-  bottom: 32px;
+  right: 1rem;
+  bottom: 1rem;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -115,7 +115,7 @@
   -webkit-mask-repeat: no-repeat;
   mask-position: center;
   -webkit-mask-position: center;
-  background-color: $white-offset;
+  background-color: darken($white-offset, 40%);
   text-align: center;
   line-height: 40px;
   font-size: 24px;
@@ -131,10 +131,10 @@
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: darken($green-artichoke, 20%);
+  stroke: darken($white-offset, 50%);
   stroke-width: 5;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  fill: $green-artichoke;
+  fill: darken($white-offset, 20%);
 }

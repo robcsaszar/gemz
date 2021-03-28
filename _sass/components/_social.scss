@@ -36,5 +36,14 @@
         content: fa-content($fa-var-linkedin);
       }
     }
+
+    &.icon-feed {
+      @extend %fa-icon;
+      @extend .fas;
+    
+      &:before {
+        content: fa-content($fa-var-rss);
+      }
+    }
   }
 }

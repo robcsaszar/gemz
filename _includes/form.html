@@ -28,18 +28,18 @@
 
                     {% if item.input_type == 'textarea' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" minlength="30" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}"  {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}" {% endif %} required></textarea>
+                        <textarea name="{{ item.name }}" name="{{ item.name }}" id="{{ item.name }}" cols="30" rows="10" minlength="30" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}" {% endif %} required></textarea>
                         <label {% if pageform.placeholders == true %}class="sr-only" {%- else -%}class="{{ pageform.label_class }}" {% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
                     {% elsif item.input_type == 'radio' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <label><input type="radio" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}"  name="{{ item.name }}" value="{{ item.placeholder }}" required>{{ item.placeholder }}</label>
+                        <label><input type="radio" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" name="{{ item.name }}" value="{{ item.placeholder }}" required>{{ item.placeholder }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
                     {% elsif item.input_type == 'checkbox' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}"   value="{{ item.placeholder }}" required>
+                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" value="{{ item.placeholder }}" required>
                         <label for="{{ item.name }}">{{ item.placeholder }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
@@ -56,12 +56,13 @@
                     {{ item.placeholder }}
                     {% elsif item.input_type == 'submit' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <button type="{{ item.input_type }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" >{{ item.placeholder }}</button>
+                        <p id="my-form-status"></p>
+                        <button type="{{ item.input_type }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}">{{ item.placeholder }}</button>
                     </div>
 
                     {% else %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}"  {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}" {% endif %} aria-describedby="validate-{{ item.name }}" required autocomplete="off">
+                        <input type="{{ item.input_type }}" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" {% if pageform.placeholders == true %}placeholder="{{ item.placeholder }}{{ requiredstar }}" {% endif %} aria-describedby="validate-{{ item.name }}" required autocomplete="off">
                         <label {% if pageform.placeholders == true %}class="sr-only" {%- else -%}class="{{ pageform.label_class }}" {% endif %} for="{{ item.name }}">{{ item.placeholder }}{{ requiredstar }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
@@ -74,4 +75,25 @@
                     var id = '#{{ pageform.id }}';
                     validateForm(id);
                 });
+                
+                var form = document.getElementById("{{ pageform.id }}");
+
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById("my-form-status");
+                    var data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset()
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form"
+                    });
+                }
+                form.addEventListener("submit", handleSubmit)
             </script>

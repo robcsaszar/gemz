@@ -1,0 +1,18 @@
+{% capture words %}
+{{ content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains '-' %}
+{%- capture minutes -%}
+{{ words | plus: 180 | divided_by: 180 }}
+{%- endcapture -%}
+{%- capture reading -%}
+{%- if minutes == '1' -%}
+{{ minutes | append: ' minut de citit' }}
+{%- else -%}
+{{ minutes | append: ' minute de citit' }}
+{%- endif -%}
+{%- endcapture -%}
+<span class="reading-time">
+{{ reading }}
+</span>
+{% endunless %}

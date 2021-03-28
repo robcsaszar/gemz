@@ -1,0 +1,17 @@
+.statistics {
+  display: flex;
+  flex-direction: row;
+  margin: 0.25rem 0;
+  justify-content: end;
+
+  .reading-time {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    &::before {
+        @extend %fa-icon;
+        @extend .fas;
+
+        content: fa-content($fa-var-clock);
+    }
+  }
+}

@@ -8,5 +8,10 @@
     "name": "Instagram",
     "link": "https://instagram.com/gemz",
     "class": "icon-instagram"
+  },
+  {
+    "name": "Instagram",
+    "link": "/feed.xml",
+    "class": "icon-feed"
   }
 ]

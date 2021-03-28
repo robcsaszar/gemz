@@ -3,10 +3,10 @@ title: Contact
 layout: contact
 bodyClass: page-contact
 forms:
-  - to: rob.csaszar@gmail.com
+  - to: f/xrgrzjej
     subject: New submission!
     redirect: /
-    form_engine: netlify
+    form_engine: formspree
     placeholders: false
     id: contact-form
     half: form-group col-md-6 col-sm-6 co-xs-12
