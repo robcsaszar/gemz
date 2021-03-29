@@ -47,7 +47,8 @@ sass:
 
 feed:
   collections:
-    - shops
+    shops:
+      path: "/feed.xml"
 
 plugins:
   - jekyll-environment-variables
