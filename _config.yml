@@ -46,6 +46,7 @@ sass:
   precision: 10
 
 feed:
+  path: "/atom.xml"
   collections:
     shops:
       path: "/feed.xml"
