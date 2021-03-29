@@ -93,6 +93,11 @@ html {
   color: $primary;
 }
 
+input,
+textarea {
+  caret-color: $primary;
+}
+
 //remove iOS input inner shadow
 textarea,
 input:matches([type="email"],
