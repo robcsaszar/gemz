@@ -4,7 +4,7 @@
 {% assign formnumber = 0 %}
 {% endif %}
 {% assign pageform = page.forms[formnumber] %}
-
+<span id="missed-message" class="user-message"></span>
 {% if pageform.form_engine == 'netlify' %}
 <form name="{{ page.title }} {% if formnumber > 0 %}{{ formnumber | plus:1 }}{% endif %}" id="{{ pageform.id }}" class="form autofill" method="POST" action="{{ pageform.redirect }}" data-netlify="true" netlify-honeypot="_gotcha">
     <input type="hidden" name="_to" value="{{ pageform.to }}">
@@ -39,7 +39,7 @@
                     </div>
                     {% elsif item.input_type == 'checkbox' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" value="{{ item.name }}" required>
+                        <input type="checkbox" name="{{ item.name }}" id="{{ item.name }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}" value="{{ item.name }}" autocomplete="off" required>
                         <label for="{{ item.name }}">{{ item.placeholder }}</label>
                         <span class="error" id="validate-{{ item.name }}"></span>
                     </div>
@@ -56,8 +56,8 @@
                     {{ item.placeholder }}
                     {% elsif item.input_type == 'submit' %}
                     <div class="{{ item.class }} {% if item.half %}{{ pageform.half }}{% else %}{{ pageform.full }}{% endif %}">
-                        <p id="my-form-status"></p>
-                        <button type="{{ item.input_type }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}">{{ item.placeholder }}</button>
+                        <span id="submit-message" class="user-message"></span>
+                        <button id="submit" type="{{ item.input_type }}" class="{% if item.item_class %}{{ item.item_class }}{% endif %} {% if item.required != true %}ignore{% endif %}">{{ item.placeholder }}</button>
                     </div>
 
                     {% else %}
@@ -75,25 +75,4 @@
                     var id = '#{{ pageform.id }}';
                     validateForm(id);
                 });
-
-                var form = document.getElementById("{{ pageform.id }}");
-
-                async function handleSubmit(event) {
-                    event.preventDefault();
-                    var status = document.getElementById("my-form-status");
-                    var data = new FormData(event.target);
-                    fetch(event.target.action, {
-                        method: form.method,
-                        body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    }).then(response => {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset()
-                    }).catch(error => {
-                        status.innerHTML = "Oops! There was a problem submitting your form"
-                    });
-                }
-                form.addEventListener("submit", handleSubmit)
             </script>

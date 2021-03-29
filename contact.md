@@ -63,7 +63,7 @@ forms:
         item_class: input-field
       - name: message
         input_type: textarea
-        placeholder: Scrie câteva cuvinte despre business-ul tău
+        placeholder: Mesajul tău
         required: true
         half: false
         item_class: input-field

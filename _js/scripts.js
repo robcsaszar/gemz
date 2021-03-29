@@ -185,6 +185,13 @@ function enableSearch() {
 }
 
 function validateForm(id) {
+    var $missed = $('#missed-message');
+    var $submit = $("#submit-message");
+
+    $.validator.methods.email = function(value, element) {
+        var regex = /[A-Za-z0-9._%+-]{1,}@([a-zA-Z]{1,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}))/;
+        return this.optional(element) || regex.test(value);
+    }
     $(id).validate({
         ignore: ".ignore",
         errorElement: "span",
@@ -196,6 +203,19 @@ function validateForm(id) {
                 error.insertBefore(element);
             }
         },
+        invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                var message = errors == 1 ?
+                    'Ți-a scăpat un câmp. Acesta a fost evidenţiat mai jos.' :
+                    'Ți-au scăpat ' + errors + ' câmpuri. Acestea au fost evidenţiate mai jos.';
+
+                $missed.fadeIn(500);
+                $missed.removeClass('success').addClass('failed').html(message);
+                $missed.delay(5000).fadeOut(800);
+            }
+        },
         // Specify validation rules
         rules: {
             // The key name on the left side is the name attribute
@@ -204,42 +224,45 @@ function validateForm(id) {
             name: "required",
             contactperson: "required",
             telephone: "required",
-            email: {
-                required: true,
-                // Specify that email should be validated
-                // by the built-in "email" rule
-                email: true
-            },
+            email: "required",
             message: "required",
             terms: "required"
         },
         // Specify validation error messages
         messages: {
-            name: "Te rugăm să introduci un nume valid.",
-            contactperson: "Te rugăm să introduci un nume valid.",
-            telephone: "Te rugăm să introduci un număr valid.",
-            email: "Te rugăm să introduci o adresă validă.",
-            message: "Te rugăm să introduci minimum 30 de litere.",
+            name: "Câmp obligatoriu",
+            contactperson: "Câmp obligatoriu",
+            telephone: "Câmp obligatoriu",
+            email: "Câmp incorect",
+            message: "Minimum 30 caractere",
             terms: ""
         },
         // Make sure the form is submitted to the destination defined
         // in the "action" attribute of the form when valid
         submitHandler: function(form) {
-            form.submit();
+            var $form = $(id);
+            $.ajax({
+                method: form.method,
+                dataType: "json",
+                url: form.action,
+                data: $(form).serialize(),
+                success: function(response) {
+                    var response = 'Mulțumim pentru mesaj! Te vom contacta în cel mai scurt timp posibil.';
+                    $submit.fadeIn(500);
+                    $submit.removeClass('failed').addClass('success').html(response);
+                    $form.find('input, input:file, select, textarea').val('');
+                    $form.find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+                    $submit.delay(5000).fadeOut(800);
+                },
+                error: function(response) {
+                    var response = 'Uh oh! Ne pare rău însă mesajul nu s-a putut trimite. Te rugăm să ne contactezi direct la adresa hello@gemz.ro.';
+                    $submit.fadeIn(500);
+                    $submit.removeClass('success').addClass('failed').html(response);
+                    $submit.delay(10000).fadeOut(800);
+                }
+            });
         }
     });
-
-    function phoneMask() {
-        var num = $(this).val().replace(/\D/g, '');
-        $(this).val(
-            '+40 ' + '(' + num.substring(2, 5) +
-            (num.length > 4 ? ')' : '') +
-            (num.length > 4 ? ' ' + num.substring(5, 8) : '') +
-            (num.length > 7 ? ' ' + num.substring(8, 11) : '') +
-            (num.length > 9 ? '' + num.substring(11, 14) : '')
-        );
-    }
-    $('[type="tel"]').keyup(phoneMask);
 }
 
 function enableFilters() {
