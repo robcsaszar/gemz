@@ -1,5 +1,6 @@
 baseurl: ''
-url: ''
+url: 'https://gemz.ro'
+dev_url: 'https://gemz.cszr.dev'
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 permalink: pretty
 title: 'Gemz.ro — Shop smart, shop local'
