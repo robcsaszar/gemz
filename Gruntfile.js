@@ -13,7 +13,8 @@ module.exports = function(grunt) {
             },
           },
           files: {
-            'assets/js/scripts.min.js': ['_js/scripts.js']
+            'assets/js/scripts.min.js': ['_js/scripts.js'],
+            'assets/js/like.min.js': ['_js/like.js']
           }
         }
       },
