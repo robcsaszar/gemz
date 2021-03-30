@@ -8,4 +8,4 @@ intro_image_hide_on_mobile: false
 ---
 # Business-uri locale la îndemână
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ligula purus, laoreet vel turpis ac, sagittis ullamcorper dui. 
+Vezi aici toate magazinele și serviciile disponibile. Poți filtra după categorie, nume sau locație și poți alege sa vizualizezi doar magazinele care livrează online.
