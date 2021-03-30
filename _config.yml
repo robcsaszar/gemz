@@ -25,8 +25,8 @@ seo:
   meta_og_type: "website"
   meta_og_url: "https://gemz.ro"
   meta_og_image: "images/social/og_metatag.png"
-  meta_og_description: "Producători locali și business-uri din România într-o singura pagina web. Selectează locația ta și descoperă toate business-urile locale din zona ta."
-  meta_twitter_card: "summary_large_image"
+  meta_og_description: "Producători locali și business-uri din România într-o singură pagină web. Selectează locația ta și descoperă toate business-urile locale din zona ta."
+  meta_twitter_card: "images/social/og_metatag.png"
   meta_twitter_site: "https://gemz.ro"
   meta_twitter_creator: "@gemz.ro"
 
