@@ -10,13 +10,12 @@ lang_direction: "ltr"
 background-color: "#f12705"
 theme-color: "#f0f5ee"
 
-google_analytics_id: "H2HMEBZC25" # without the G-
+google_analytics_id: "G-H2HMEBZC25"
 homepage:
   show_call_box: true
 logo:
   mobile: "images/logo/logo-mobile.svg"
   desktop: "images/logo/logo.svg"
-  desktop_height: "64px"
 footer:
   copyright_text: 'built by <a class="nhg" href="https://nhg.design">nhg.design</a>'
 
@@ -56,15 +55,15 @@ pwa:
   sw_src_filepath: sw.js # Optional
   sw_dest_filename: sw.js # Optional
   dest_js_directory: assets/js # Required
-  precache_glob_directory: / # Optional
-  precache_glob_patterns: # Optional
-    - "/**/*.{js,json,css}"
-    - "/**/*.{ico,jpg,jpeg,png,svg}"
-    - "/**/*.html"
-    - "fonts/**/*"
-    - "assets/webfonts/*"
-  precache_glob_ignores: # Optional
-    - "sw-register.js"
+  # precache_glob_directory: / # Optional
+  # precache_glob_patterns: # Optional
+  #   - "/**/*.{js,json,css}"
+  #   - "/**/*.{ico,jpg,jpeg,png,svg}"
+  #   - "/**/*.html"
+  #   - "fonts/**/*"
+  #   - "assets/webfonts/*"
+  # precache_glob_ignores: # Optional
+  #   - "sw-register.js"
 
 plugins:
   - jekyll-environment-variables

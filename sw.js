@@ -1,10 +1,18 @@
 // sw.js
-const FALLBACK_URL = '/offline';
+var pre = 'gemz';
+var v = 'v1.0';
+
+const FALLBACK_HTML_URL = /(offline)/;
+
+// Force production builds
+workbox.setConfig({
+    debug: false
+});
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
-    prefix: 'gemz',
-    suffix: 'v1.1',
+    prefix: pre,
+    suffix: v,
     precache: 'precache',
     runtime: 'runtime-cache'
 });
@@ -24,18 +32,49 @@ workbox.routing.registerRoute(
 
 // use `NetworkFirst` strategy for css and js
 workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
+    /\.(?:js|css|json)$/,
     new workbox.strategies.NetworkFirst()
 );
 
 // use `CacheFirst` strategy for images
 workbox.routing.registerRoute(
-    /assets\/(img|icons)/,
-    new workbox.strategies.CacheFirst()
+    /\.(?:ico|jpg|jpeg|png|svg|webp)$/,
+    new workbox.strategies.CacheFirst({
+        cacheName: pre + '-images-' + v,
+      })
+);
+
+// use `CacheFirst` strategy for fonts
+workbox.routing.registerRoute(
+    /(\/*fonts\/)/,
+    new workbox.strategies.CacheFirst({
+        cacheName: pre + '-fonts-' + v,
+      })
 );
 
 // use `StaleWhileRevalidate` third party files
 workbox.routing.registerRoute(
-    /^https?:\/\/cdn.staticfile.org/,
-    new workbox.strategies.StaleWhileRevalidate()
+    /^https?:\/\/code.jquery.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: pre + '-thirdparty-' + v,
+    })
 );
+
+workbox.routing.registerRoute(
+    /^https?:\/\/cdnjs.cloudflare.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: pre + '-thirdparty-' + v,
+    })
+);
+
+workbox.routing.setDefaultHandler(new workbox.strategies.NetworkOnly());
+
+workbox.routing.setCatchHandler((event) => {
+  switch (event.request.destination) {
+    case 'document':
+      return caches.match(FALLBACK_HTML_URL);
+      break;
+    default:
+      return Response.error();
+  }
+});

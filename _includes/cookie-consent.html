@@ -12,3 +12,108 @@
         <a class="close" id="cookie-notice-accept" href="#"><i class="fa fa-times"></i></a>
     </div>
 </div>
+<script>
+    $(function() {
+        var $banner = $('.cookie-message');
+
+        $(window).resize(function() {
+            if ($(window).width() < 576) {
+                $banner.removeClass("popped");
+            } else {
+                $banner.addClass("popped");
+            }
+        });
+        $("#cookie-button").click(function() {
+            if ($banner.hasClass("popped")) {
+                $banner.animate({
+                    bottom: '-500px'
+                }, {
+                    queue: false,
+                    duration: 500
+                }).removeClass("popped");
+            } else {
+                $banner.animate({
+                    bottom: "1rem"
+                }, {
+                    queue: false,
+                    duration: 500
+                }).addClass("popped");
+            }
+        });
+    });
+
+    function appendToHead(elemntType, content) {
+        // detect whether provided content is "link" (instead of inline codes)
+        var Is_Link = content.split(/\r\n|\r|\n/).length <= 1 && content.indexOf("//") > -1 && content.indexOf(" ") <= -1;
+        if (Is_Link) {
+            if (elemntType == 'script') {
+                var x = document.createElement('script');
+                x.src = content;
+                x.type = 'text/javascript';
+            } else if (elemntType == 'style') {
+                var x = document.createElement('link');
+                x.href = content;
+                x.type = 'text/css';
+                x.rel = 'stylesheet';
+            }
+        } else {
+            var x = document.createElement(elemntType);
+            if (elemntType == 'script') {
+                x.type = 'text/javascript';
+                x.innerHTML = content;
+            } else if (elemntType == 'style') {
+                x.type = 'text/css';
+                if (x.styleSheet) {
+                    x.styleSheet.cssText = content;
+                } else {
+                    x.appendChild(document.createTextNode(content));
+                }
+            }
+        }
+        //append in head
+        (document.head || document.getElementsByTagName('head')[0]).appendChild(x);
+    }
+
+    function createCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/;samesite=none; secure";
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name, "", -1);
+    }
+
+    if (readCookie('cookie-acknowledged') == 'true') {
+
+        appendToHead('script', 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}');
+        
+        {% include ga.js %}
+
+        console.log('Cookie loaded 🍪');
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click", function() {
+
+        //create cookie for 90 days
+        createCookie('cookie-acknowledged', 'true', 90);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+</script>

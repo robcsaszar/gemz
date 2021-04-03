@@ -45,18 +45,18 @@
 #list {
   float: left;
   width: 100%;
-  margin: 2rem 0;
-  padding: 0;
+  margin: 1rem 0;
+  padding: 0 2rem;
   position: relative;
 }
 
 #list:before {
   content: 'offline';
   position: absolute;
-  left: -7rem;
+  left: -5rem;
   font-size: 3rem;
   text-align: right;
-  top: 1.5rem;
+  top: 3rem;
   color: $gray-400;
   font-weight: bold;
   font-family: 'Fraunces', serif;
