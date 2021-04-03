@@ -63,6 +63,14 @@ $('#search-box').focus(function() {
     return false;
 })
 
+$('#quicksearch').focus(function() {
+    var $htmlOrBody = $('html, body');
+    $htmlOrBody.animate({
+        scrollTop: ($('#quicksearch').offset().top - 10)
+    }, 500);
+    return false;
+})
+
 var progressPath = document.querySelector('.progress-wrap path');
 var pathLength = progressPath.getTotalLength();
 progressPath.style.transition = progressPath.style.WebkitTransition = 'none';

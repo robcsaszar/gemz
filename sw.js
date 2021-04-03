@@ -1,10 +1,10 @@
-// service-worker.js
+// sw.js
 const FALLBACK_URL = '/offline';
 
 // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
     prefix: 'gemz',
-    suffix: 'v1.0',
+    suffix: 'v1.1',
     precache: 'precache',
     runtime: 'runtime-cache'
 });
