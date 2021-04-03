@@ -52,7 +52,22 @@ feed:
     shops:
       path: "/feed.xml"
 
+pwa:
+  sw_src_filepath: service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
+  dest_js_directory: assets/js # Required
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "/**/*.{js,json,css}"
+    - "/**/*.{ico,jpg,jpeg,png,svg}"
+    - "/**/*.html"
+    - "fonts/**/*"
+    - "assets/webfonts/*"
+  precache_glob_ignores: # Optional
+    - "sw-register.js"
+
 plugins:
   - jekyll-environment-variables
   - jekyll-menus
   - jekyll-feed
+  - jekyll-pwa-workbox

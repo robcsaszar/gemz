@@ -77,7 +77,7 @@ title: Ești offline!
         if (!navigator || !navigator.serviceWorker) return;
         caches.keys().then(function(keys) {
             return keys.filter(function(key) {
-                return key.includes('_pages');
+                return key.includes('precache');
             }).forEach(function(key) {
                 caches.open(key).then(function(cache) {
                     cache.keys().then(function(keys) {
@@ -86,7 +86,7 @@ title: Ești offline!
                             '<ul id="list" class="pb-6">' +
                             keys.map(function(key) {
 
-                                if ((key.url.includes('/shops') || key.url.includes('/categories') || key.url.includes('/despre-noi')) && !key.url.includes('?')) return '<li class="in"><a href="' + key.url + '">' + key.url + '</a></li>';
+                                if ((key.url.includes('/shops') || key.url.includes('/categories') || key.url.includes('/despre-noi')) && !key.url.includes('/shops/?') && !key.url.includes('/images/')) return '<li class="in"><a href="' + key.url + '">' + key.url.split('?')[0] + '</a></li>';
                                 return '';
                             }).join('') +
                             '<span class="empty-item">Niciun rezultat</span></ul>';

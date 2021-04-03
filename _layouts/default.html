@@ -78,17 +78,6 @@
     <script type="text/javascript" src="{{ '/assets/js/scripts.min.js' | relative_url }}"></script>
     <script src="{{ '/search.json' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/lunr.min.js' | relative_url }}"></script>
-    <script>
-        if (navigator && navigator.serviceWorker) {
-            navigator.serviceWorker.register("/sw.js").then(function(registration) {
-                // register success
-                console.log('ServiceWorker registration successful with score: ', registration.scope);
-            }, function(err) {
-                //register fail
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        }
-    </script>
   {% include cookie-consent.html %}
   <script>
       $(function() {
