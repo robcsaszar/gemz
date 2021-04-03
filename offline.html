@@ -85,8 +85,9 @@ title: Ești offline!
                         offline.innerHTML =
                             '<ul id="list" class="pb-6">' +
                             keys.map(function(key) {
-                                if (!key.url.endsWith('/')) return '';
-                                return '<li class="in"><a href="' + key.url + '">' + key.url + '</a></li>';
+
+                                if ((key.url.includes('/shops') || key.url.includes('/categories') || key.url.includes('/despre-noi')) && !key.url.includes('?')) return '<li class="in"><a href="' + key.url + '">' + key.url + '</a></li>';
+                                return '';
                             }).join('') +
                             '<span class="empty-item">Niciun rezultat</span></ul>';
                     });
