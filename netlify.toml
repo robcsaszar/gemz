@@ -1,5 +1,5 @@
 [build]
-  command = "brew install libpng libwebp libjpeg vips && jekyll build"
+  command = "brew install vips libpng libwebp libjpeg && jekyll build"
   publish = "_site"
 
 [build.environment]
