@@ -64,7 +64,7 @@
       a {
         display: block;
         position: relative;
-        color: #ffffff;
+        color: $white;
         text-decoration: none;
         overflow: hidden;
 
@@ -119,7 +119,7 @@
   }
 }
 
-@media only screen and (max-width: 959px) {
+@include media-breakpoint-down(md) {
   .menu-container {
     width: 100%;
   }
@@ -215,10 +215,12 @@
     }
   }
 }
+
 a.mobile-search {
   display: none;
+
   @include media-breakpoint-down(md) {
-display: block;
+    display: block;
     font-size: 2rem;
     margin-left: auto;
     margin-right: 2rem;

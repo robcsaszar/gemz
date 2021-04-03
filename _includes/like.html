@@ -1,2 +1,84 @@
-<applause-button style="width: 58px; height: 58px;" url="{{ page.url | prepend: site.dev_url }}"/>
-<script src="/assets/js/like.min.js"></script>
+<!-- <applause-button style="width: 58px; height: 58px;" url="{{ page.url | prepend: site.dev_url }}"/>
+<script src="/assets/js/like.min.js"></script> -->
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBYwOkjnZKMOcElSLU0IXlBidCdhpUM2EE",
+        authDomain: "gemz-ro.firebaseapp.com",
+        databaseURL: "https://gemz-ro-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "gemz-ro",
+        storageBucket: "gemz-ro.appspot.com",
+        messagingSenderId: "220583109783",
+        appId: "1:220583109783:web:05a76e7839eae6d746b5d2"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    let firestore = firebase.firestore();
+    const docRef = firestore.collection("shop-likes");
+
+    const docID = window.location.pathname
+        .split("/")
+        .slice(-1)[0]
+        .replace(".", "-");
+
+    let prevLikes = 0;
+    
+    $(document).ready(function() {
+        var userLikes = window.localStorage.getItem("likes") || 0;
+        $("#pages").html(userLikes);
+        docRef
+            .doc(docID)
+            .get()
+            .then((doc) => {
+                if (doc.exists) {
+                    prevLikes = doc.data()["likes"];
+                } else {
+                    console.log("No such document!");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    });
+
+    $("#like").on("click", function(e) {
+        docRef
+            .doc(docID)
+            .set({
+                likes: prevLikes + 1,
+                lastUpdate: new Date().toISOString()
+            })
+            .then(function(docRef) {
+                console.log("Document successfully written!");
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
+    });
+
+    docRef.doc(docID).onSnapshot((doc) => {
+        const likes = doc.data()["likes"];
+        $("#likes").html(likes);
+        window.localStorage.setItem("likes", docID);
+        docRef
+            .doc(docID)
+            .get()
+            .then((doc) => {
+                if (doc.exists) {
+                    prevLikes = doc.data()["likes"];
+                } else {
+                    console.log("No such document!");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    });
+</script>
+
+<p id="pages"></p>
+<p id="likes"></p>
+<button id="like">like</button>

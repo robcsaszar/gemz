@@ -1,12 +1,12 @@
 .logo {
   display: none;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: block;
   }
 
   img {
-    max-width: unset;
+    max-width: 200px;
   }
 
   a {
@@ -20,11 +20,12 @@
   display: block;
   width: 3rem;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
 
   img {
+    max-width: 200px;
     width: 100%;
     height: auto;
   }
