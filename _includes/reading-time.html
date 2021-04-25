@@ -1,20 +1,22 @@
-{% capture words %}
-{{ content | number_of_words | minus: 180 }}
-{% endcapture %}
-{% unless words == 0 %}
-{%- capture minutes -%}
-{{ words | plus: 180 | divided_by: 180 }}
-{%- endcapture -%}
-{%- capture reading -%}
-{%- if minutes < '1' -%}
-{{ 'sub un minut de citit' }}
-{%- elsif minutes == '1' -%}
-{{ minutes | append: ' minut de citit' }}
-{%- else -%}
-{{ minutes | append: ' minute de citit' }}
-{%- endif -%}
-{%- endcapture -%}
-<span class="reading-time">
-{{ reading }}
-</span>
-{% endunless %}
+<div class="reading-time">
+    {% capture words %}
+    {{ content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words == 0 %}
+    {%- capture minutes -%}
+    {{ words | plus: 180 | divided_by: 180 }}
+    {%- endcapture -%}
+    {%- capture reading -%}
+    {%- if minutes < '1' -%}
+    {{ 'sub un minut de citit' }}
+    {%- elsif minutes == '1' -%}
+    {{ minutes | append: ' minut de citit' }}
+    {%- else -%}
+    {{ minutes | append: ' minute de citit' }}
+    {%- endif -%}
+    {%- endcapture -%}
+    <span id="reading-time">
+        {{- reading -}}
+    </span>
+    {% endunless %}
+</div>

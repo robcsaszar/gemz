@@ -90,17 +90,17 @@ img {
 }
 
 :focus {
-  outline: none;
+  outline: none !important;
 }
 
 ::selection {
-  background: lighten($primary, 45%);
-  color: $primary;
+  background: lighten($primary, 45%) !important;
+  color: $primary !important;
 }
 
 input,
 textarea {
-  caret-color: $primary;
+  caret-color: $primary !important;
 }
 
 //remove iOS input inner shadow
@@ -117,4 +117,11 @@ input:matches([type="email"],
 
 :target {
   top: -20px;
+}
+
+hr {
+  border: 0;
+  background: darken($white-offset, 10%);
+  width: 100%;
+  height: 1px;
 }

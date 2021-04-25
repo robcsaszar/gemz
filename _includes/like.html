@@ -1,9 +1,10 @@
-<!-- <applause-button style="width: 58px; height: 58px;" url="{{ page.url | prepend: site.dev_url }}"/>
-<script src="/assets/js/like.min.js"></script> -->
-
-<p id="pages"></p>
-<p id="likes">0</p>
-<button id="like">like</button>
+<div class="likes">
+    <button type="button" id="like" class="like"><i class="far fa-heart"></i></button>
+    <div class="like-counter" >
+        <span id="likes" data-tooltip="Aprecieri">0</span>
+    </div>
+</div>
+<hr>
 <script type="application/javascript">
     var countLikes = {
         apiKey: "AIzaSyBYwOkjnZKMOcElSLU0IXlBidCdhpUM2EE",
@@ -14,25 +15,19 @@
         messagingSenderId: "220583109783",
         appId: "1:220583109783:web:d7dea247faba679046b5d2"
     };
-    const countViews = {
-        appId: "1:220583109783:web:d7dea247faba679046b5d2"
-    };
     firebase.initializeApp(countLikes);
-    firebase.initializeApp(countViews, "secondary");
-    
+
     let firestore = firebase.firestore();
     const docRef = firestore.collection("shops");
-
     const docID = window.location.pathname
         .split("/")
         .slice(-1)[0]
         .replace(".", "-");
-
     let prevLikes = 0;
+    var likeButton = $('#like');
+    var likeCounter = $('#likes');
 
     $(document).ready(function() {
-        var userLikes = window.localStorage.getItem("likes") || 0;
-        $("#pages").html(userLikes);
         docRef
             .doc(docID)
             .get()
@@ -46,9 +41,17 @@
             .catch((error) => {
                 console.log(error);
             });
+            likeButton.each(function(e) {
+            if (localStorage.getItem(docID)) {
+                $(this).removeClass("like").addClass("unlike").children("i").attr('class', 'fas fa-heart');
+                $(this).prop('disabled', true);
+            } else {
+                $(this).removeClass("unlike").addClass("like").children("i").attr('class', 'far fa-heart');
+            }
+        });
     });
 
-    $("#like").on("click", function(e) {
+    likeButton.one("click", function(e) {
         docRef
             .doc(docID)
             .set({
@@ -61,12 +64,19 @@
             .catch(function(error) {
                 console.error("Error adding document: ", error);
             });
+        if (localStorage.getItem(docID)) {
+            localStorage.removeItem(docID);
+            $(this).removeClass("unlike").addClass("like").children("i").attr('class', 'far fa-heart');
+        } else {
+            localStorage.setItem(docID, 'liked');
+            $(this).removeClass("like").addClass("unlike").children("i").attr('class', 'fas fa-heart');
+            $(this).prop('disabled', true);
+        }
     });
 
     docRef.doc(docID).onSnapshot((doc) => {
         const likes = doc.data()["likes"];
-        $("#likes").html(likes);
-        window.localStorage.setItem("likes", docID);
+        likeCounter.html(likes);
         docRef
             .doc(docID)
             .get()
@@ -80,28 +90,5 @@
             .catch((error) => {
                 console.log(error);
             });
-    });
-
-    function get_viewers_ip(json) {
-        viewers_ip = json.ip;
-        count_view(viewers_ip);
-    }
-
-    function count_view(viewers_ip) {
-        var views;
-        var ip_to_string = viewers_ip.toString();
-
-        for (var i, i = 0; i < ip_to_string.length; i++) {
-            ip_to_string = ip_to_string.replace(".", "-");
-        }
-
-        firebase.database().ref().child(docID + "/" + ip_to_string).set({
-            viewers_ip: viewers_ip
-        });
-    }
-
-    firebase.database().ref().child(docID).on("value", function(snapshot) {
-        views = snapshot.numChildren();
-        $("#view_count_container").html("<i class='fa fa-eye'></i> " + views);
     });
 </script>

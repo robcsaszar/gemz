@@ -1,7 +1,39 @@
-<h2>Views</h2>
-<p id="view_count_container">0</p>
-
+<div class="views">
+    <span id="views">0</span> <span>vizualizări</span>
+</div>
 <script type="application/javascript">
+    const countViews = {
+        apiKey: "AIzaSyBYwOkjnZKMOcElSLU0IXlBidCdhpUM2EE",
+        authDomain: "gemz-ro.firebaseapp.com",
+        databaseURL: "https://gemz-ro-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "gemz-ro",
+        storageBucket: "gemz-ro.appspot.com",
+        messagingSenderId: "220583109783",
+        appId: "1:220583109783:web:d7dea247faba679046b5d2"
+    };
+    firebase.initializeApp(countViews, "secondary");
 
+    function get_viewers_ip(json) {
+        viewers_ip = json.ip;
+        count_view(viewers_ip);
+    }
+
+    function count_view(viewers_ip) {
+        var views;
+        var ip_to_string = viewers_ip.toString();
+
+        for (var i, i = 0; i < ip_to_string.length; i++) {
+            ip_to_string = ip_to_string.replace(".", "-");
+        }
+
+        firebase.database().ref().child(docID + "/" + ip_to_string).set({
+            viewers_ip: viewers_ip
+        });
+    }
+
+    firebase.database().ref().child(docID).on("value", function(snapshot) {
+        views = snapshot.numChildren();
+        $("#views").html(views);
+    });
 </script>
-<script type="application/javascript" src="https://api64.ipify.org?format=jsonp&callback=get_viewers_ip"> </script>
+<script type="application/javascript" src="https://api64.ipify.org?format=jsonp&callback=get_viewers_ip"></script>
