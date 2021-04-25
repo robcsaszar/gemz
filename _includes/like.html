@@ -117,8 +117,8 @@
             viewers_ip: viewers_ip
         });
 
-        viewsRef.doc('views').set({
-            views: firebase.firestore.FieldValue.increment(1),
+        viewsRef.doc('views').update({
+            views: prevViews + 1,
             lastUpdate: new Date().toISOString()
         });
 
