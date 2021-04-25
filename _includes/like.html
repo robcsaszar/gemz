@@ -28,7 +28,7 @@
         .replace(".", "-");
     const viewsRef = docRef.doc(docID).collection("views");
     let prevLikes = 0;
-    let prevViews = 0;
+    var prevViews = 0;
 
     $(document).ready(function() {
         var userLikes = window.localStorage.getItem("likes") || 0;
@@ -118,7 +118,7 @@
         });
 
         viewsRef.doc('views').set({
-            views: prevViews + 1,
+            views: firebase.firestore.FieldValue.increment(1),
             lastUpdate: new Date().toISOString()
         });
 
