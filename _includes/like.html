@@ -14,17 +14,19 @@
         messagingSenderId: "220583109783",
         appId: "1:220583109783:web:d7dea247faba679046b5d2"
     };
-
+    const countViews = {
+        appId: "1:220583109783:web:d7dea247faba679046b5d2"
+    };
     firebase.initializeApp(countLikes);
-    
-    let firestore = firebase.firestore();
-    const docRef = firestore.collection("shop-likes");
+    firebase.initializeApp(countViews, "secondary");
 
+    let firestore = firebase.firestore();
+    const docRef = firestore.collection("shops");
     const docID = window.location.pathname
         .split("/")
         .slice(-1)[0]
         .replace(".", "-");
-
+    const viewsRef = docRef.doc(docID).collection("views");
     let prevLikes = 0;
 
     $(document).ready(function() {
@@ -78,4 +80,56 @@
                 console.log(error);
             });
     });
+
+    viewsRef.doc("views").onSnapshot((doc) => {
+        const views = doc.data()["views"];
+        $("#view_count_container").html("<i class='fa fa-eye'></i> " + views);
+        viewsRef
+            .doc(docID)
+            .get()
+            .then((doc) => {
+                if (doc.exists) {
+                    prevViews = doc.data()["views"];
+                } else {
+                    console.log("No such document!");
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    });
+
+    function get_viewers_ip(json) {
+        viewers_ip = json.ip;
+        count_view(viewers_ip);
+    }
+
+    function count_view(viewers_ip) {
+        var views;
+        let prevViews = 0;
+        var ip_to_string = viewers_ip.toString();
+
+        for (var i, i = 0; i < ip_to_string.length; i++) {
+            ip_to_string = ip_to_string.replace(".", "-");
+        }
+
+        viewsRef.doc(ip_to_string).set({
+            viewers_ip: viewers_ip
+        });
+
+        viewsRef.doc('views').set({
+            views: prevViews + 1,
+            lastUpdate: new Date().toISOString()
+        });
+
+        // firebase.database().ref().child("page_views/" + ip_to_string).set({
+        //     viewers_ip: viewers_ip
+        // });
+    }
+    
+
+    // firebase.database().ref().child("page_views").on("value", function(snapshot) {
+    //     views = snapshot.numChildren();
+    //     
+    // });
 </script>
