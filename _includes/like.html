@@ -28,6 +28,7 @@
         .replace(".", "-");
     const viewsRef = docRef.doc(docID).collection("views");
     let prevLikes = 0;
+    let prevViews = 0;
 
     $(document).ready(function() {
         var userLikes = window.localStorage.getItem("likes") || 0;
@@ -106,7 +107,6 @@
 
     function count_view(viewers_ip) {
         var views;
-        let prevViews = 0;
         var ip_to_string = viewers_ip.toString();
 
         for (var i, i = 0; i < ip_to_string.length; i++) {
