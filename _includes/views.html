@@ -1,0 +1,33 @@
+<h2>Views</h2>
+<p id="view_count_container">0</p>
+
+<script type="application/javascript">
+    const countViews = {
+        appId: "1:220583109783:web:d7dea247faba679046b5d2"
+    };
+    firebase.initializeApp(countViews, "secondary");
+
+    function get_viewers_ip(json) {
+        viewers_ip = json.ip;
+        count_view(viewers_ip);
+    }
+
+    function count_view(viewers_ip) {
+        var views;
+        var ip_to_string = viewers_ip.toString();
+
+        for (var i, i = 0; i < ip_to_string.length; i++) {
+            ip_to_string = ip_to_string.replace(".", "-");
+        }
+
+        firebase.database().ref().child("page_views/" + ip_to_string).set({
+            viewers_ip: viewers_ip
+        });
+
+        firebase.database().ref().child("page_views").on("value", function(snapshot) {
+            views = snapshot.numChildren();
+            $("#view_count_container").html("<i class='fa fa-eye'></i> " + views);
+        });
+    }
+</script>
+<script type="application/javascript" src="https://api64.ipify.org?format=jsonp&callback=get_viewers_ip"> </script>
