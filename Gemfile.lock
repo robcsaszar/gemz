@@ -71,14 +71,13 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  eventmachine
   jekyll (~> 4.1)
   jekyll-environment-variables
   jekyll-feed
   jekyll-menus
   jekyll-paginate-v2
   jekyll-pwa-workbox
-  wdm (~> 0.1.1)
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.2.15
