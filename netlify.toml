@@ -4,3 +4,9 @@
 
 [build.environment]
   JEKYLL_ENV = "production"
+
+[[redirects]]
+  from = "/comments/*"
+  to = "http://34.118.52.161:8181/:splat"
+  status = 200
+  force = true
