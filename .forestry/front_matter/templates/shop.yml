@@ -147,9 +147,3 @@ fields:
     display_utc: false
   hidden: true
   default: now
-pages:
-- _shops/4lei80.md
-- _shops/alienwear-clothing.md
-- _shops/art-corner.md
-- _shops/barbershop-srl.md
-- _shops/birou-avocatura.md
