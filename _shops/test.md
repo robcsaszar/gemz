@@ -21,6 +21,5 @@ socials:
   telephone: ''
   email: ''
 physical_address: false
-published: false
 
 ---
