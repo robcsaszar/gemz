@@ -9,7 +9,7 @@ address:
   postcode: ''
 layout: shop
 date: 2021-06-24 10:53:57 +0300
-title: Test
+title: Test SRL
 featured: false
 category:
 - Accesorii
